@@ -2,16 +2,23 @@
 //  cinfoApp.swift
 //  cinfo
 //
-//  Created by PhilpSarena on 4/28/26.
-//
 
 import SwiftUI
 
 @main
 struct cinfoApp: App {
+
+    @StateObject private var store = CollegeStore()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
+                .environmentObject(store)
+                .onAppear {
+                    // Background fetch — returns immediately; does nothing if
+                    // the remote URL isn't configured or if called < 7 days ago.
+                    RemoteDataService.shared.fetchIfNeeded()
+                }
         }
     }
 }
