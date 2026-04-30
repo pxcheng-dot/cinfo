@@ -64,7 +64,7 @@ enum DataLoader {
         var lines = raw.components(separatedBy: "\n")
         guard lines.count > 1 else { return nil }
 
-        let header = parseCSVLine(lines.removeFirst())
+        let header = parseCSVLine(lines.removeFirst().trimmingCharacters(in: .whitespacesAndNewlines))
         let columnIndex = buildColumnIndex(from: header)
 
         let colleges = lines.compactMap { parseCollege(from: $0, index: columnIndex) }

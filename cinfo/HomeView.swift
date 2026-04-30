@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject private var store: CollegeStore
     @AppStorage("appLanguage") private var lang = "en"
     @State private var aiContext: AIChatContext? = nil
+    @State private var showOverallInfo = false
 
     private var topColleges: [College] {
         Array(
@@ -71,10 +72,25 @@ struct HomeView: View {
 
                     // ── Top 10 Leaderboard ────────────────────────────────────
                     VStack(alignment: .leading, spacing: 0) {
-                        Text(l("top_10", lang))
-                            .font(.title2).fontWeight(.bold)
-                            .padding(.horizontal)
-                            .padding(.bottom, 12)
+                        HStack(spacing: 6) {
+                            Text(l("top_10", lang))
+                                .font(.title2).fontWeight(.bold)
+                            Button {
+                                showOverallInfo = true
+                            } label: {
+                                Image(systemName: "info.circle")
+                                    .font(.system(size: 17, weight: .regular))
+                                    .foregroundStyle(.secondary)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                        .padding(.horizontal)
+                        .padding(.bottom, 12)
+                        .sheet(isPresented: $showOverallInfo) {
+                            OverallRankingInfoSheet()
+                                .presentationDetents([.medium])
+                                .presentationDragIndicator(.visible)
+                        }
 
                         VStack(spacing: 0) {
                             ForEach(Array(topColleges.enumerated()), id: \.element.id) { index, college in
@@ -306,6 +322,97 @@ private struct TopUniversityRow: View {
         .buttonStyle(.plain)
         .sheet(isPresented: $showDetail) {
             UniversityDetailView(college: college)
+        }
+    }
+}
+
+// ── Overall Ranking Info Sheet ────────────────────────────────────────────────
+private struct OverallRankingInfoSheet: View {
+    @Environment(\.dismiss) private var dismiss
+
+    private struct Factor: Identifiable {
+        let id = UUID()
+        let icon: String
+        let color: Color
+        let title: String
+        let detail: String
+    }
+
+    private let factors: [Factor] = [
+        Factor(icon: "chart.bar.fill",       color: .blue,
+               title: "Academic Achievement",
+               detail: "Temporally-weighted average across QS, Times Higher Education, US News & World Report, and Shanghai ARWU, with recent years count more"),
+        Factor(icon: "dollarsign.circle.fill", color: .green,
+               title: "Financial Strength",
+               detail: "Reflects the resources available to support students, including endowment and institutional funding"),
+        Factor(icon: "lock.fill",            color: .orange,
+               title: "Selectivity",
+               detail: "Reflects how competitive admission is, indicating both applicant demand and student quality"),
+        Factor(icon: "medal.fill",           color: .yellow,
+               title: "Concentrated Excellence",
+               detail: "Measures how strongly top research awards are concentrated within the institution"),
+        Factor(icon: "target",               color: .purple,
+               title: "Institutional Focus",
+               detail: "Captures how focused an institution is, with smaller and more specialized universities receiving higher scores"),
+    ]
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("SRS fuses time-weighted, independent signals into a single, intelligent measure of university performance.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 4)
+
+                    VStack(spacing: 0) {
+                        ForEach(Array(factors.enumerated()), id: \.element.id) { i, factor in
+                            HStack(alignment: .top, spacing: 14) {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(factor.color.opacity(0.15))
+                                        .frame(width: 36, height: 36)
+                                    Image(systemName: factor.icon)
+                                        .font(.system(size: 15, weight: .semibold))
+                                        .foregroundStyle(factor.color)
+                                }
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text(factor.title)
+                                        .font(.subheadline).fontWeight(.semibold)
+                                    Text(factor.detail)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                            }
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 12)
+                            if i < factors.count - 1 {
+                                Divider().padding(.leading, 66)
+                            }
+                        }
+                    }
+                    .background(Color(.secondarySystemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .overlay(RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color(.separator), lineWidth: 0.5))
+                    .padding(.horizontal)
+                }
+                .padding(.bottom, 24)
+            }
+            .background(Color(.systemGroupedBackground).ignoresSafeArea())
+            .navigationTitle("SRS Score")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { dismiss() }
+                }
+            }
         }
     }
 }

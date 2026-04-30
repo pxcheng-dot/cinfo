@@ -32,6 +32,19 @@ private extension RankingSystem {
         case .shanghai: return .green
         }
     }
+
+    /// Display name inside the trend view.
+    /// .overall shows as "Average" here because the line plots the simple
+    /// per-year mean — distinct from the card's weighted positional rank.
+    var trendLabel: String {
+        self == .overall ? "Average" : rawValue
+    }
+
+    /// Color used for the Average chip — teal so it doesn't clash with
+    /// the purple Overall badge in the banner above.
+    var trendColor: Color {
+        self == .overall ? .teal : color
+    }
 }
 
 // MARK: – View
@@ -133,6 +146,10 @@ struct RankingTrendView: View {
                     }
                     .padding(.horizontal)
 
+                    // ── Overall rank banner ─────────────────────────────────
+                    OverallRankBanner(overallRank: overallRank, college: college)
+                        .padding(.horizontal)
+
                     // ── System toggles ──────────────────────────────────────
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
@@ -144,11 +161,11 @@ struct RankingTrendView: View {
                                         else  { visible.remove(system) }
                                     }
                                 )) {
-                                    Text(system.rawValue)
+                                    Text(system.trendLabel)
                                         .font(.subheadline)
                                         .fontWeight(.semibold)
                                 }
-                                .toggleStyle(ChipToggleStyle(color: system.color))
+                                .toggleStyle(ChipToggleStyle(color: system.trendColor))
                             }
                         }
                         .padding(.horizontal)
@@ -258,7 +275,7 @@ struct RankingTrendView: View {
 
                         ForEach(RankingSystem.allCases, id: \.self) { system in
                             HStack {
-                                Text(system.rawValue)
+                                Text(system.trendLabel)
                                     .font(.caption).fontWeight(.semibold)
                                     .foregroundStyle(system.color)
                                     .frame(width: 72, alignment: .leading)
@@ -294,6 +311,57 @@ struct RankingTrendView: View {
             }
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
         }
+    }
+}
+
+// MARK: – Overall rank banner
+
+private struct OverallRankBanner: View {
+    let overallRank: Int
+    let college: College
+
+    var body: some View {
+        HStack(spacing: 12) {
+            // Rank badge
+            ZStack {
+                LinearGradient(colors: [.purple, Color(red: 0.5, green: 0.1, blue: 0.9)],
+                               startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                VStack(spacing: 0) {
+                    Text("SRS")
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.85))
+                    Text("#\(overallRank)")
+                        .font(.system(size: 22, weight: .heavy, design: .rounded))
+                        .foregroundStyle(.white)
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
+            }
+            .fixedSize()
+            .shadow(color: .purple.opacity(0.35), radius: 8, y: 4)
+
+            // Explanation
+            VStack(alignment: .leading, spacing: 3) {
+                Text("SRS is a weighted multi-factor model blending temporally-weighted academic achievement with selectivity, financial strength, concentrated excellence, institutional focus, and career opportunities.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color(.secondarySystemBackground))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14)
+                        .strokeBorder(
+                            LinearGradient(colors: [.purple.opacity(0.6), .purple.opacity(0.2)],
+                                           startPoint: .topLeading, endPoint: .bottomTrailing),
+                            lineWidth: 1
+                        )
+                )
+        )
     }
 }
 

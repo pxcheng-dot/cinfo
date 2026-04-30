@@ -118,10 +118,10 @@ struct ContentView: View {
 
                 // ── University List ───────────────────────────────────────────
                 List {
-                    ForEach(Array(filteredColleges.enumerated()), id: \.element.id) { index, college in
+                    ForEach(filteredColleges, id: \.id) { college in
                         CollegeRow(college: college,
                                    activeRanking: activeRanking,
-                                   overallRank: index + 1)
+                                   overallRank: store.globalOverallRanks[college.id] ?? 0)
                             .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color(.systemGroupedBackground))

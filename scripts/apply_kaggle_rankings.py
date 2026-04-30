@@ -35,7 +35,12 @@ MAX_RANK    = 700
 
 # ── Name normalisation ────────────────────────────────────────────────────────
 ALIASES: dict[str, list[str]] = {
-    "Massachusetts Institute of Technology": ["MIT", "Massachusetts Institute of Technology (MIT)"],
+    "Massachusetts Institute of Technology": [
+        "MIT",
+        "Massachusetts Institute of Technology (MIT)",
+        "Massachusetts Institute of Technology - MIT",
+        "Massachusetts Institute Of Technology",
+    ],
     "University of California, Berkeley":    ["UC Berkeley", "Univ California Berkeley"],
     "University of California, Los Angeles": ["UCLA", "UC Los Angeles"],
     "University of California, San Diego":   ["UC San Diego", "UCSD"],
@@ -46,19 +51,23 @@ ALIASES: dict[str, list[str]] = {
                                               "University of Michigan-Ann Arbor"],
     "University of Wisconsin–Madison":       ["University of Wisconsin-Madison", "UW Madison",
                                               "University of Wisconsin - Madison"],
-    "University of Minnesota–Twin Cities":   ["University of Minnesota"],
     "Washington University in St. Louis":    ["WashU", "Washington Univ St Louis",
                                               "Washington University in St Louis"],
     "HKUST": ["Hong Kong University of Science and Technology",
                "HKUST - Hong Kong University of Science and Technology"],
     "KAIST": ["Korea Advanced Institute of Science and Technology",
-               "Korea Advanced Institute of Science & Technology (KAIST)"],
+               "Korea Advanced Institute of Science & Technology (KAIST)",
+               "Korea Advanced Institute of Science & Technology",
+               "KAIST - Korea Advanced Institute of Science & Technology",
+               "KAIST - Korea Advanced Institute of Science and Technology"],
     "POSTECH": ["Pohang University of Science and Technology"],
     "LMU Munich": ["Ludwig Maximilian University of Munich",
                    "Ludwig-Maximilians-Universitat Munchen",
                    "Ludwig-Maximilians-Universität München",
                    "Ludwig-Maximilians-Universitat München",
-                   "Ludwig Maximilian University Munich"],
+                   "Ludwig Maximilian University Munich",
+                   "Ludwig-Maximilians-Universität München (LMU)",
+                   "LMU - Ludwig Maximilian University Munich"],
     "Technical University of Munich": ["TU Munich", "TUM",
                                        "Technische Universitat Munchen",
                                        "Technische Universität München",
@@ -73,22 +82,42 @@ ALIASES: dict[str, list[str]] = {
                                        "Freie Universität Berlin"],
     "Heidelberg University":          ["Ruprecht-Karls-Universitat Heidelberg",
                                        "Ruprecht Karls University Heidelberg",
-                                       "Universität Heidelberg"],
+                                       "Universität Heidelberg",
+                                       "University of Heidelberg"],
     "ETH Zurich":  ["ETH Zürich", "Swiss Federal Institute of Technology Zurich",
-                    "Swiss Federal Institute of Technology in Zurich"],
+                    "Swiss Federal Institute of Technology in Zurich",
+                    "ETH Zurich - Swiss Federal Institute of Technology",
+                    "ETH Zurich (Swiss Federal Institute of Technology)",
+                    "ETH Zürich - Swiss Federal Institute Of Technology",
+                    "Swiss Federal Institute of Technology Zurich - ETHZ",
+                    "Swiss Federal Institute of Technology (ETH Zurich)",
+                    "ETHZ"],
     "EPFL":        ["Ecole Polytechnique Federale de Lausanne",
                     "École Polytechnique Fédérale de Lausanne",
-                    "Ecole Polytechnique Fédérale de Lausanne"],
+                    "Ecole Polytechnique Fédérale de Lausanne",
+                    "Swiss Federal Institute of Technology Lausanne - EPFL",
+                    "Swiss Federal Institute Of Technology Lausanne (EPFL)",
+                    "EPFL - Ecole Polytechnique Fédérale de Lausanne"],
     "PSL University": ["Universite PSL", "PSL Research University",
                        "PSL - Universite Paris Sciences et Lettres",
                        "Université Paris Sciences et Lettres",
-                       "Universite Paris Sciences et Lettres (PSL)"],
+                       "Universite Paris Sciences et Lettres (PSL)",
+                       "Paris Sciences et Lettres – PSL Research University Paris",
+                       "Paris Sciences & Lettres - PSL Research University",
+                       "PSL Research University Paris"],
     "Université Paris-Saclay": ["Paris-Saclay University", "University of Paris-Saclay"],
     "Institut Polytechnique de Paris": ["IP Paris"],
-    "Sorbonne University":  ["Sorbonne Universite", "Sorbonne Université"],
-    "KU Leuven":            ["Katholieke Universiteit Leuven"],
+    "Sorbonne University":  ["Sorbonne Universite", "Sorbonne Université",
+                             "Sorbonne Universite (Paris IV)",
+                             "Sorbonne University (merged from Paris IV & UPMC)"],
+    "KU Leuven":            ["Katholieke Universiteit Leuven",
+                             "Catholic University of Leuven"],
     "Delft University of Technology": ["TU Delft", "Technische Universiteit Delft"],
     "Karolinska Institute":           ["Karolinska Institutet"],
+    "University College London":      ["UCL", "UCL (University College London)",
+                                       "University College London (UCL)"],
+    "University of Hamburg":          ["Universität Hamburg", "Universitat Hamburg",
+                                       "Universitaet Hamburg"],
     "University of Hong Kong":        ["HKU", "The University of Hong Kong"],
     "Chinese University of Hong Kong":["CUHK", "The Chinese University of Hong Kong"],
     "National Taiwan University":     ["NTU"],
@@ -103,14 +132,37 @@ ALIASES: dict[str, list[str]] = {
     "University of Science and Technology of China": ["USTC"],
     "Huazhong University of Science and Technology": ["HUST",
         "Huazhong University of Construction"],
-    "University of Adelaide":         ["Adelaide University"],
-    "University of New South Wales":  ["UNSW Sydney", "UNSW"],
-    "University of Tokyo":            ["The University of Tokyo"],
+    "University of Adelaide":         ["Adelaide University", "The University of Adelaide"],
+    "University of New South Wales":  ["UNSW Sydney", "UNSW", "UNSW Australia",
+                                       "The University of New South Wales",
+                                       "The University of New South Wales (UNSW Sydney)",
+                                       "University of New South Wales (UNSW Sydney)"],
+    "University of Tokyo":            ["The University of Tokyo", "Univ of Tokyo",
+                                       "The Univ of Tokyo", "University of Tokyo (UTokyo)"],
     "University of Melbourne":        ["The University of Melbourne"],
     "University of Sydney":           ["The University of Sydney"],
     "University of Queensland":       ["The University of Queensland"],
     "University of Western Australia":["The University of Western Australia"],
-    "Ohio State University":          ["The Ohio State University"],
+    "Ohio State University":          ["The Ohio State University",
+                                       "Ohio State University (Main campus)",
+                                       "Ohio State University Main campus",
+                                       "The Ohio State University - Columbus",
+                                       "The Ohio State University (Main campus)"],
+    "Pennsylvania State University":  ["Penn State", "Penn State University",
+                                       "Penn State (Main campus)",
+                                       "Pennsylvania State University (Main campus)",
+                                       "Pennsylvania State University - University Park"],
+    "University of Pittsburgh":       ["University of Pittsburgh-Pittsburgh campus",
+                                       "University of Pittsburgh - Pittsburgh campus",
+                                       "University of Pittsburgh (Main campus)"],
+    "University of Virginia":         ["University of Virginia (Main campus)",
+                                       "University of Virginia Main campus"],
+    "Yonsei University":              ["Yonsei University (Seoul campus)",
+                                       "Yonsei University Seoul campus"],
+    "Osaka University":               ["The University of Osaka", "Osaka Univ"],
+    "University of Michigan–Ann Arbor": ["University of Michigan", "Univ Michigan",
+                                          "University of Michigan-Ann Arbor",
+                                          "University of Michigan Ann Arbor"],
     "University of Minnesota–Twin Cities": ["University of Minnesota"],
     "Nanyang Technological University": ["Nanyang Technological University, Singapore"],
     "National University of Singapore": ["NUS", "NUS Singapore",
@@ -119,16 +171,10 @@ ALIASES: dict[str, list[str]] = {
         "California Institute of Technology (Caltech)"],
     "University of Chicago":        ["Univ of Chicago", "UChicago"],
     "University of Toronto":        ["Univ of Toronto", "U of Toronto"],
-    "University of Tokyo":          ["Univ of Tokyo", "The Univ of Tokyo",
-                                     "University of Tokyo (UTokyo)"],
     "Kyoto University":             ["Kyoto Univ"],
     "University of Sydney":         ["Univ of Sydney"],
     "University of Melbourne":      ["Univ of Melbourne"],
     "University of Queensland":     ["Univ of Queensland"],
-    "University of New South Wales":["UNSW", "UNSW Sydney",
-                                     "The University of New South Wales",
-                                     "The University of New South Wales (UNSW Sydney)",
-                                     "University of New South Wales (UNSW Sydney)"],
     "London School of Economics":   ["LSE",
                                      "London School of Economics and Political Science",
                                      "London School of Economics and Political Science (LSE)",
@@ -158,25 +204,56 @@ ALIASES: dict[str, list[str]] = {
                                      "Purdue University West Lafayette"],
     "University of Padova":         ["University of Padua (UNIPD)", "University of Padua"],
     "University of Bologna":        ["Alma Mater Studiorum - University of Bologna"],
-    "Sorbonne University":          ["Sorbonne Universite", "Sorbonne Université",
-                                     "Sorbonne University (merged from Paris IV & UPMC)"],
-    "KU Leuven":                    ["Catholic University of Leuven",
-                                     "Katholieke Universiteit Leuven"],
 }
 
 def _norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
-def best_match(scraped: str, csv_names: list[str], threshold: float = 0.82):
+def _variants(name: str) -> list[str]:
+    """Return common surface variants for a name (for exact matching)."""
+    v: list[str] = [name]
+    n = name.strip()
+    # "The University of X" → "University of X"
+    if re.match(r"(?i)^the\s+", n):
+        v.append(re.sub(r"(?i)^the\s+", "", n))
+    # "University of X (ACRONYM)" or "X University (Y)" → strip trailing parens
+    without_parens = re.sub(r"\s*\([^)]*\)\s*$", "", n).strip()
+    if without_parens and without_parens != n:
+        v.append(without_parens)
+        # combine: "The X (ACRONYM)" → "X" (strip both)
+        if re.match(r"(?i)^the\s+", without_parens):
+            v.append(re.sub(r"(?i)^the\s+", "", without_parens))
+    # "X - Main campus" / "X (Main campus)"
+    without_campus = re.sub(r"\s*[-–(]\s*[Mm]ain\s+[Cc]ampus.*$", "", n).strip()
+    if without_campus and without_campus != n:
+        v.append(without_campus)
+    # "X, Columbus" / "X, University Park" type suffixes
+    without_loc = re.sub(r",\s+[A-Z][a-zA-Z ]+$", "", n).strip()
+    if without_loc and without_loc != n:
+        v.append(without_loc)
+    return list(dict.fromkeys(v))  # deduplicate, preserve order
+
+def best_match(scraped: str, csv_names: list[str], threshold: float = 0.96):
+    # Phase 1: exact match (after normalisation) against CSV names + aliases + variants
     sn = _norm(scraped)
     for cn in csv_names:
-        for alias in [cn] + ALIASES.get(cn, []):
-            if _norm(alias) == sn:
+        candidates = [cn] + ALIASES.get(cn, [])
+        for candidate in candidates:
+            for variant in _variants(candidate):
+                if _norm(variant) == sn:
+                    return cn, 1.0
+        # Also check variants of the scraped name against the CSV name
+        for src_variant in _variants(scraped):
+            if _norm(src_variant) == _norm(cn):
                 return cn, 1.0
+            for alias in ALIASES.get(cn, []):
+                if _norm(src_variant) == _norm(alias):
+                    return cn, 1.0
+    # Phase 2: high-confidence fuzzy match (threshold raised to avoid false positives)
     best_cn, best_score = None, 0.0
     for cn in csv_names:
-        for alias in [cn] + ALIASES.get(cn, []):
-            s = SequenceMatcher(None, sn, _norm(alias)).ratio()
+        for candidate in [cn] + ALIASES.get(cn, []):
+            s = SequenceMatcher(None, sn, _norm(candidate)).ratio()
             if s > best_score:
                 best_score, best_cn = s, cn
     return (best_cn, best_score) if best_score >= threshold else (None, 0.0)
@@ -317,8 +394,14 @@ def apply(systems: list[str], years: list[int], dry_run: bool) -> None:
         return
 
     out = io.StringIO()
+    # Use lineterminator="\n" to write Unix line endings.
+    # Python's csv module defaults to \r\n (RFC 4180); those \r bytes cause
+    # Swift's components(separatedBy:"\n") to leave a trailing \r on the last
+    # header column name, making Int("2022\r") return nil and dropping the
+    # entire rankShanghai_2022 column from the parsed data.
     writer = csv.DictWriter(out, fieldnames=new_headers,
-                            quoting=csv.QUOTE_ALL, extrasaction="ignore")
+                            quoting=csv.QUOTE_ALL, extrasaction="ignore",
+                            lineterminator="\n")
     writer.writeheader()
     for row in rows:
         writer.writerow(row)
@@ -332,8 +415,8 @@ def main() -> None:
     p = argparse.ArgumentParser(description="Apply Kaggle ranking CSVs to universities.csv")
     p.add_argument("--systems", nargs="+",
                    choices=["qs", "the", "arwu", "usnews", "all"],
-                   default=["qs", "the", "arwu"],
-                   help="Systems to update (default: qs the arwu)")
+                   default=["qs", "the", "arwu", "usnews"],
+                   help="Systems to update (default: qs the arwu usnews)")
     p.add_argument("--years", nargs="+", type=int, default=ALL_YEARS)
     p.add_argument("--dry-run", action="store_true")
     args = p.parse_args()

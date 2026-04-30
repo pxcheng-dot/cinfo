@@ -37,7 +37,7 @@ private let strings: [String: [String: String]] = [
                          "zh": "估算费用，规划你的预算"],
 
     // Home screen
-    "top_10":           ["en": "Top 10 Overall",    "zh": "综合前十"],
+    "top_10":           ["en": "Top 10 Institutions", "zh": "综合前十"],
     "countries_covered":["en": "Countries Covered", "zh": "涵盖地区"],
     "stat_unis":        ["en": "Universities",      "zh": "大学"],
     "stat_countries":   ["en": "Countries",         "zh": "国家/地区"],

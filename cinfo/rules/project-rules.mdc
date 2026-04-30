@@ -1,3 +1,70 @@
 ---
 alwaysApply: true
 ---
+
+---
+alwaysApply: true
+---
+
+General principles:
+- Use SwiftUI unless it lacks required functionality or I explicitly request otherwise.
+- Keep code simple and readable.
+- Prefer small, incremental changes over large rewrites.
+- Do not add external packages unless I explicitly approve.
+
+Editing safety:
+- Never overwrite or remove code I did not ask to change.
+- Make minimal, targeted edits only.
+- Do not rewrite entire files unless explicitly requested.
+
+Before making any edits:
+- Re-read the latest version of all relevant files from disk.
+- Do not rely on cached or previous context.
+- Provide a clear plan:
+  1. Which files will be modified
+  2. What changes will be made
+- Show a diff or describe exact changes before applying edits.
+
+After making edits:
+- Summarize exactly what changed and why.
+- Explain how to test the changes in Xcode (step-by-step if needed).
+- Ensure the project still builds.
+
+Error handling:
+- If there is an error, fix one issue at a time.
+- Do not introduce new changes unrelated to the error.
+
+File size & structure:
+- If a file exceeds ~300 lines, refactor before proceeding.
+- Prefer modular SwiftUI structure (separate Views, ViewModels, and utilities when appropriate).
+
+File cleanup:
+- Do not delete files automatically.
+- If files appear unused:
+  - List them and explain why they seem unused
+  - Ask for explicit confirmation before deletion
+- Never remove files that may be referenced by:
+  - Xcode project settings
+  - Assets (Assets.xcassets, previews, etc.)
+  - Build targets or schemes
+- Prefer removing unused code within files over deleting entire files.
+- After any deletion:
+  - Ensure the project builds successfully
+  - Update any broken references if needed
+
+Assumptions:
+- Assume I may edit files outside of Cursor (e.g., in Xcode).
+- Always prioritize preserving existing functionality unless explicitly told otherwise.
+
+SRS — Synaptic Ranking System:
+- SRS stands for Synaptic Ranking System. Always use this full name on first mention, then SRS.
+- SRS is the app's proprietary university ranking. It is NOT the same as QS, Times, USNews, or Shanghai.
+- SRS is computed in `cinfo/College.swift` (`compositeScore` / `averageRank`).
+- Supplemental data (acceptance rate, endowment, awards, students, faculty, schools, location) lives in `cinfo/SupplementalData.swift`.
+- SRS has six weighted components: Academic rankings (49%), Endowment per student (15%), Selectivity (13.5%), Research awards (12%), Institutional focus (8.5%), Location (2%).
+- Weights must always sum to 100%. If weights change, update College.swift, RANKINGS.md, HomeView.swift, and RankingTrendView.swift together.
+- The algorithm is documented in `/RANKINGS.md` under "SRS Algorithm (v3 — current)". Keep that doc in sync with code.
+- In the UI, SRS appears as: the "SRS" tab in Discover (ContentView), the badge on CollegeRow, and the banner in RankingTrendView.
+
+
+

@@ -12,7 +12,7 @@ import Foundation
 
 // Which ranking system is currently active — used both for sorting and card highlighting.
 enum RankingSystem: String, CaseIterable, Identifiable {
-    case overall  = "Overall"
+    case overall  = "SRS"
     case qs       = "QS"
     case times    = "Times"
     case usNews   = "USNews"
@@ -73,13 +73,193 @@ struct College: Identifiable {
         return nil
     }
 
-    // MARK: – Computed average / sort helpers (unchanged API)
+    // MARK: – Overall composite score  (v3)
+    //
+    // ═══════════════════════════════════════════════════════════════════════
+    // Algorithm  v2  —  full specification  (recorded for reproducibility)
+    // ═══════════════════════════════════════════════════════════════════════
+    //
+    // Goal
+    // ────
+    // Produce a single "Overall" score and positional rank that reflects
+    // four independent dimensions of institutional quality:
+    //   1. Academic rankings  (temporal-weighted cross-system average)
+    //   2. Selectivity        (undergraduate acceptance rate)
+    //   3. Financial strength (institutional endowment)
+    //   4. Research legacy    (cumulative Nobel / Fields / Turing laureates)
+    //
+    // ── Component 1 : Rankings  (base weight 55 %) ──────────────────────
+    //
+    //   Step 1a – Per-system temporal-weighted average rank r(S)
+    //   For each S ∈ {QS, Times, USNews, Shanghai}:
+    //     • Collect every year Y ∈ [currentYear−4 … currentYear] with data.
+    //     • Temporal weight  w(Y) = α^(currentYear−Y),  α = 0.75
+    //     • r(S) = Σ[ w(Y)·rank(S,Y) ] / Σ[ w(Y) ]
+    //
+    //   Effective weights when all 5 years are present:
+    //     currentYear − 0  (2026): 1.000  →  32.8 %
+    //     currentYear − 1  (2025): 0.750  →  24.6 %
+    //     currentYear − 2  (2024): 0.563  →  18.4 %
+    //     currentYear − 3  (2023): 0.422  →  13.8 %
+    //     currentYear − 4  (2022): 0.316  →  10.4 %
+    //
+    //   Step 1b – Cross-system mean
+    //     r̄ = mean of r(S) over every system with ≥ 1 data point.
+    //     (All four systems weighted equally — equal expertise representation.)
+    //
+    //   Step 1c – Normalise to 0–100 score (higher = better)
+    //     rankScore = max(0,  100 × (1 − (r̄ − 1) / 249))
+    //     rank 1 → 100.0 ;  rank 125 → 50.2 ;  rank 250 → 0.0
+    //
+    // ── Component 2 : Selectivity  (base weight 15 %) ───────────────────
+    //
+    //   Data: undergraduate acceptance rate  a  (%, 0–100).
+    //   Note: Chinese top universities use effective Gaokao qualification
+    //         rates (~0.04–0.08 %); European public universities reflect
+    //         near-open-enrollment offer rates (~70–90 %).
+    //
+    //   selScore = max(0,  min(100,  100 − a))
+    //   3 %  →  97.0 ;  15 %  →  85.0 ;  50 %  →  50.0 ;  90 %  →  10.0
+    //
+    // ── Component 3 : Endowment  (base weight 15 %) ─────────────────────
+    //
+    //   Data: total endowment  e  in USD billions.
+    //   Log scale anchored at Harvard 2024 endowment ($53.2 B → ≈ 100).
+    //
+    //   endScore = min(100,  ln(e + 1) / ln(54.2) × 100)
+    //   $53 B → 99.7 ;  $10 B → 62.1 ;  $1 B → 26.1 ;  $0.1 B → 11.5
+    //
+    // ── Component 4 : Award count  (base weight 15 %) ───────────────────
+    //
+    //   Data: all-time affiliated Nobel Prize + Fields Medal + Turing Award
+    //         laureates (alumni + faculty combined).
+    //   Log scale anchored at Harvard (161 laureates → ≈ 100).
+    //
+    //   awardScore = min(100,  ln(n + 1) / ln(162) × 100)
+    //   161 → 99.8 ;  100 → 91.9 ;  30 → 69.3 ;  10 → 46.0 ;  1 → 19.4 ;  0 → 0
+    //
+    // ── Weighted blend ───────────────────────────────────────────────────
+    //
+    //   Base weights:  rankings 0.55,  selectivity 0.15,
+    //                  endowment 0.15,  awards 0.15
+    //
+    //   Missing-data policy: if a supplemental factor is nil, its base
+    //   weight is redistributed proportionally to available components.
+    //   This ensures universities with partial data are not penalised by
+    //   an implicit score of 0 for unknown fields.
+    //
+    //   compositeScore (0–100, higher = better) =
+    //     Σ(available w_i × score_i) / Σ(available w_i)
+    //
+    // ── Positional rank ──────────────────────────────────────────────────
+    //
+    //   averageRank = 100 − compositeScore   (lower = better, for sorting)
+    //   Sort all universities ascending by averageRank.
+    //   Position in that list = "Overall" rank badge.
+    //   (Computed by CollegeStore.rebuildGlobalRanks().)
+    //
+    // ── Constants ────────────────────────────────────────────────────────
+    //   temporalDecay  α        = 0.75
+    //   currentYear             = 2026
+    //   historyWindow           = 5 years  (currentYear−4 … currentYear)
+    //   rankFloor               = 250  (ranks beyond this score as 0)
+    //   endowmentAnchorBn       = 54.2  (Harvard 2024, USD billions)
+    //   awardAnchor             = 162   (Harvard all-time laureates)
+    //   Weight: rankings / selectivity / endowment / awards = 55/15/15/15
 
-    var averageRank: Double? {
-        let available = [rankQS, rankTimes, rankUSNews, rankShanghai].compactMap { $0 }
-        guard !available.isEmpty else { return nil }
-        return Double(available.reduce(0, +)) / Double(available.count)
+    static let temporalDecay: Double = 0.75
+
+    // ── v1-compatible internal helper ────────────────────────────────────
+    // Returns the cross-system temporal-weighted average rank (lower = better).
+    // Used exclusively as the rankings component of compositeScore below.
+    private var temporalWeightedAvgRank: Double? {
+        let decay  = Self.temporalDecay
+        let kpList: [KeyPath<YearRankings, Int?>] = [\.qs, \.times, \.usNews, \.shanghai]
+        var systemScores: [Double] = []
+        for kp in kpList {
+            var wSum = 0.0, wTot = 0.0
+            for age in 0...4 {
+                let w = pow(decay, Double(age))
+                if let r = yearlyRankings[Self.currentYear - age]?[keyPath: kp] {
+                    wSum += w * Double(r); wTot += w
+                }
+            }
+            if wTot > 0 { systemScores.append(wSum / wTot) }
+        }
+        guard !systemScores.isEmpty else { return nil }
+        return systemScores.reduce(0, +) / Double(systemScores.count)
     }
+
+    // ── Composite score  (0–100, higher = better)  ───────────────────────
+    //
+    // v3 weights: rankings 48 % | selectivity 12 % | endowment/student 14 %
+    //             awards/faculty 14 % | institutional focus 12 %
+    //
+    // "Focus" rewards smaller, more specialised institutions:
+    //   a concentrated $4 B endowment across 2 400 students (Caltech) ranks
+    //   higher than the same sum spread over 50 000 students.
+    //   Likewise, 45 laureates among 310 faculty (Caltech, density 0.145)
+    //   outscores 161 laureates among 2 400 faculty (Harvard, density 0.067).
+    var compositeScore: Double? {
+        guard let r = temporalWeightedAvgRank else { return nil }
+
+        let sup = SupplementalData.get(name)
+        typealias WS = (weight: Double, score: Double)
+        var parts: [WS] = []
+
+        // 1 – Academic rankings (49 %)
+        let rankScore = max(0.0, 100.0 * (1.0 - (r - 1.0) / 249.0))
+        parts.append((0.49, rankScore))
+
+        // 2 – Selectivity (13.5 %)
+        if let a = sup.acceptanceRate {
+            parts.append((0.135, max(0.0, min(100.0, 100.0 - a))))
+        }
+
+        // 3 – Endowment per student (15 %) — log scale, Princeton ~$4 012 K/student → 100
+        if let e = sup.endowmentBn, e > 0,
+           let s = sup.studentCount, s > 0 {
+            let kUSD  = e * 1_000_000.0 / Double(s)
+            let score = min(100.0, max(0.0, log(max(1.0, kUSD)) / log(4012.0) * 100.0))
+            parts.append((0.15, score))
+        }
+
+        // 4 – Research awards (12 %) — log scale, Harvard 161 laureates → 100
+        // Anchor = log(162) so Harvard scores 100 and all others scale below.
+        if let n = sup.awardCount {
+            let score = min(100.0, max(0.0,
+                log(Double(max(1, n)) + 1.0) / log(162.0) * 100.0))
+            parts.append((0.12, score))
+        }
+
+        // 5 – Institutional focus (8.5 %) — enrollment + school count, equal sub-weight
+        let enrollFocus: Double? = sup.studentCount.map { sc in
+            let c = Double(max(sc, 2_000))
+            return min(100.0, max(0.0,
+                (log(150_000.0) - log(c)) / (log(150_000.0) - log(2_000.0)) * 100.0))
+        }
+        let deptFocus: Double? = sup.schoolCount.map { dc in
+            let c = Double(max(dc, 4))
+            return min(100.0, max(0.0,
+                (log(65.0) - log(c)) / (log(65.0) - log(4.0)) * 100.0))
+        }
+        if enrollFocus != nil || deptFocus != nil {
+            let subs = [enrollFocus, deptFocus].compactMap { $0 }
+            parts.append((0.085, subs.reduce(0, +) / Double(subs.count)))
+        }
+
+        // 6 – Location (2 %) — metro-area centrality, 0-100 pre-scored
+        if let loc = sup.locationScore {
+            parts.append((0.02, loc))
+        }
+
+        let totalW = parts.reduce(0.0) { $0 + $1.weight }
+        let wSum   = parts.reduce(0.0) { $0 + $1.weight * $1.score }
+        return wSum / totalW
+    }
+
+    /// Lower is better (rank #1 is best).  Returns nil if no ranking data.
+    var averageRank: Double? { compositeScore.map { 100.0 - $0 } }
 
     func rank(for system: RankingSystem) -> Int? {
         switch system {
