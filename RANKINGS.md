@@ -30,11 +30,12 @@ python3 scripts/update_rankings.py --csv /path/to/universities.csv
 ## After updating
 
 Commit and push `cinfo/universities.csv` to GitHub.
-The app will silently download the new file within 7 days via RemoteDataService.
+The app will silently download the new file within 24 hours via RemoteDataService.
 
 ```bash
+cd /Users/SarePhil/Desktop/cinfo
 git add cinfo/universities.csv
-git commit -m "Update rankings YYYY"
+git commit -m "Update rankings 2026"
 git push
 ```
 

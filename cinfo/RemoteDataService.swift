@@ -6,7 +6,7 @@
 //
 //  How it works
 //  ────────────
-//  1. On app launch, checks whether ≥ 7 days have passed since the last fetch.
+//  1. On app launch, checks whether ≥ 24 hours have passed since the last fetch.
 //  2. If so, sends a conditional GET (If-None-Match / ETag) to the remote URL.
 //     • 304 Not Modified → nothing downloaded, just stamps the timestamp.
 //     • 200 OK           → saves the new CSV to Documents, reloads college data,
@@ -46,8 +46,8 @@ final class RemoteDataService {
         string: "https://raw.githubusercontent.com/pxcheng-dot/cinfo/main/cinfo/universities.csv"
     )!
 
-    /// Minimum time between fetches (seconds). Default: 7 days.
-    private static let fetchIntervalSeconds: TimeInterval = 7 * 24 * 60 * 60
+    /// Minimum time between fetches (seconds). Default: 1 day.
+    private static let fetchIntervalSeconds: TimeInterval = 24 * 60 * 60
 
     // ── UserDefaults keys ──────────────────────────────────────────────────
     private let lastFetchKey = "remoteDataLastFetch"

@@ -25,7 +25,20 @@ enum DataLoader {
     // MARK: – Public entry point
 
     static func loadColleges() -> [College] {
-        if let cached = loadFrom(cacheURL) { return cached }
+        // Use the cache only if it is newer than the bundled file.
+        // This ensures an app update (with a fresher bundled CSV) always wins
+        // over a stale downloaded cache from a previous install.
+        let useCache: Bool = {
+            guard let bundleURL,
+                  let bundleMod = (try? FileManager.default
+                      .attributesOfItem(atPath: bundleURL.path))?[.modificationDate] as? Date,
+                  let cacheMod  = (try? FileManager.default
+                      .attributesOfItem(atPath: cacheURL.path))?[.modificationDate] as? Date
+            else { return true } // no bundle date info → prefer cache as before
+            return cacheMod > bundleMod
+        }()
+
+        if useCache, let cached = loadFrom(cacheURL) { return cached }
         if let bundled = loadFrom(bundleURL) { return bundled }
         assertionFailure("universities.csv not found in bundle")
         return []
