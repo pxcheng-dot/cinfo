@@ -20,7 +20,12 @@ struct ContentView: View {
 
     @AppStorage("appLanguage") private var lang = "en"
 
-    @State private var showReorderSheet = false
+    @State private var showReorderSheet    = false
+    @State private var showAllUniversities = false
+    @State private var showCountries       = false
+    @State private var showAI              = false
+
+    private var countryCount: Int { Set(store.colleges.map(\.country)).count }
 
     private var orderedTabs: [FilterTab] {
         FilterTab.orderedTabs(from: filterTabOrderRaw)
@@ -39,11 +44,37 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
 
+                // ── Stats strip ───────────────────────────────────────────────
+                HStack(spacing: 12) {
+                    Button { showAllUniversities = true } label: {
+                        DiscoverStatChip(number: "\(store.colleges.count)",
+                                         label: l("stat_unis", lang))
+                    }
+                    .buttonStyle(.plain)
+                    .sheet(isPresented: $showAllUniversities) {
+                        UniversitiesSheet(colleges: store.colleges, lang: lang)
+                    }
+
+                    Button { showCountries = true } label: {
+                        DiscoverStatChip(number: "\(countryCount)",
+                                         label: l("stat_countries", lang))
+                    }
+                    .buttonStyle(.plain)
+                    .sheet(isPresented: $showCountries) {
+                        CountriesSheet(lang: lang)
+                    }
+
+                }
+                .padding(.horizontal)
+                .padding(.top, 10)
+                .padding(.bottom, 4)
+
                 // ── Ranking Selector ─────────────────────────────────────────
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
                         ForEach(RankingSystem.allCases, id: \.self) { system in
                             RankingTab(label: system.rawValue,
+                                       symbol: system == .overall ? system.sfSymbol : nil,
                                        isActive: activeRanking == system) {
                                 withAnimation(.easeInOut(duration: 0.2)) {
                                     activeRanking = system
@@ -101,10 +132,20 @@ struct ContentView: View {
                 .background(Color(.systemGroupedBackground))
                 .animation(.easeInOut(duration: 0.3), value: activeRanking)
             }
-            .navigationTitle(l("app_title", lang))
+            .navigationTitle(l("tab_rankings", lang))
             .searchable(text: $searchText, prompt: l("search_prompt", lang))
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button { showAI = true } label: {
+                        Image(systemName: "sparkles")
+                    }
+                }
+            }
             .sheet(isPresented: $showReorderSheet) {
                 FilterOrderSheet(orderRaw: $filterTabOrderRaw, lang: lang)
+            }
+            .sheet(isPresented: $showAI) {
+                AIChatView(context: .discover)
             }
     }
 }
@@ -112,17 +153,25 @@ struct ContentView: View {
 // ── Ranking Tab ───────────────────────────────────────────────────────────────
 private struct RankingTab: View {
     let label: String
+    let symbol: String?
     let isActive: Bool
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             VStack(spacing: 4) {
-                Text(label)
-                    .font(.subheadline)
-                    .fontWeight(isActive ? .bold : .regular)
-                    .foregroundStyle(isActive ? Color.accentColor : .secondary)
-                    .padding(.horizontal, 6)
+                HStack(spacing: 4) {
+                    if let symbol = symbol {
+                        Image(systemName: symbol)
+                            .font(.system(size: 11, weight: isActive ? .bold : .regular))
+                            .foregroundStyle(isActive ? Color.accentColor : .secondary)
+                    }
+                    Text(label)
+                        .font(.subheadline)
+                        .fontWeight(isActive ? .bold : .regular)
+                        .foregroundStyle(isActive ? Color.accentColor : .secondary)
+                }
+                .padding(.horizontal, 6)
                 Capsule()
                     .fill(isActive ? Color.accentColor : Color.clear)
                     .frame(height: 3)
@@ -170,6 +219,30 @@ private struct FilterOrderSheet: View {
                 }
             }
         }
+    }
+}
+
+// ── Discover Stat Chip ────────────────────────────────────────────────────────
+private struct DiscoverStatChip: View {
+    let number: String
+    let label: String
+
+    var body: some View {
+        VStack(spacing: 2) {
+            Text(number)
+                .font(.system(size: 17, weight: .bold))
+                .foregroundStyle(Color.accentColor)
+            Text(label)
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 8)
+        .background(Color(.secondarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .overlay(RoundedRectangle(cornerRadius: 10)
+            .stroke(Color(.separator), lineWidth: 0.5))
     }
 }
 

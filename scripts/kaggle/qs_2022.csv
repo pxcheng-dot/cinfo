@@ -1,0 +1,1000 @@
+year,rank,university,country
+2022,1,   Massachusetts Institute of Technology - MIT   , USA    
+2022,2,   University of Oxford   , UK    
+2022,3,   University of Cambridge   , UK    
+2022,3,   Stanford University   , USA    
+2022,5,   Harvard University   , USA    
+2022,6,   California Institute of Technology - Caltech   , USA    
+2022,7,   Imperial College London   , UK    
+2022,8,   Swiss Federal Institute of Technology Zurich - ETHZ   , Switzerland    
+2022,8,   University College London   , UK    
+2022,10,   University of Chicago   , USA    
+2022,11,   National University of Singapore   , Singapore    
+2022,12,   Nanyang Technological University   , Singapore    
+2022,13,   University of Pennsylvania   , USA    
+2022,14,   Swiss Federal Institute of Technology Lausanne - EPFL   , Switzerland    
+2022,14,   Yale University   , USA    
+2022,16,   University of Edinburgh   , UK    
+2022,17,   Tsinghua University   , China    
+2022,18,   Peking University   , China    
+2022,19,   Columbia University   , USA    
+2022,20,   Princeton University   , USA    
+2022,21,   Cornell University   , USA    
+2022,22,   University of Hong Kong   , Hong Kong    
+2022,23,   The University of Tokyo   , Japan    
+2022,23,   University of Michigan - Ann Arbor   , USA    
+2022,25,   Johns Hopkins University   , USA    
+2022,26,   University of Toronto   , Canada    
+2022,27,   Australian National University   , Australia    
+2022,27,   McGill University   , Canada    
+2022,27,   University of Manchester   , UK    
+2022,30,   Northwestern University   , USA    
+2022,31,   Fudan University   , China    
+2022,32,   University of California - Berkeley   , USA    
+2022,33,   Kyoto University   , Japan    
+2022,34,   Hong Kong University of Science and Technology   , Hong Kong    
+2022,35,   King's College London   , UK    
+2022,36,   Seoul National University   , South Korea    
+2022,37,   University of Melbourne   , Australia    
+2022,38,   University of Sydney   , Australia    
+2022,39,   Chinese University of Hong Kong   , Hong Kong    
+2022,40,   University of California - Los Angeles   , USA    
+2022,41,   Korea Advanced Institute of Science and Technology   , South Korea    
+2022,42,   New York University   , USA    
+2022,43,   University of New South Wales   , Australia    
+2022,44,   PSL Research University Paris   , France    
+2022,45,   Zhejiang University   , China    
+2022,46,   University of British Columbia   , Canada    
+2022,47,   University of Queensland   , Australia    
+2022,48,   University of California - San Diego   , USA    
+2022,49,   London School of Economics   , UK    
+2022,49,   Institut Polytechnique de Paris   , France    
+2022,50,   Shanghai Jiao Tong University   , China    
+2022,50,   Technical University of M�nchen   , Germany    
+2022,52,   Duke University   , USA    
+2022,53,   City University of Hong Kong   , Hong Kong    
+2022,53,   Carnegie Mellon University   , USA    
+2022,55,   University of Amsterdam   , Netherlands    
+2022,56,   Tokyo Institute of Technology   , Japan    
+2022,57,   Delft University of Technology   , Netherlands    
+2022,58,   Monash University   , Australia    
+2022,60,   Brown University   , USA    
+2022,61,   University of Warwick   , UK    
+2022,62,   University of Bristol   , UK    
+2022,63,   University of Heidelberg   , Germany    
+2022,64,   University of M�nchen   , Germany    
+2022,65,   University of Malaya   , Malaysia    
+2022,66,   Hong Kong Polytechnic University   , Hong Kong    
+2022,67,   University of Texas at Austin   , USA    
+2022,68,   National Taiwan University   , Taiwan    
+2022,69,   University of Buenos Aires   , Argentina    
+2022,70,   Catholic University of Leuven   , Belgium    
+2022,70,   University of Zurich   , Switzerland    
+2022,72,   Sorbonne University   , France    
+2022,73,   University of Glasgow   , UK    
+2022,74,   Korea University   , South Korea    
+2022,75,   Osaka University   , Japan    
+2022,75,   University of Wisconsin-Madison   , USA    
+2022,77,   University of Southampton   , UK    
+2022,78,   Moscow State University   , Russia    
+2022,79,   University of Copenhagen   , Denmark    
+2022,79,   Yonsei University   , South Korea    
+2022,81,   Pohang University of Science and Technology   , South Korea    
+2022,82,   Tohoku University   , Japan    
+2022,82,   University of Durham   , UK    
+2022,82,   University of Illinois at Urbana-Champaign   , USA    
+2022,85,   University of Auckland   , New Zealand    
+2022,85,   University of Washington   , USA    
+2022,86,   Universit� Paris-Saclay   , France    
+2022,87,   Lund University   , Sweden    
+2022,88,   Georgia Institute of Technology   , USA    
+2022,89,   KTH - Royal Institute of Technology   , Sweden    
+2022,90,   University of Birmingham   , UK    
+2022,91,   University of St. Andrews   , UK    
+2022,92,   University of Leeds   , UK    
+2022,93,   University of Western Australia   , Australia    
+2022,94,   Rice University   , USA    
+2022,95,   University of Sheffield   , UK    
+2022,96,   Pennsylvania State University   , USA    
+2022,97,   Sungkyunkwan University   , South Korea    
+2022,98,   University of Science and Technology of China   , China    
+2022,99,   Technical University of Denmark   , Denmark    
+2022,100,   University of North Carolina at Chapel Hill   , USA    
+2022,101,   Trinity College Dublin   , Ireland    
+2022,102,   University of Oslo   , Norway    
+2022,103,   University of Nottingham   , UK    
+2022,104,   University of Helsinki   , Finland    
+2022,105,   University of Geneva   , Switzerland    
+2022,105,   National Autonomous University of Mexico   , Mexico    
+2022,107,   Washington University in St. Louis   , USA    
+2022,108,   University of Adelaide   , Australia    
+2022,109,   King Abdulaziz University   , Saudi Arabia    
+2022,110,   Utrecht University   , Netherlands    
+2022,111,   University of Montreal   , Canada    
+2022,112,   University of Leiden   , Netherlands    
+2022,112,   University of Southern California   , USA    
+2022,112,   Boston University   , USA    
+2022,112,   Aalto University   , Finland    
+2022,116,   Purdue University   , USA    
+2022,117,   Queen Mary - University of London   , UK    
+2022,118,   Nagoya University   , Japan    
+2022,119,   University of Bern   , Switzerland    
+2022,120,   Ohio State University   , USA    
+2022,121,   University of Sao Paulo   , Brazil    
+2022,121,   Chalmers University of Technology   , Sweden    
+2022,123,   Wageningen University & Research Center   , Netherlands    
+2022,124,   Uppsala University   , Sweden    
+2022,125,   Eindhoven University of Technology   , Netherlands    
+2022,126,   University of Alberta   , Canada    
+2022,127,   Free University of Berlin   , Germany    
+2022,128,   Humboldt University of Berlin   , Germany    
+2022,128,   University of Groningen   , Netherlands    
+2022,130,   Ecole Normale Sup�rieure de Lyon   , France    
+2022,131,   Nanjing University   , China    
+2022,132,   Lancaster University   , UK    
+2022,133,   University of Technology Sydney   , Australia    
+2022,134,   Newcastle University - Newcastle-upon-Tyne   , UK    
+2022,135,   Pontifical Catholic University of Chile   , Chile    
+2022,136,   Karlsruhe Institute of Technology   , Germany    
+2022,137,   Kyushu University   , Japan    
+2022,138,   University of Basel   , Switzerland    
+2022,138,   University of California - Davis   , USA    
+2022,140,   McMaster University   , Canada    
+2022,141,   University of Gent   , Belgium    
+2022,142,   Polytechnic University of Milan   , Italy    
+2022,143,   University of Putra Malaysia   , Malaysia    
+2022,144,   National University of Malaysia   , Malaysia    
+2022,145,   Hokkaido University   , Japan    
+2022,146,   University of California - Santa Barbara   , USA    
+2022,147,   University of Science - Malaysia   , Malaysia    
+2022,148,   Stockholm University   , Sweden    
+2022,149,   University of Waterloo   , Canada    
+2022,149,   University of Exeter   , UK    
+2022,151,   University of Vienna   , Austria    
+2022,151,   Cardiff University   , UK    
+2022,151,   University of York   , UK    
+2022,154,   University of Rochester   , USA    
+2022,155,   Aarhus University   , Denmark    
+2022,156,   Hanyang University   , South Korea    
+2022,157,   Michigan State University   , USA    
+2022,158,   University of Maryland at College Park   , USA    
+2022,159,   Technical University of Berlin   , Germany    
+2022,160,   Emory University   , USA    
+2022,161,   Monterrey Institute of Technology and Higher Education    , Mexico    
+2022,161,   Case Western Reserve University   , USA    
+2022,163,   University of Pittsburgh   , USA    
+2022,163,   King Fahd University of Petroleum & Minerals   , Saudi Arabia    
+2022,165,   RWTH Aachen University   , Germany    
+2022,166,   University of Bologna   , Italy    
+2022,166,   University of Bath   , UK    
+2022,168,   University of Barcelona   , Spain    
+2022,168,   Texas A&M University   , USA    
+2022,170,   Western University   , Canada    
+2022,171,   University of Rome - La Sapienza   , Italy    
+2022,172,   University of Freiburg   , Germany    
+2022,173,   University College Dublin   , Ireland    
+2022,173,   University of Florida   , USA    
+2022,175,   Al-Farabi Kazakh National University   , Kazakhstan    
+2022,176,   University of Lausanne   , Switzerland    
+2022,177,   University of T�bingen   , Germany    
+2022,177,   Indian Institute of Technology - Bombay   , India    
+2022,179,   Erasmus University Rotterdam   , Netherlands    
+2022,180,   Vienna University of Technology   , Austria    
+2022,180,   G�teborg University   , Sweden    
+2022,180,   National Tsinghua University   , Taiwan    
+2022,183,   University of Chile   , Chile    
+2022,183,   Khalifa University   , United Arab Emirates    
+2022,185,   Indian Institute of Technology - Delhi   , India    
+2022,186,   Indian Institute of Science   , India    
+2022,186,   University of Minnesota - Twin Cities   , USA    
+2022,188,   Catholic University of Louvain   , Belgium    
+2022,189,   University of Twente   , Netherlands    
+2022,189,   University of Liverpool   , UK    
+2022,191,   University of Technology - Malaysia   , Malaysia    
+2022,191,   Dartmouth College   , USA    
+2022,193,   University of Wollongong   , Australia    
+2022,194,   Curtin University   , Australia    
+2022,194,   Technical University of Dresden   , Germany    
+2022,194,   University of Otago   , New Zealand    
+2022,197,   University of Newcastle - Australia   , Australia    
+2022,198,   Hebrew University of Jerusalem   , Israel    
+2022,199,   University of Bergen   , Norway    
+2022,200,   Macquarie University   , Australia    
+2022,201,   Keio University   , Japan    
+2022,202,   University of Reading   , UK    
+2022,203,   Waseda University   , Japan    
+2022,204,   University of G�ttingen   , Germany    
+2022,205,   University of Aberdeen   , UK    
+2022,206,   RMIT University   , Australia    
+2022,207,   Universit� Libre de Bruxelles   , Belgium    
+2022,207,   Autonomous University of Madrid   , Spain    
+2022,209,   Autonomous University of Barcelona   , Spain    
+2022,209,   VU University Amsterdam   , Netherlands    
+2022,211,   Tongji University   , China    
+2022,212,   Ulsan National Institute of Science and Technology   , South Korea    
+2022,213,   Queensland University of Technology   , Australia    
+2022,214,   University of Hamburg   , Germany    
+2022,215,   Chulalongkorn University   , Thailand    
+2022,216,   Queen's University Belfast   , UK    
+2022,216,   Arizona State University   , USA    
+2022,218,   Vanderbilt University   , USA    
+2022,219,   State University of Campinas   , Brazil    
+2022,220,   Radboud University of Nijmegen   , Netherlands    
+2022,221,   Vrije Universiteit Brussel   , Belgium    
+2022,222,   University of Notre Dame   , USA    
+2022,223,   Complutense University of Madrid   , Spain    
+2022,224,   University of Qatar   , Qatar    
+2022,225,   Wuhan University   , China    
+2022,226,   University of Bonn   , Germany    
+2022,226,   University of Sussex   , UK    
+2022,226,   University of Cape Town   , South Africa    
+2022,226,   University of Virginia   , USA    
+2022,230,   University of Ottawa   , Canada    
+2022,231,   Loughborough University   , UK    
+2022,232,   University of California - Irvine   , USA    
+2022,233,   University of Antwerp   , Belgium    
+2022,233,   University of Maastricht   , Netherlands    
+2022,235,   University of Calgary   , Canada    
+2022,236,   Harbin Institute of Technology   , China    
+2022,236,   University of Los Andes   , Colombia    
+2022,236,   Victoria University of Wellington   , New Zealand    
+2022,236,   University of Leicester   , UK    
+2022,240,   Queen's University   , Canada    
+2022,240,   University of Lugano   , Switzerland    
+2022,242,   University of Padua   , Italy    
+2022,242,   American University of Beirut   , Lebanon    
+2022,242,   St. Petersburg State University   , Russia    
+2022,245,   Ecole des Ponts ParisTech   , France    
+2022,246,   Novosibirsk State University   , Russia    
+2022,246,   University of Massachusetts - Amherst   , USA    
+2022,248,   University Pompeu Fabra   , Spain    
+2022,248,   Georgetown University   , USA    
+2022,250,   University of Brunei Darussalam   , Brunei    
+2022,251,   University of Colorado at Boulder   , USA    
+2022,252,   National Cheng Kung University   , Taiwan    
+2022,252,   Yeshiva University   , USA    
+2022,254,   Gadjah Mada University   , Indonesia    
+2022,255,   Tel Aviv University   , Israel    
+2022,255,   Indian Institute of Technology - Madras   , India    
+2022,255,   Mahidol University   , Thailand    
+2022,258,   National University of Colombia   , Colombia    
+2022,258,   National University of Ireland - Galway   , Ireland    
+2022,258,   University of Canterbury   , New Zealand    
+2022,260,   Sun Yat-Sen University   , China    
+2022,261,   Sciences Po - Paris   , France    
+2022,261,   Paris Cit� University   , France    
+2022,264,   Kyung Hee University   , South Korea    
+2022,264,   Rutgers - The State University of New Jersey   , USA    
+2022,266,   Charles University Prague   , Czech Republic    
+2022,266,   University of Navarra   , Spain    
+2022,268,   University of Arizona   , USA    
+2022,268,   National Yang Ming Chiao Tung University   , Taiwan    
+2022,269,   Technical University of Darmstadt   , Germany    
+2022,270,   Beijing Normal University   , China    
+2022,270,   Heriot-Watt University   , UK    
+2022,272,   Dalhousie University   , Canada    
+2022,272,   Tomsk State University   , Russia    
+2022,272,   University of Surrey   , UK    
+2022,275,   Tufts University   , USA    
+2022,275,   Southern University of Science and Technology   , China    
+2022,277,   Graz University of Technology   , Austria    
+2022,277,   Indian Institute of Technology - Kanpur   , India    
+2022,277,   King Saud University   , Saudi Arabia    
+2022,280,   Indian Institute of Technology - Kharagpur   , India    
+2022,281,   University of Innsbruck   , Austria    
+2022,281,   Bauman Moscow State Technical University   , Russia    
+2022,283,   Deakin University   , Australia    
+2022,284,   Massey University   , New Zealand    
+2022,285,   Tsukuba University   , Japan    
+2022,285,   University of Illinois at Chicago   , USA    
+2022,287,   Hong Kong Baptist University   , Hong Kong    
+2022,288,   United Arab Emirates University   , United Arab Emirates    
+2022,290,   Griffith University   , Australia    
+2022,290,   Xi'an Jiaotong University   , China    
+2022,290,   University Panth�on-Sorbonne (Paris I)   , France    
+2022,290,   University of Indonesia   , Indonesia    
+2022,290,   Moscow Institute of Physics and Technology   , Russia    
+2022,295,   Belarusian State University   , Belarus    
+2022,295,   University of Turku   , Finland    
+2022,295,   University of Porto   , Portugal    
+2022,298,   Simon Fraser University   , Canada    
+2022,298,   University College Cork   , Ireland    
+2022,300,   University of Tartu   , Estonia    
+2022,300,   North Carolina State University   , USA    
+2022,302,   University of Strathclyde   , UK    
+2022,303,   University of Tasmania   , Australia    
+2022,303,   Institute of Technology Bandung   , Indonesia    
+2022,305,   Higher School of Economics   , Russia    
+2022,305,   Gwangju Institute of Science and Technology   , South Korea    
+2022,307,   University of East Anglia   , UK    
+2022,308,   University of Warsaw   , Poland    
+2022,309,   University of Southern Denmark   , Denmark    
+2022,309,   Jagiellonian University   , Poland    
+2022,311,   University of Cologne   , Germany    
+2022,311,   University of Miami   , USA    
+2022,311,   Indiana University at Bloomington   , USA    
+2022,314,   National Taiwan University of Science and Technology   , Taiwan    
+2022,314,   Grenoble Alpes University   , France    
+2022,316,   University of Milan   , Italy    
+2022,317,   Peoples' Friendship University of Russia   , Russia    
+2022,317,   IE University   , Spain    
+2022,319,   Polytechnic University of Catalonia   , Spain    
+2022,319,   National Research Nuclear University   , Russia    
+2022,321,   Swinburne University of Technology   , Australia    
+2022,322,   University of Erlangen-N�rnberg   , Germany    
+2022,322,   University of Macau   , Macao    
+2022,322,   University of Dundee   , UK    
+2022,322,   Pontifical Catholic University Argentina   , Argentina    
+2022,326,   University of South Australia   , Australia    
+2022,326,   Aalborg University   , Denmark    
+2022,328,   L.N. Gumilyov Eurasian National University   , Kazakhstan    
+2022,329,   Linkoping University   , Sweden    
+2022,330,   Technion - Israel Institute of Technology   , Israel    
+2022,330,   City University London   , UK    
+2022,332,   Birkbeck - University of London   , UK    
+2022,332,   Taylor's University   , Malaysia    
+2022,334,   University of Victoria   , Canada    
+2022,334,   Huazhong University of Science and Technology   , China    
+2022,334,   Tianjin University   , China    
+2022,334,   Polytechnic University of Turin   , Italy    
+2022,334,   National Taiwan Normal University   , Taiwan    
+2022,334,   Royal Holloway - University of London   , UK    
+2022,340,   University of Frankfurt am Main   , Germany    
+2022,340,   University of Hawaii at Manoa   , USA    
+2022,342,   Northeastern University   , USA    
+2022,343,   Hiroshima University   , Japan    
+2022,344,   University of Jena   , Germany    
+2022,344,   University of Technology Brunei   , Brunei    
+2022,346,   Virginia Polytechnic Institute and State University   , USA    
+2022,347,   University of Stuttgart   , Germany    
+2022,347,   University of California - Santa Cruz   , USA    
+2022,347,   Kazan Federal University    , Russia    
+2022,347,   UCSI University   , Malaysia    
+2022,351,   University Carlos III de Madrid   , Spain    
+2022,351,   Brunel University   , UK    
+2022,351,   Ural Federal University   , Russia    
+2022,354,   University of Linz   , Austria    
+2022,355,   George Washington University   , USA    
+2022,356,   Tilburg University   , Netherlands    
+2022,356,   University of Lisbon   , Portugal    
+2022,358,   Nankai University   , China    
+2022,358,   National University of Sciences and Technology - Islamabad   , Pakistan    
+2022,358,   University of Utah   , USA    
+2022,358,   University of Jyvaskyla   , Finland    
+2022,362,   La Trobe University   , Australia    
+2022,362,   Ewha Womans University   , South Korea    
+2022,362,   Moscow State Institute of International Relations   , Russia    
+2022,365,   University of Ulm   , Germany    
+2022,365,   Umea University   , Sweden    
+2022,365,   ITMO University   , Russia    
+2022,368,   Sultan Qaboos University   , Oman    
+2022,369,   Federal University of Rio de Janeiro   , Brazil    
+2022,369,   Norwegian University of Science and Technology   , Norway    
+2022,371,   Polytechnic University of Valencia   , Spain    
+2022,372,   Lincoln University   , New Zealand    
+2022,373,   Beijing Institute of Technology   , China    
+2022,373,   University of Waikato   , New Zealand    
+2022,373,   University of Connecticut   , USA    
+2022,373,   University of Chemistry and Technology - Prague   , Czech Republic    
+2022,377,   University of Oulu   , Finland    
+2022,378,   University of W�rzburg   , Germany    
+2022,378,   Quaid-i-Azam University   , Pakistan    
+2022,378,   State University of New York at Stony Brook   , USA    
+2022,381,   Sharif University of Technology   , Iran    
+2022,381,   Tokyo Medical and Dental University   , Japan    
+2022,383,   American University of Sharjah   , United Arab Emirates    
+2022,383,   Beihang University   , China    
+2022,383,   University of Kent at Canterbury   , UK    
+2022,386,   Kobe University   , Japan    
+2022,387,   University of Kansas   , USA    
+2022,388,   University of Pisa   , Italy    
+2022,388,   State University of New York at Buffalo   , USA    
+2022,390,   Vita-Salute San Raffaele University   , Italy    
+2022,391,   Universidad de Palermo   , Argentina    
+2022,391,   School of Oriental and African Studies - University of London   , UK    
+2022,393,   University of Bochum   , Germany    
+2022,393,   Peter the Great St Petersburg Polytechnic University   , Russia    
+2022,395,   Indian Institute of Technology - Guwahati   , India    
+2022,395,   Pontifical Catholic University of Per�   , Peru    
+2022,395,   Tomsk Polytechnic University   , Russia    
+2022,398,   Pakistan Institute of Engineering and Applied Sciences   , Pakistan    
+2022,399,   University of the Philippines Manila   , Philippines    
+2022,400,   Austral University   , Argentina    
+2022,400,   Indian Institute of Technology - Roorkee   , India    
+2022,400,   Vilnius University   , Lithuania    
+2022,403,   Shandong University   , China    
+2022,403,   Czech Technical University of Prague   , Czech Republic    
+2022,403,   University of California - Riverside   , USA    
+2022,407,   Flinders University   , Australia    
+2022,407,   South China University of Technology   , China    
+2022,407,   Xiamen University   , China    
+2022,407,   Taipei Medical University   , Taiwan    
+2022,411,   University of M�nster   , Germany    
+2022,412,   Pontificia Universidad Javeriana   , Colombia    
+2022,412,   National Sun Yat-Sen University   , Taiwan    
+2022,414,   Laval University   , Canada    
+2022,414,   University of Science and Technology Beijing   , China    
+2022,414,   Lappeenranta University of Technology   , Finland    
+2022,414,   University of Tampere   , Finland    
+2022,414,   Chung-Ang University   , South Korea    
+2022,414,   University of Technology - Petronas   , Malaysia    
+2022,414,   University of Colorado at Denver   , USA    
+2022,421,   National Technical University of Athens   , Greece    
+2022,421,   University of Strasbourg   , France    
+2022,423,   University of Mannheim   , Germany    
+2022,424,   James Cook University   , Australia    
+2022,424,   University of Naples Federico II   , Italy    
+2022,424,   University of Witwatersrand   , South Africa    
+2022,427,   University of Mainz   , Germany    
+2022,427,   Washington State University   , USA    
+2022,429,   Oxford Brookes University   , UK    
+2022,429,   Wake Forest University   , USA    
+2022,431,   New University of Lisbon   , Portugal    
+2022,431,   Colorado State University   , USA    
+2022,431,   Rensselaer Polytechnic Institute   , USA    
+2022,434,   Federal University of Sao Paulo   , Brazil    
+2022,434,   University of Johannesburg   , South Africa    
+2022,436,   University of Canberra   , Australia    
+2022,436,   Shanghai University   , China    
+2022,436,   Tulane University   , USA    
+2022,439,   University of Essex   , UK    
+2022,440,   University of Cyprus   , Cyprus    
+2022,440,   University of Trento   , Italy    
+2022,440,   Swansea University   , UK    
+2022,440,   Uit the Arctic University of Norway   , Norway    
+2022,444,   Illinois Institute of Technology   , USA    
+2022,445,   American University in Cairo   , Egypt    
+2022,445,   Hankuk University of Foreign Studies   , South Korea    
+2022,447,   University of Leipzig   , Germany    
+2022,447,   Saarland University   , Germany    
+2022,447,   Umm Al-Qura University   , Saudi Arabia    
+2022,450,   University of Milan - Bicocca   , Italy    
+2022,451,   Bond University   , Australia    
+2022,451,   Sichuan University   , China    
+2022,451,   University of Florence   , Italy    
+2022,451,   Auckland University of Technology   , New Zealand    
+2022,455,   University of Coimbra   , Portugal    
+2022,455,   University of Iowa   , USA    
+2022,455,   Brandeis University   , USA    
+2022,458,   University of Saskatchewan   , Canada    
+2022,459,   University of St.Gallen   , Switzerland    
+2022,459,   Technical University of Madrid   , Spain    
+2022,461,   University of Halle-Wittenberg   , Germany    
+2022,461,   Far Eastern Federal University   , Russia    
+2022,461,   Goldsmiths College - University of London   , UK    
+2022,461,   Colorado School of Mines   , USA    
+2022,465,   University of Belgrano   , Argentina    
+2022,465,   Southeast University   , China    
+2022,465,   Airlangga University   , Indonesia    
+2022,465,   Amirkabir University of Technology   , Iran    
+2022,469,   National Taipei University of Technology   , Taiwan    
+2022,469,   University of Montevideo   , Uruguay    
+2022,471,   Hasselt University   , Belgium    
+2022,471,   Ben-Gurion University of the Negev   , Israel    
+2022,471,   University of Stirling   , UK    
+2022,471,   University ORT Uruguay   , Uruguay    
+2022,475,   Florida State University   , USA    
+2022,476,   University of Missouri - Columbia   , USA    
+2022,477,   Bar-Ilan University   , Israel    
+2022,477,   Chiba University   , Japan    
+2022,477,   University of Texas at Dallas   , USA    
+2022,480,   University of Li�ge   , Belgium    
+2022,480,   Chang Gung University   , Taiwan    
+2022,482,   Catholic University of Korea   , South Korea    
+2022,482,   University of Stellenbosch   , South Africa    
+2022,482,   Auezov South Kazakhstan State University   , Kazakhstan    
+2022,485,   University of Turin   , Italy    
+2022,485,   Aston University   , UK    
+2022,487,   University of Santiago de Chile   , Chile    
+2022,487,   Yokohama City University   , Japan    
+2022,487,   National University of Science and Technology MISiS   , Russia    
+2022,490,   University of Giessen   , Germany    
+2022,490,   Dublin City University   , Ireland    
+2022,492,   Sao Paulo State University   , Brazil    
+2022,492,   University of Granada   , Spain    
+2022,494,   University of Western Sydney   , Australia    
+2022,494,   York University   , Canada    
+2022,494,   University of Kiel   , Germany    
+2022,494,   University of Rome - Tor Vergata   , Italy    
+2022,494,   Dongguk University   , South Korea    
+2022,494,   Sogang University   , South Korea    
+2022,494,   Iowa State University   , USA    
+2022,494,   Boston College   , USA    
+2022,    501-510  ,   University of Klagenfurt   , Austria    
+2022,    501-510  ,   Jilin University   , China    
+2022,    501-510  ,   University of Havana   , Cuba    
+2022,    501-510  ,   University of Konstanz   , Germany    
+2022,    501-510  ,   University of Limerick   , Ireland    
+2022,    501-510  ,   University of Delhi   , India    
+2022,    501-510  ,   Warsaw University of Technology   , Poland    
+2022,    501-510  ,   University of Bordeaux   , France    
+2022,    501-510  ,   Aix-Marseille University   , France    
+2022,    501-510  ,   Satbayev Kazakh National Technical University   , Kazakhstan    
+2022,    511-520  ,   University of Alcal� de Henares   , Spain    
+2022,    511-520  ,   Bogor Agricultural University   , Indonesia    
+2022,    511-520  ,   Balamand University   , Lebanon    
+2022,    511-520  ,   University of Utara Malaysia   , Malaysia    
+2022,    511-520  ,   Singapore Management University   , Singapore    
+2022,    511-520  ,   Koc University   , Turkey    
+2022,    511-520  ,   Wayne State University   , USA    
+2022,    511-520  ,   V.N. Karazin Kharkiv National University   , Ukraine    
+2022,    511-520  ,   Missouri University of Science and Technology   , USA    
+2022,    521-530  ,   Concordia University   , Canada    
+2022,    521-530  ,   Central South University   , China    
+2022,    521-530  ,   China University of Geosciences Wuhan   , China    
+2022,    521-530  ,   University Marta Abreu of Las Villas   , Cuba    
+2022,    521-530  ,   University of Bayreuth   , Germany    
+2022,    521-530  ,   University of Tehran   , Iran    
+2022,    521-530  ,   National Central University   , Taiwan    
+2022,    521-530  ,   University of Eastern Finland   , Finland    
+2022,    521-530  ,   University of Montpellier   , France    
+2022,    521-530  ,   Imam Abdulrahman Bin Faisal University   , Saudi Arabia    
+2022,    531-540  ,   East China Normal University   , China    
+2022,    531-540  ,   University of Costa Rica   , Costa Rica    
+2022,    531-540  ,   University of Zaragoza   , Spain    
+2022,    531-540  ,   Institut National des Sciences Appliqu�es de Lyon   , France    
+2022,    531-540  ,   Hitotsubashi University   , Japan    
+2022,    531-540  ,   Nagasaki University   , Japan    
+2022,    531-540  ,   Ajou University   , South Korea    
+2022,    531-540  ,   Saratov State University   , Russia    
+2022,    531-540  ,   University of Delaware   , USA    
+2022,    531-540  ,   Oregon State University   , USA    
+2022,    531-540  ,   Lehigh University   , USA    
+2022,    531-540  ,   Southern Federal University   , Russia    
+2022,    531-540  ,   Saint Joseph University of Beirut   , Lebanon    
+2022,    541-550  ,   Iran University of Science and Technology Tehran   , Iran    
+2022,    541-550  ,   Niigata University   , Japan    
+2022,    541-550  ,   Kyungpook National University   , South Korea    
+2022,    541-550  ,   Ulsan University   , South Korea    
+2022,    541-550  ,   Sabanci University   , Turkey    
+2022,    541-550  ,   Aberystwyth University   , UK    
+2022,    541-550  ,   University of Georgia   , USA    
+2022,    541-550  ,   University of Tennessee - Knoxville   , USA    
+2022,    541-550  ,   Northwestern Polytechnical University   , China    
+2022,    551-560  ,   Masaryk University   , Czech Republic    
+2022,    551-560  ,   University of Seville   , Spain    
+2022,    551-560  ,   University Paul Sabatier - Toulouse III   , France    
+2022,    551-560  ,   Aristotle University of Thessaloniki   , Greece    
+2022,    551-560  ,   University of Szeged   , Hungary    
+2022,    551-560  ,   Catholic University of the Sacred Heart   , Italy    
+2022,    551-560  ,   Panamerican University   , Mexico    
+2022,    551-560  ,   Middle East Technical University   , Turkey    
+2022,    551-560  ,   Kazakh National Pedagogical University   , Kazakhstan    
+2022,    551-560  ,   Kazakh National Agrarian University   , Kazakhstan    
+2022,    561-570  ,   University of Fribourg   , Switzerland    
+2022,    561-570  ,   Technical University of Braunschweig   , Germany    
+2022,    561-570  ,   Jawaharlal Nehru University   , India    
+2022,    561-570  ,   University of Pavia   , Italy    
+2022,    561-570  ,   Hallym University   , South Korea    
+2022,    561-570  ,   Inha University   , South Korea    
+2022,    561-570  ,   Altai State University   , Russia    
+2022,    561-570  ,   The New School   , USA    
+2022,    571-580  ,   Dalian University of Technology   , China    
+2022,    571-580  ,   East China University of Science and Technology   , China    
+2022,    571-580  ,   Hunan University   , China    
+2022,    571-580  ,   University of Bremen   , Germany    
+2022,    571-580  ,   Cairo University   , Egypt    
+2022,    571-580  ,   University of Valencia   , Spain    
+2022,    571-580  ,   Tbilisi State University   , Georgia    
+2022,    571-580  ,   Osaka City University   , Japan    
+2022,    571-580  ,   Chonbuk National University   , South Korea    
+2022,    571-580  ,   Holy Spirit University of Kaslik   , Lebanon    
+2022,    571-580  ,   University of Minho   , Portugal    
+2022,    571-580  ,   University of Nebraska - Lincoln   , USA    
+2022,    581-590  ,   National University de La Plata   , Argentina    
+2022,    581-590  ,   Murdoch University   , Australia    
+2022,    581-590  ,   University of Guelph   , Canada    
+2022,    581-590  ,   Lingnan University   , Hong Kong    
+2022,    581-590  ,   Okayama University   , Japan    
+2022,    581-590  ,   Lebanese American University   , Lebanon    
+2022,    581-590  ,   University of South Florida   , USA    
+2022,    581-590  ,   Samara University   , Russia    
+2022,    591-600  ,   Sofia University   , Bulgaria    
+2022,    591-600  ,   University of Quebec   , Canada    
+2022,    591-600  ,   University of Electronic Science and Technology of China   , China    
+2022,    591-600  ,   University Externado de Colombia   , Colombia    
+2022,    591-600  ,   University of Regensburg   , Germany    
+2022,    591-600  ,   University of Debrecen    , Hungary    
+2022,    591-600  ,   Savitribai Phule Pune University   , India    
+2022,    591-600  ,   Kumamoto University   , Japan    
+2022,    591-600  ,   University of Ljubljana   , Slovenia    
+2022,    591-600  ,   Bilkent University   , Turkey    
+2022,    591-600  ,   National Chengchi University   , Taiwan    
+2022,    591-600  ,   Indian Institute of Technology - Hyderabad   , India    
+2022,    591-600  ,   Applied Science University Bahrain   , Bahrain    
+2022,    601-650  ,  Universidad Nacional del Centro de la Provincia de Buenos Aire  , Argentina    
+2022,    601-650  ,   American University in Dubai   , United Arab Emirates    
+2022,    601-650  ,   University of Sharjah   , United Arab Emirates    
+2022,    601-650  ,   Central Queensland University   , Australia    
+2022,    601-650  ,   Victoria University - Melbourne   , Australia    
+2022,    601-650  ,   Carleton University   , Canada    
+2022,    601-650  ,   University of Manitoba   , Canada    
+2022,    601-650  ,   University of Concepci�n   , Chile    
+2022,    601-650  ,   China Agricultural University   , China    
+2022,    601-650  ,   Nanjing University of Science and Technology   , China    
+2022,    601-650  ,   Renmin University of China   , China    
+2022,    601-650  ,   Shenzhen University   , China    
+2022,    601-650  ,   Palacky University   , Czech Republic    
+2022,    601-650  ,   University of Hannover   , Germany    
+2022,    601-650  ,   University of Hohenheim   , Germany    
+2022,    601-650  ,   University Pontificia Comillas   , Spain    
+2022,    601-650  ,   Ramon Llull University   , Spain    
+2022,    601-650  ,   Abo Akademi University   , Finland    
+2022,    601-650  ,   University Panth�on-Assas (Paris II)   , France    
+2022,    601-650  ,   University of Genoa   , Italy    
+2022,    601-650  ,   University of Siena   , Italy    
+2022,    601-650  ,   Jordan University   , Jordan    
+2022,    601-650  ,   Gifu University   , Japan    
+2022,    601-650  ,   Kanazawa University   , Japan    
+2022,    601-650  ,   Tokyo University of Agriculture and Technology   , Japan    
+2022,    601-650  ,   Konkuk University   , South Korea    
+2022,    601-650  ,   Pusan National University   , South Korea    
+2022,    601-650  ,   Sejong University   , South Korea    
+2022,    601-650  ,   An�huac University   , Mexico    
+2022,    601-650  ,   Ateneo de Manila University   , Philippines    
+2022,    601-650  ,   University of Aveiro   , Portugal    
+2022,    601-650  ,   Pavol Jozef Safarik University in Kosice   , Slovakia    
+2022,    601-650  ,   Chiang Mai University   , Thailand    
+2022,    601-650  ,   Thammasat University   , Thailand    
+2022,    601-650  ,   Coventry University   , UK    
+2022,    601-650  ,   Kingston University   , UK    
+2022,    601-650  ,   University of Plymouth   , UK    
+2022,    601-650  ,   Bangor University   , UK    
+2022,    601-650  ,   University of Pretoria   , South Africa    
+2022,    601-650  ,   Clark University   , USA    
+2022,    601-650  ,   Smith College   , USA    
+2022,    601-650  ,   University of Cincinnati   , USA    
+2022,    601-650  ,   University of South Carolina   , USA    
+2022,    601-650  ,   Taras Shevchenko National University of Kyiv   , Ukraine    
+2022,    601-650  ,   Soochow University   , China    
+2022,    601-650  ,   Management and Science University   , Malaysia    
+2022,    601-650  ,   Canadian University Dubai   , United Arab Emirates    
+2022,    601-650  ,   Asfendiyarov Kazakh National Medical University   , Kazakhstan    
+2022,    651-700  ,   Zayed University   , United Arab Emirates    
+2022,    651-700  ,   University of Graz   , Austria    
+2022,    651-700  ,   Edith Cowan University   , Australia    
+2022,    651-700  ,   University of Mons-Hainaut   , Belgium    
+2022,    651-700  ,   Pontifical Catholic University of Rio de Janeiro   , Brazil    
+2022,    651-700  ,   Federal University of Minas Gerais   , Brazil    
+2022,    651-700  ,   University of New Brunswick   , Canada    
+2022,    651-700  ,   Chongqing University   , China    
+2022,    651-700  ,   ICESI University   , Colombia    
+2022,    651-700  ,   University of Antioqu�a   , Colombia    
+2022,    651-700  ,   University of Rostock   , Germany    
+2022,    651-700  ,   University of Salamanca   , Spain    
+2022,    651-700  ,   University Claude Bernard - Lyon I   , France    
+2022,    651-700  ,   University of Athens   , Greece    
+2022,    651-700  ,   University of Crete   , Greece    
+2022,    651-700  ,   E�tv�s Lorand University   , Hungary    
+2022,    651-700  ,   University of Pecs   , Hungary    
+2022,    651-700  ,   Jadavpur University   , India    
+2022,    651-700  ,   University of Hyderabad   , India    
+2022,    651-700  ,   Free University of Bozen-Bolzano   , Italy    
+2022,    651-700  ,   University of Trieste   , Italy    
+2022,    651-700  ,   Kagoshima University   , Japan    
+2022,    651-700  ,   Tokushima University   , Japan    
+2022,    651-700  ,   International Islamic University Malaysia   , Malaysia    
+2022,    651-700  ,   University of Technology - Mara   , Malaysia    
+2022,    651-700  ,   University Peruana Cayetano Heredia   , Peru    
+2022,    651-700  ,   Lahore University of Management Sciences   , Pakistan    
+2022,    651-700  ,   I.M. Sechenov First Moscow State Medical University   , Russia    
+2022,    651-700  ,   Comenius University in Bratislava   , Slovakia    
+2022,    651-700  ,   National Chung Hsing University - Taipei   , Taiwan    
+2022,    651-700  ,   National Technical University (Kharkiv Polytechnic Institute)   , Ukraine    
+2022,    651-700  ,   University of Hull   , UK    
+2022,    651-700  ,   University of Portsmouth   , UK    
+2022,    651-700  ,   University of Ulster   , UK    
+2022,    651-700  ,   American University   , USA    
+2022,    651-700  ,   Howard University   , USA    
+2022,    651-700  ,   University of Kentucky   , USA    
+2022,    651-700  ,   University of Massachusetts at Boston   , USA    
+2022,    651-700  ,   Michigan Technological University   , USA    
+2022,    651-700  ,   University of New Mexico   , USA    
+2022,    651-700  ,   Syracuse University   , USA    
+2022,    651-700  ,   University of Oklahoma   , USA    
+2022,    651-700  ,   University of Oregon   , USA    
+2022,    651-700  ,   Drexel University   , USA    
+2022,    651-700  ,   University of Vermont   , USA    
+2022,    651-700  ,   College of William and Mary   , USA    
+2022,    651-700  ,   King Khalid University   , Saudi Arabia    
+2022,    651-700  ,   Lobachevsky University   , Russia    
+2022,    651-700  ,   Macau University of Science and Technology   , Macao    
+2022,    651-700  ,   Pontifical Bolivarian University   , Colombia    
+2022,    651-700  ,   Sunway University   , Malaysia    
+2022,    651-700  ,   Immanuel Kant Baltic Federal University   , Russia    
+2022,    701-750  ,   Buenos Aires Institute of Technology   , Argentina    
+2022,    701-750  ,   University of San Andres   , Argentina    
+2022,    701-750  ,   Abu Dhabi University   , United Arab Emirates    
+2022,    701-750  ,   Ajman University of Science and Technology   , United Arab Emirates    
+2022,    701-750  ,   Charles Darwin University   , Australia    
+2022,    701-750  ,   University of Southern Queensland   , Australia    
+2022,    701-750  ,   University of Windsor   , Canada    
+2022,    701-750  ,   Beijing University of Technology   , China    
+2022,    701-750  ,   University of La Sabana   , Colombia    
+2022,    701-750  ,   Brno University of Technology   , Czech Republic    
+2022,    701-750  ,   University of Marburg   , Germany    
+2022,    701-750  ,   University of Potsdam   , Germany    
+2022,    701-750  ,   University of Santiago de Compostela   , Spain    
+2022,    701-750  ,   University of the Basque Country   , Spain    
+2022,    701-750  ,   University of Rovira i Virgili   , Spain    
+2022,    701-750  ,   University of Haifa   , Israel    
+2022,    701-750  ,   Polytechnic University of Bari   , Italy    
+2022,    701-750  ,   University of Modena   , Italy    
+2022,    701-750  ,   Gunma University   , Japan    
+2022,    701-750  ,   Osaka Prefecture University   , Japan    
+2022,    701-750  ,   Tokyo Metropolitan University   , Japan    
+2022,    701-750  ,   Lebanese University Beirut   , Lebanon    
+2022,    701-750  ,   Plekhanov Russian University of Economics   , Russia    
+2022,    701-750  ,   St. Petersburg State Electrotechnical University   , Russia    
+2022,    701-750  ,   Ufa State Aviation Technical University   , Russia    
+2022,    701-750  ,   Jouf University   , Saudi Arabia    
+2022,    701-750  ,   University of Centre - Sousse   , Tunisia    
+2022,    701-750  ,   Bogazici University   , Turkey    
+2022,    701-750  ,   Istanbul Technical University   , Turkey    
+2022,    701-750  ,   National Technical University of Ukraine   , Ukraine    
+2022,    701-750  ,   Sumy State University   , Ukraine    
+2022,    701-750  ,   Middlesex University   , UK    
+2022,    701-750  ,   University of Bradford   , UK    
+2022,    701-750  ,   University of Huddersfield   , UK    
+2022,    701-750  ,   University of Northumbria at Newcastle   , UK    
+2022,    701-750  ,   University of Westminster   , UK    
+2022,    701-750  ,   University Central de Venezuela   , Venezuela    
+2022,    701-750  ,   New Jersey Institute of Technology   , USA    
+2022,    701-750  ,   Stevens Institute of Technology   , USA    
+2022,    701-750  ,   City University of New York   , USA    
+2022,    701-750  ,   University of Houston   , USA    
+2022,    701-750  ,   Virginia Commonwealth University   , USA    
+2022,    701-750  ,   Ibero-American University   , Mexico    
+2022,    701-750  ,   University of C�te d'Azur   , France    
+2022,    701-750  ,   Notre Dame University - Louaize   , Lebanon    
+2022,    701-750  ,   Indian Institute of Technology - Bhubaneswar   , India    
+2022,    701-750  ,   O.P. Jindal Global University   , India    
+2022,    701-750  ,   Al Ain University   , United Arab Emirates    
+2022,    701-750  ,   Prince Mohammad Bin Fahd University   , Saudi Arabia    
+2022,    751-800  ,   University Torcuato di Tella   , Argentina    
+2022,    751-800  ,   Southern Cross University   , Australia    
+2022,    751-800  ,   Federal University of Rio Grande do Sul   , Brazil    
+2022,    751-800  ,   Memorial University of Newfoundland   , Canada    
+2022,    751-800  ,   University of Sherbrooke   , Canada    
+2022,    751-800  ,   University Adolfo Ib��ez   , Chile    
+2022,    751-800  ,   Pontifical Catholic University of Valparaiso   , Chile    
+2022,    751-800  ,   Jinan University - Guangdong   , China    
+2022,    751-800  ,   Lanzhou University   , China    
+2022,    751-800  ,   University of Rosario   , Colombia    
+2022,    751-800  ,   University of D�sseldorf   , Germany    
+2022,    751-800  ,   University San Francisco de Quito   , Ecuador    
+2022,    751-800  ,   University of Zagreb   , Croatia    
+2022,    751-800  ,   National University of Ireland - Maynooth   , Ireland    
+2022,    751-800  ,   Jamia Millia Islamia University   , India    
+2022,    751-800  ,   Manipal University   , India    
+2022,    751-800  ,   Shiraz University   , Iran    
+2022,    751-800  ,   University of Brescia   , Italy    
+2022,    751-800  ,   University of Perugia   , Italy    
+2022,    751-800  ,   Ritsumeikan University   , Japan    
+2022,    751-800  ,   Chonnam National University   , South Korea    
+2022,    751-800  ,   Chungnam National University   , South Korea    
+2022,    751-800  ,   Dankook University   , South Korea    
+2022,    751-800  ,   Karaganda State Technical University   , Kazakhstan    
+2022,    751-800  ,   Vilnius Gediminas Technical University   , Lithuania    
+2022,    751-800  ,   Riga Technical University   , Latvia    
+2022,    751-800  ,   National Polytechnic Institute    , Mexico    
+2022,    751-800  ,   M�xico Autonomous Institute of Technology   , Mexico    
+2022,    751-800  ,   University of Tenaga Nasional   , Malaysia    
+2022,    751-800  ,   Bournemouth University   , UK    
+2022,    751-800  ,   Keele University   , UK    
+2022,    751-800  ,   University of Greenwich   , UK    
+2022,    751-800  ,   Northwest University   , China    
+2022,    751-800  ,   University of Denver   , USA    
+2022,    751-800  ,   University of Central Florida   , USA    
+2022,    751-800  ,   Georgia State University   , USA    
+2022,    751-800  ,   University of Maryland Baltimore County   , USA    
+2022,    751-800  ,   Worcester Polytechnic Institute   , USA    
+2022,    751-800  ,   Clarkson University   , USA    
+2022,    751-800  ,   State University of New York at Albany   , USA    
+2022,    751-800  ,   Temple University   , USA    
+2022,    751-800  ,   Tallinn University of Technology   , Estonia    
+2022,    751-800  ,   University of the Republic   , Uruguay    
+2022,    751-800  ,   Belarusian National Technical University   , Belarus    
+2022,    751-800  ,   Sepuluh Nopember Institute of Technology   , Indonesia    
+2022,    751-800  ,   American University of the Middle East   , Kuwait    
+2022,    751-800  ,   Princess Nourah bint Abdulrahman University   , Saudi Arabia    
+2022,    801-1000  ,  Ca' Foscari University of Venice  , Italy    
+2022,    801-1000  ,  De Montfort University  , UK    
+2022,    801-1000  ,  Financial University of Under the Government the Russian Federation  , Russia    
+2022,    801-1000  ,  Kazan National Research Technological University  , Russia    
+2022,    801-1000  ,  Perm State National Research University  , Russia    
+2022,    801-1000  ,  Qassim University  , Saudi Arabia    
+2022,    801-1000  ,  Queen Margaret University  , UK    
+2022,    801-1000  ,  Russian Presidential Academy National Economy and Public Administration  , Russia    
+2022,    801-1000  ,  Siksha O Anusandhan  , India    
+2022,    801-1000  ,  Sz�chenyi Istv�n University  , Hungary    
+2022,    801-1000  ,  Szent Istvan University  , Hungary    
+2022,    801-1000  ,  Autonomous University of Hidalgo State  , Mexico    
+2022,    801-1000  ,  University �ilina  , Slovakia    
+2022,    801-1000  ,  Viet Nam National University ho Chi Minh City  , Viet Nam    
+2022,    801-1000  ,   National University de C�rdoba   , Argentina    
+2022,    801-1000  ,   National University de Rosario   , Argentina    
+2022,    801-1000  ,   National University de San Luis   , Argentina    
+2022,    801-1000  ,   National Technological University   , Argentina    
+2022,    801-1000  ,   Yerevan State University   , Armenia    
+2022,    801-1000  ,   University of Salzburg   , Austria    
+2022,    801-1000  ,   Australian Catholic University   , Australia    
+2022,    801-1000  ,   Charles Sturt University   , Australia    
+2022,    801-1000  ,   University of New England   , Australia    
+2022,    801-1000  ,   Bangladesh University of Engineering and Technology (BUET)   , Bangladesh    
+2022,    801-1000  ,   University of Dhaka   , Bangladesh    
+2022,    801-1000  ,   University of Bahrain   , Bahrain    
+2022,    801-1000  ,   Pontif�cia Universidade Cat�lica de S�o Paulo   , Brazil    
+2022,    801-1000  ,   Federal University of Pernambuco   , Brazil    
+2022,    801-1000  ,   Federal University of Santa Catarina   , Brazil    
+2022,    801-1000  ,   Federal University of S�o Carlos   , Brazil    
+2022,    801-1000  ,   Federal University of Paran�   , Brazil    
+2022,    801-1000  ,   University of Bras�lia   , Brazil    
+2022,    801-1000  ,   Ryerson University   , Canada    
+2022,    801-1000  ,   University Diego Portales   , Chile    
+2022,    801-1000  ,   Federico Santa Mar�a Technical University   , Chile    
+2022,    801-1000  ,   University of the Andes - Chile   , Chile    
+2022,    801-1000  ,   Beijing Foreign Studies University   , China    
+2022,    801-1000  ,   Beijing University of Chinese Medicine and Pharmacology   , China    
+2022,    801-1000  ,   Beijing University of Posts and Telecommunications   , China    
+2022,    801-1000  ,   Harbin Engineering University   , China    
+2022,    801-1000  ,   Nanjing University of Aeronautics and Astronautics   , China    
+2022,    801-1000  ,   Wuhan University of Technology   , China    
+2022,    801-1000  ,   EAFIT University   , Colombia    
+2022,    801-1000  ,   University of Valle del Cauca   , Colombia    
+2022,    801-1000  ,   Costa Rica Institute of Technology   , Costa Rica    
+2022,    801-1000  ,   Mendel University of Agriculture and Forestry   , Czech Republic    
+2022,    801-1000  ,   Technical University of Liberec   , Czech Republic    
+2022,    801-1000  ,   University of Education Hradec Kralove   , Czech Republic    
+2022,    801-1000  ,   University of Duisburg-Essen   , Germany    
+2022,    801-1000  ,   University of Bielefeld   , Germany    
+2022,    801-1000  ,   Ain Shams University   , Egypt    
+2022,    801-1000  ,   University of Alicante   , Spain    
+2022,    801-1000  ,   University of La Coru�a   , Spain    
+2022,    801-1000  ,   University of Murcia   , Spain    
+2022,    801-1000  ,   University of Oviedo   , Spain    
+2022,    801-1000  ,   University of Rennes I   , France    
+2022,    801-1000  ,   University of Nantes   , France    
+2022,    801-1000  ,   Toulouse 1 University Capitole   , France    
+2022,    801-1000  ,   University of Patras   , Greece    
+2022,    801-1000  ,   Budapest University of Technology and Economics   , Hungary    
+2022,    801-1000  ,   Padjadjaran University   , Indonesia    
+2022,    801-1000  ,   Anna University   , India    
+2022,    801-1000  ,   Pondicherry University   , India    
+2022,    801-1000  ,   University of Calcutta   , India    
+2022,    801-1000  ,   Roma Tre University   , Italy    
+2022,    801-1000  ,   University of Bari   , Italy    
+2022,    801-1000  ,   University of Catania   , Italy    
+2022,    801-1000  ,   University of Ferrara   , Italy    
+2022,    801-1000  ,   University of Messina   , Italy    
+2022,    801-1000  ,   University of Palermo   , Italy    
+2022,    801-1000  ,   University of Parma   , Italy    
+2022,    801-1000  ,   University of Salerno   , Italy    
+2022,    801-1000  ,   University of Udine   , Italy    
+2022,    801-1000  ,   University of Verona   , Italy    
+2022,    801-1000  ,   German Jordanian University   , Jordan    
+2022,    801-1000  ,   Jordan University of Science and Technology   , Jordan    
+2022,    801-1000  ,   Princess Sumaya University for Technology   , Jordan    
+2022,    801-1000  ,   International Christian University   , Japan    
+2022,    801-1000  ,   Kyoto Institute of Technology   , Japan    
+2022,    801-1000  ,   Kyushu Institute of Technology   , Japan    
+2022,    801-1000  ,   Tokyo University of Science   , Japan    
+2022,    801-1000  ,   Shinshu University   , Japan    
+2022,    801-1000  ,   Sophia University   , Japan    
+2022,    801-1000  ,   Yamaguchi University   , Japan    
+2022,    801-1000  ,   Yokohama National University   , Japan    
+2022,    801-1000  ,   Seoul University   , South Korea    
+2022,    801-1000  ,   Yeungnam University   , South Korea    
+2022,    801-1000  ,   Gulf University for Science and Technology   , Kuwait    
+2022,    801-1000  ,   Karaganda State Buketov University   , Kazakhstan    
+2022,    801-1000  ,   Kazakhstan Institute of Management - Economics - and Strategic Research   , Kazakhstan    
+2022,    801-1000  ,   Beirut Arab University   , Lebanon    
+2022,    801-1000  ,   Kaunas University of Technology   , Lithuania    
+2022,    801-1000  ,   Vytautas Magnus University   , Lithuania    
+2022,    801-1000  ,   University of Malta   , Malta    
+2022,    801-1000  ,   Metropolitan Autonomous University   , Mexico    
+2022,    801-1000  ,   Autonomous University of Chapingo   , Mexico    
+2022,    801-1000  ,   Autonomous University of Mexico State   , Mexico    
+2022,    801-1000  ,   University of Guadalajara   , Mexico    
+2022,    801-1000  ,   University of las Am�ricas - Puebla   , Mexico    
+2022,    801-1000  ,   University of Malaysia Perlis   , Malaysia    
+2022,    801-1000  ,   University of Kuala Lumpur   , Malaysia    
+2022,    801-1000  ,   University of Tunku Abdul Rahman   , Malaysia    
+2022,    801-1000  ,   Technological University of Panama   , Panama    
+2022,    801-1000  ,   National University of San Marcos   , Peru    
+2022,    801-1000  ,   De La Salle University   , Philippines    
+2022,    801-1000  ,   University of Engineering and Technology Lahore   , Pakistan    
+2022,    801-1000  ,   University of the Punjab   , Pakistan    
+2022,    801-1000  ,   Adam Mickiewicz University in Poznan   , Poland    
+2022,    801-1000  ,   Nicolaus Copernicus University   , Poland    
+2022,    801-1000  ,   Lodz University of Technology   , Poland    
+2022,    801-1000  ,   University of Gdansk   , Poland    
+2022,    801-1000  ,   University of Lodz   , Poland    
+2022,    801-1000  ,   AGH University of Science and Technology   , Poland    
+2022,    801-1000  ,   University of Wroclaw   , Poland    
+2022,    801-1000  ,   Catholic University of Portugal   , Portugal    
+2022,    801-1000  ,   Mendeleev Russian University of Chemical Technology   , Russia    
+2022,    801-1000  ,   Novosibirsk State Technical University   , Russia    
+2022,    801-1000  ,   Tyumen State University   , Russia    
+2022,    801-1000  ,   Islamic University of Madinah   , Saudi Arabia    
+2022,    801-1000  ,   King Faisal University   , Saudi Arabia    
+2022,    801-1000  ,   University of Maribor   , Slovenia    
+2022,    801-1000  ,   Slovak University of Technology   , Slovakia    
+2022,    801-1000  ,   Technical University in Kosice   , Slovakia    
+2022,    801-1000  ,   Kasetsart University   , Thailand    
+2022,    801-1000  ,   Khon Kaen University   , Thailand    
+2022,    801-1000  ,   King Mongkut's University of Technology Thonburi   , Thailand    
+2022,    801-1000  ,   Prince of Songkla University   , Thailand    
+2022,    801-1000  ,   Ankara University   , Turkey    
+2022,    801-1000  ,   Hacettepe University   , Turkey    
+2022,    801-1000  ,   Istanbul University   , Turkey    
+2022,    801-1000  ,   National Chung Cheng University   , Taiwan    
+2022,    801-1000  ,   Liverpool John Moores University   , UK    
+2022,    801-1000  ,   London Metropolitan University   , UK    
+2022,    801-1000  ,   Edinburgh Napier University   , UK    
+2022,    801-1000  ,   Nottingham Trent University   , UK    
+2022,    801-1000  ,   The Manchester Metropolitan University   , UK    
+2022,    801-1000  ,   The Robert Gordon University   , UK    
+2022,    801-1000  ,   University of Brighton   , UK    
+2022,    801-1000  ,   University of Central Lancashire   , UK    
+2022,    801-1000  ,   University of East London   , UK    
+2022,    801-1000  ,   University of Hertfordshire   , UK    
+2022,    801-1000  ,   University of Salford   , UK    
+2022,    801-1000  ,   University of the West of England - Bristol   , UK    
+2022,    801-1000  ,   Catholic University of Uruguay   , Uruguay    
+2022,    801-1000  ,   Catholic University Andres Bello   , Venezuela    
+2022,    801-1000  ,   University Sim�n Bolivar   , Venezuela    
+2022,    801-1000  ,   University of the Andes - Venezuela   , Venezuela    
+2022,    801-1000  ,   Rhodes University   , South Africa    
+2022,    801-1000  ,   University of KwaZulu-Natal   , South Africa    
+2022,    801-1000  ,   University of Hartford   , USA    
+2022,    801-1000  ,   Florida International University   , USA    
+2022,    801-1000  ,   Loyola University of Chicago   , USA    
+2022,    801-1000  ,   Indiana University-Purdue University of Indianapolis   , USA    
+2022,    801-1000  ,   Kansas State University   , USA    
+2022,    801-1000  ,   Louisiana State University   , USA    
+2022,    801-1000  ,   University of Mississippi   , USA    
+2022,    801-1000  ,   University of Missouri - Kansas City   , USA    
+2022,    801-1000  ,   University of New Hampshire   , USA    
+2022,    801-1000  ,   Rutgers - The State University of New Jersey   , USA    
+2022,    801-1000  ,   Fordham University   , USA    
+2022,    801-1000  ,   Binghamton University   , USA    
+2022,    801-1000  ,   Oklahoma State University   , USA    
+2022,    801-1000  ,   University of Tulsa   , USA    
+2022,    801-1000  ,   Clemson University   , USA    
+2022,    801-1000  ,   Southern Methodist University   , USA    
+2022,    801-1000  ,   Texas Technical University   , USA    
+2022,    801-1000  ,   University of Texas at San Antonio   , USA    
+2022,    801-1000  ,   George Mason University   , USA    
+2022,    801-1000  ,   Seattle University   , USA    
+2022,    801-1000  ,   West Virginia University   , USA    
+2022,    801-1000  ,   University of Wisconsin-Milwaukee   , USA    
+2022,    801-1000  ,   University of Wyoming   , USA    
+2022,    801-1000  ,   University of Alabama   , USA    
+2022,    801-1000  ,   Auburn University   , USA    
+2022,    801-1000  ,   Beijing Jiaotong University   , China    
+2022,    801-1000  ,   University of Lorraine   , France    
+2022,    801-1000  ,   Technical University of Dortmund   , Germany    
+2022,    801-1000  ,   Marche Polytechnic University   , Italy    
+2022,    801-1000  ,   Corvinus University of Budapest   , Hungary    
+2022,    801-1000  ,   Gda�sk University of Technology   , Poland    
+2022,    801-1000  ,   Czech University of Life Sciences Prague   , Czech Republic    
+2022,    801-1000  ,   University of Lille   , France    
+2022,    801-1000  ,   University of Lincoln (England)   , UK    
+2022,    801-1000  ,   London South Bank University   , UK    
+2022,    801-1000  ,   Lviv Polytechnic National University   , Ukraine    
+2022,    801-1000  ,   University of Baghdad   , Iraq    
+2022,    801-1000  ,   Kazakh Ablai Khan University of International Relations and World Languages   , Kazakhstan    
+2022,    801-1000  ,   Silesian University of Technology   , Poland    
+2022,    801-1000  ,   Kazakh-British Technical University   , Kazakhstan    
+2022,    801-1000  ,   Riga Stradins University   , Latvia    
+2022,    801-1000  ,   Cracow University of Technology   , Poland    
+2022,    801-1000  ,   Poznan University of Technology   , Poland    
+2022,    801-1000  ,   Wroclaw University of Science and Technology   , Poland    
+2022,    801-1000  ,   South Ural State University   , Russia    
+2022,    801-1000  ,   Viet Nam National University - Hanoi   , Viet Nam    
+2022,    801-1000  ,   Technological University Dublin   , Ireland    
+2022,    801-1000  ,   University of Malaysia - Pahang   , Malaysia    
+2022,    801-1000  ,   Xi'an Jiaotong Liverpool University   , China    
+2022,    801-1000  ,   Parthenope University of Naples   , Italy    
+2022,    801-1000  ,   CY Cergy Paris University   , France      

@@ -11,6 +11,7 @@ struct HomeView: View {
 
     @EnvironmentObject private var store: CollegeStore
     @AppStorage("appLanguage") private var lang = "en"
+    @State private var aiContext: AIChatContext? = nil
 
     private var topColleges: [College] {
         Array(
@@ -21,26 +22,10 @@ struct HomeView: View {
         )
     }
 
-    private var countryCount: Int { Set(store.colleges.map(\.country)).count }
-
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 28) {
-
-                    // ── Stats ─────────────────────────────────────────────────
-                    LazyVGrid(
-                        columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 3),
-                        spacing: 12
-                    ) {
-                        StatCard(number: "\(store.colleges.count)",
-                                 label: l("stat_unis", lang))
-                        StatCard(number: "\(countryCount)",
-                                 label: l("stat_countries", lang))
-                        StatCard(number: "4",
-                                 label: l("stat_rankings", lang))
-                    }
-                    .padding(.horizontal)
 
                     // ── Feature Cards ─────────────────────────────────────────
                     LazyVGrid(
@@ -53,23 +38,34 @@ struct HomeView: View {
                             FeatureCard(icon: "list.number",
                                         color: .accentColor,
                                         title: l("tab_rankings", lang),
-                                        subtitle: "\(store.colleges.count) universities")
+                                        subtitle: l("tab_rankings_sub", lang))
                         }
                         .buttonStyle(.plain)
 
-                        // Placeholder cards
-                        FeatureCard(icon: "ellipsis.circle",
-                                    color: Color(.systemGray3),
-                                    title: "—",
-                                    subtitle: "Coming soon")
-                        FeatureCard(icon: "ellipsis.circle",
-                                    color: Color(.systemGray3),
-                                    title: "—",
-                                    subtitle: "Coming soon")
-                        FeatureCard(icon: "ellipsis.circle",
-                                    color: Color(.systemGray3),
-                                    title: "—",
-                                    subtitle: "Coming soon")
+                        // AI-powered cards
+                        Button { aiContext = .match } label: {
+                            FeatureCard(icon: "sparkles",
+                                        color: .purple,
+                                        title: l("tab_match", lang),
+                                        subtitle: l("tab_match_sub", lang))
+                        }
+                        .buttonStyle(.plain)
+
+                        Button { aiContext = .apply } label: {
+                            FeatureCard(icon: "paperplane.fill",
+                                        color: .orange,
+                                        title: l("tab_apply", lang),
+                                        subtitle: l("tab_apply_sub", lang))
+                        }
+                        .buttonStyle(.plain)
+
+                        Button { aiContext = .budget } label: {
+                            FeatureCard(icon: "dollarsign.circle.fill",
+                                        color: .green,
+                                        title: l("tab_budget", lang),
+                                        subtitle: l("tab_budget_sub", lang))
+                        }
+                        .buttonStyle(.plain)
                     }
                     .padding(.horizontal)
 
@@ -95,31 +91,6 @@ struct HomeView: View {
                         .padding(.horizontal)
                     }
 
-                    // ── Countries Covered ─────────────────────────────────────
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text(l("countries_covered", lang))
-                            .font(.title2).fontWeight(.bold)
-                            .padding(.horizontal)
-
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 10) {
-                                ForEach(Country.allCases, id: \.self) { country in
-                                    VStack(spacing: 4) {
-                                        Text(country.flag).font(.largeTitle)
-                                        Text(country.abbr)
-                                            .font(.caption2)
-                                            .foregroundStyle(.secondary)
-                                    }
-                                    .frame(width: 64)
-                                    .padding(.vertical, 12)
-                                    .background(Color(.systemGray6))
-                                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                                }
-                            }
-                            .padding(.horizontal)
-                        }
-                    }
-
                     // ── Last Updated ──────────────────────────────────────────
                     if let stamp = store.lastRemoteUpdate,
                        let date = ISO8601DateFormatter().date(from: stamp) {
@@ -132,6 +103,9 @@ struct HomeView: View {
                 .padding(.vertical, 16)
             }
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
+            .sheet(item: $aiContext) { ctx in
+                AIChatView(context: ctx)
+            }
         }
     }
 }
@@ -169,6 +143,7 @@ private struct FeatureCard: View {
 private struct StatCard: View {
     let number: String
     let label: String
+    var tappable: Bool = false
 
     var body: some View {
         VStack(spacing: 6) {
@@ -179,6 +154,11 @@ private struct StatCard: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
+            if tappable {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 9, weight: .medium))
+                    .foregroundStyle(.tertiary)
+            }
         }
         .frame(maxWidth: .infinity, minHeight: 90)
         .background(Color(.secondarySystemBackground))
@@ -188,11 +168,102 @@ private struct StatCard: View {
     }
 }
 
+// ── Universities Sheet ────────────────────────────────────────────────────────
+struct UniversitiesSheet: View {
+    let colleges: [College]
+    let lang: String
+    @Environment(\.dismiss) private var dismiss
+    @State private var searchText    = ""
+    @State private var selectedCollege: College?
+
+    private var displayed: [College] {
+        let sorted = colleges.sorted { $0.name < $1.name }
+        guard !searchText.isEmpty else { return sorted }
+        return sorted.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+    }
+
+    var body: some View {
+        NavigationStack {
+            List(displayed) { college in
+                Button {
+                    selectedCollege = college
+                } label: {
+                    HStack(spacing: 10) {
+                        Text(college.country.flag)
+                        Text(college.name)
+                            .font(.body)
+                            .foregroundStyle(.primary)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+                .buttonStyle(.plain)
+            }
+            .navigationTitle("\(colleges.count) \(l("stat_unis", lang))")
+            .navigationBarTitleDisplayMode(.large)
+            .searchable(text: $searchText, prompt: l("search_prompt", lang))
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button(l("done", lang)) { dismiss() }
+                }
+            }
+            .sheet(item: $selectedCollege) { college in
+                UniversityDetailView(college: college)
+            }
+        }
+    }
+}
+
+// ── Countries Sheet ───────────────────────────────────────────────────────────
+struct CountriesSheet: View {
+    let lang: String
+    @Environment(\.dismiss) private var dismiss
+
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 4)
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 12) {
+                    ForEach(Country.allCases, id: \.self) { country in
+                        VStack(spacing: 6) {
+                            Text(country.flag).font(.largeTitle)
+                            Text(country.abbr)
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(Color(.secondarySystemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .overlay(RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color(.separator), lineWidth: 0.5))
+                    }
+                }
+                .padding()
+            }
+            .background(Color(.systemGroupedBackground).ignoresSafeArea())
+            .navigationTitle(l("countries_covered", lang))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button(l("done", lang)) { dismiss() }
+                }
+            }
+        }
+    }
+}
+
 // ── Top University Row ────────────────────────────────────────────────────────
 private struct TopUniversityRow: View {
     let rank: Int
     let college: College
     let lang: String
+
+    @State private var showDetail = false
 
     private var rankColor: Color {
         switch rank {
@@ -204,29 +275,38 @@ private struct TopUniversityRow: View {
     }
 
     var body: some View {
-        HStack(spacing: 14) {
-            Text("\(rank)")
-                .font(.system(size: 18, weight: .bold))
-                .foregroundStyle(rank <= 3 ? rankColor : Color.accentColor)
-                .frame(width: 30, alignment: .center)
+        Button { showDetail = true } label: {
+            HStack(spacing: 14) {
+                Text("\(rank)")
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundStyle(rank <= 3 ? rankColor : Color.accentColor)
+                    .frame(width: 30, alignment: .center)
 
-            VStack(alignment: .leading, spacing: 2) {
-                Text(college.name)
-                    .font(.subheadline).fontWeight(.semibold)
-                    .lineLimit(1)
-                Text("\(college.country.flag) \(college.country.rawValue)")
-                    .font(.caption).foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(college.name)
+                        .font(.subheadline).fontWeight(.semibold)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .foregroundStyle(.primary)
+                        .multilineTextAlignment(.leading)
+
+                    Text("\(college.country.flag) \(college.country.rawValue)")
+                        .font(.caption).foregroundStyle(.secondary)
+                }
+
+                Spacer(minLength: 8)
+
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundStyle(.tertiary)
             }
-
-            Spacer()
-
-            if let avg = college.averageRank {
-                Text(String(format: "\(l("avg_label", lang)) %.1f", avg))
-                    .font(.caption).foregroundStyle(.secondary)
-            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
+        .buttonStyle(.plain)
+        .sheet(isPresented: $showDetail) {
+            UniversityDetailView(college: college)
+        }
     }
 }
 

@@ -16,11 +16,25 @@ private let strings: [String: [String: String]] = [
 
     // Tabs
     "tab_home":         ["en": "Home",              "zh": "首页"],
-    "tab_rankings":     ["en": "Rankings",          "zh": "排名"],
+    "tab_rankings":     ["en": "Discover",           "zh": "探索"],
+    "tab_rankings_sub": ["en": "Explore schools, rankings, and key details",
+                         "zh": "探索院校、排名与关键信息"],
+    "tab_files":        ["en": "Files",             "zh": "文件"],
     "tab_settings":     ["en": "Settings",          "zh": "设置"],
 
     // Navigation titles
     "app_title":        ["en": "Universities",      "zh": "大学信息"],
+
+    // Feature card titles & subtitles
+    "tab_match":        ["en": "Match",             "zh": "匹配"],
+    "tab_match_sub":    ["en": "Find your best-fit schools",
+                         "zh": "发现最适合你的大学"],
+    "tab_apply":        ["en": "Apply",             "zh": "申请"],
+    "tab_apply_sub":    ["en": "Plan and manage your applications",
+                         "zh": "规划并管理你的申请"],
+    "tab_budget":       ["en": "Budget",            "zh": "预算"],
+    "tab_budget_sub":   ["en": "Estimate costs and plan your budget",
+                         "zh": "估算费用，规划你的预算"],
 
     // Home screen
     "top_10":           ["en": "Top 10 Overall",    "zh": "综合前十"],
@@ -33,6 +47,12 @@ private let strings: [String: [String: String]] = [
     // Rankings screen
     "search_prompt":    ["en": "Search universities", "zh": "搜索大学"],
     "per_year_usd":     ["en": "/ year (USD)",      "zh": "/ 年（美元）"],
+    "per_year_cny":     ["en": "year (CNY)",        "zh": "年（人民币）"],
+
+    // Home currency setting
+    "home_currency":    ["en": "Home Currency",     "zh": "本地货币"],
+    "home_currency_hint":["en": "Tap any tuition fee to convert to your home currency.",
+                          "zh": "点击学费金额可换算为本地货币。"],
 
     // Filter tabs
     "filter_all":       ["en": "All",               "zh": "全部"],

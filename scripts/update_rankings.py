@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from __future__ import annotations
 """
 update_rankings.py
 ──────────────────
@@ -57,7 +58,7 @@ FIXED_COLS = ["name", "country", "description", "tuitionUSD", "websiteURL"]
 # Maps each CSV name to alternative spellings that ranking sites might use.
 # Add entries here whenever a scraped name fails to match automatically.
 
-NAME_ALIASES: dict[str, list[str]] = {
+NAME_ALIASES = {
     "Massachusetts Institute of Technology":    ["MIT", "Massachusetts Institute of Technology (MIT)"],
     "University of California, Berkeley":       ["UC Berkeley", "University of California Berkeley"],
     "University of California, Los Angeles":    ["UCLA", "University of California Los Angeles"],

@@ -26,6 +26,9 @@ struct MainTabView: View {
             HomeView()
                 .tabItem { Label(l("tab_home",     lang), systemImage: "house.fill") }
 
+            FilesView()
+                .tabItem { Label(l("tab_files",    lang), systemImage: "folder.fill") }
+
             SettingsView()
                 .tabItem { Label(l("tab_settings", lang), systemImage: "gear") }
         }

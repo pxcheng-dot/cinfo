@@ -1,0 +1,1001 @@
+year,rank,university,region,region_code,Alumni,Award,HiCi,N&S,PUB,PCP,continent,total_score
+2023,1,Harvard University,United States,us,100,92.6,100,100,100,86.7,North America,97.19
+2023,2,Stanford University,United States,us,45.6,88.1,73.6,82.8,67.5,58,North America,72.76
+2023,3,Massachusetts Institute of Technology (MIT),United States,us,72.5,81.1,54.7,71.8,55,73.8,North America,67.15
+2023,4,University of Cambridge,United Kingdom,gb,78.9,90.8,45.1,61,63.6,60.4,Europe,66.03
+2023,5,University of California - Berkeley,United States,us,65.8,76.5,52.6,64.3,53.1,57.3,North America,61.61
+2023,6,Princeton University,United States,us,61.7,100,32.9,50.4,39.4,76.7,North America,58.38
+2023,7,University of Oxford,United Kingdom,gb,49.9,59.7,51.4,57.6,71.4,48.5,Europe,57.86
+2023,8,Columbia University,United States,us,58.5,60.9,47,52.3,63.1,32.1,North America,53.72
+2023,9,California Institute of Technology,United States,us,56.1,63.4,28.7,57.3,37.6,100,North America,53.01
+2023,10,University of Chicago,United States,us,56.6,84.5,35.4,42.5,48.6,44.6,North America,52.32
+2023,11,Yale University,United States,us,50.7,49.6,46.1,53.9,59.2,38.8,North America,50.71
+2023,12,Cornell University,United States,us,40.9,44.2,44.1,55,59,45.4,North America,49.09
+2023,13,University of California - Los Angeles,United States,us,30.1,45,44.1,51.7,62.7,29.6,North America,46.67
+2023,14,University of Pennsylvania,United States,us,32.3,30.6,52.2,44.7,67,42.2,North America,46.35
+2023,15,Paris-Saclay University,France,fr,34.1,70.9,32.9,31.4,60.2,32.4,Europe,45.73
+2023,16,Johns Hopkins University,United States,us,37,34.6,49.7,39.7,70.1,29.9,North America,45.51
+2023,17,University College London,United Kingdom,gb,27.2,31.5,46.5,41.1,74,33.3,Europe,44.67
+2023,18,University of Washington,United States,us,22.8,34.9,43.6,52.3,65.6,25.8,North America,44.14
+2023,19,University of California - San Diego,United States,us,18.1,32.4,53.9,49.3,56.6,32.6,North America,43.51
+2023,20,ETH Zurich,Switzerland,ch,26.7,42.2,30.2,54,50.1,49.2,Europe,42.89
+2023,21,University of California - San Francisco,United States,us,0,41.9,45.1,54.9,56.4,31.2,North America,42.78
+2023,22,Tsinghua University,China,cn,9.1,0,55.4,44.1,77.6,28.5,Asia,39.18
+2023,23,Imperial College London,United Kingdom,gb,12.8,31.3,38.4,38.3,60,39.4,Europe,38.82
+2023,24,University of Toronto,Canada,ca,16.6,13,40,37.1,77.7,33.4,North America,38.56
+2023,25,Washington University in St. Louis,United States,us,20.9,27.4,46.1,37.9,49,37.1,North America,37.88
+2023,26,University of Michigan-Ann Arbor,United States,us,37.4,9.8,36,38.5,69.1,23.3,North America,36.75
+2023,27,The University of Tokyo,Japan,jp,36.6,23.5,19.7,46.1,63.5,23.6,Asia,36.58
+2023,28,New York University,United States,us,26.7,35.1,32.2,37.7,52.5,21.3,North America,36.3
+2023,29,Peking University,China,cn,10.5,0,36,41.1,81.3,29.6,Asia,35.69
+2023,30,Northwestern University,United States,us,12.8,25.8,37.2,37,53.6,28.2,North America,34.82
+2023,31,University of North Carolina at Chapel Hill,United States,us,7.4,21.9,41.6,34.1,55.3,33.6,North America,34.68
+2023,32,University of Copenhagen,Denmark,dk,18.9,20.6,28.7,35.9,59.3,34,Europe,34.19
+2023,33,Zhejiang University,China,cn,0,0,34.8,33.8,89.4,24.3,Asia,34.03
+2023,34,Duke University,United States,us,19.6,17.8,36,38,55.4,22.1,North America,33.61
+2023,36,The University of Melbourne,Australia,au,14.8,11.3,40.6,24.4,67.9,32,Oceania,33.52
+2023,35,University of Wisconsin - Madison,United States,us,28.2,31.3,26.3,30,54.9,22.1,North America,33.53
+2023,37,Karolinska Institute,Sweden,se,22.8,23.8,26.3,24.6,52.5,53.5,Europe,33.07
+2023,38,The University of Edinburgh,United Kingdom,gb,25.6,22.6,36,29.1,50.8,26.7,Europe,32.93
+2023,39,Kyoto University,Japan,jp,33.9,38.8,18.6,26,50.7,21.5,Asia,32.36
+2023,40,Rockefeller University,United States,us,15.7,57.6,23.7,41.9,14,33.2,North America,32.33
+2023,41,PSL University,France,fr,50.7,45.1,9.3,20.9,48,23.9,Europe,32.12
+2023,42,The University of Manchester,United Kingdom,gb,14.8,29.1,28.7,28.9,52.3,28.3,Europe,32.11
+2023,43,The University of Texas at Austin,United States,us,23.4,21.6,34.8,27.1,50.4,27.7,North America,31.89
+2023,45,University of British Columbia,Canada,ca,13.8,17.2,32.9,28.9,61,23.8,North America,31.76
+2023,44,University of Minnesota - Twin Cities,United States,us,26.2,15,36.6,26.4,56.6,22.3,North America,31.77
+2023,47,Shanghai Jiao Tong University,China,cn,0,0,30.2,27.1,87.8,26.4,Asia,31.66
+2023,46,Sorbonne University,France,fr,36.4,23.3,18.6,29.2,56.2,26.1,Europe,31.71
+2023,48,The University of Texas Southwestern Medical Center at Dallas,United States,us,17.4,31.4,31.6,36.6,35.8,26.6,North America,31.48
+2023,49,University of Geneva,Switzerland,ch,37.7,37.3,13.2,26.5,40,37.9,Europe,30.96
+2023,50,University of Maryland - College Park,United States,us,17.4,18.4,31.6,34.3,45.4,31.3,North America,30.81
+2023,51,The University of Queensland,Australia,au,11.7,0,44.6,24.9,59.9,36.1,Oceania,30.66
+2023,52,University of Illinois at Urbana-Champaign,United States,us,25.6,33,17.4,29.6,47.2,25.2,North America,30.52
+2023,53,Utrecht University,Netherlands,nl,20.9,17.2,34.8,22.6,53.7,27.6,Europe,30.51
+2023,54,Swiss Federal Institute of Technology Lausanne,Switzerland,ch,0,29.1,25.5,36.4,36.2,49.7,Europe,30.41
+2023,55,Heidelberg University,Germany,de,18.1,21.1,24.6,33.2,49,29.6,Europe,30.35
+2023,56,Fudan University,China,cn,0,0,34.2,31,73.1,26.1,Asia,30.27
+2023,57,University of Colorado at Boulder,United States,us,11.7,31.4,24.6,32.1,40.9,31.7,North America,30.14
+2023,58,University of Southern California,United States,us,0,29.1,32.9,25.3,50,25.1,North America,29.97
+2023,61,King's College London,United Kingdom,gb,23.4,16.8,34.8,18.8,53,27.9,Europe,29.81
+2023,62,Technical University of Munich,Germany,de,34.3,17.2,21.8,27.9,50.2,29.4,Europe,29.79
+2023,59,University of Munich,Germany,de,25.1,15,24.6,31.5,51,29.6,Europe,29.89
+2023,60,University of Zurich,Switzerland,ch,0,20.6,26.3,32.9,51.1,36.6,Europe,29.84
+2023,63,University of California - Santa Barbara,United States,us,13.8,36,20.8,34.4,30.9,35.4,North America,29.34
+2023,64,University of Science and Technology of China,China,cn,0,0,33.5,32.1,66.2,29.1,Asia,29.27
+2023,65,University of California - Irvine,United States,us,14.8,26.9,28.7,25.9,43.1,25.4,North America,28.94
+2023,66,Vanderbilt University,United States,us,13.8,26.1,27.9,18.6,46.8,33.1,North America,28.57
+2023,67,University of Bonn,Germany,de,30.5,33,21.8,20.9,38.1,26.9,Europe,28.5
+2023,68,Weizmann Institute of Science,Israel,il,16.6,15,34.2,39.2,22.7,45.3,Asia,28.41
+2023,69,Université Paris Cité,France,fr,14,10.1,30.2,27.1,55.4,23.5,Europe,28.31
+2023,70,McGill University,Canada,ca,30.1,0,28.7,29.1,54.4,26.7,North America,28.12
+2023,71,National University of Singapore,Singapore,sg,0,0,39.5,23.4,60.8,32.8,Asia,28.02
+2023,72,The University of New South Wales,Australia,au,0,0,37.8,24.7,60.6,32.1,Oceania,27.83
+2023,74,Sun Yat-sen University,China,cn,0,0,29.4,17.6,78.3,24.1,Asia,27.47
+2023,73,University of Oslo,Norway,no,25.1,29.1,17.4,15.9,48.8,28.1,Europe,27.56
+2023,75,University of Sydney,Australia,au,12.8,0,32.9,19.1,64.1,29.6,Oceania,27.46
+2023,76,University of Groningen,Netherlands,nl,12.8,22.6,22.8,19.7,51.1,27.6,Europe,27.28
+2023,77,Monash University,Australia,au,0,0,30.2,26.4,63.6,32.1,Oceania,27.25
+2023,78,Aarhus University,Denmark,dk,10.5,20.3,22.8,22.1,50.3,27.3,Europe,26.88
+2023,79,Technion-Israel Institute of Technology,Israel,il,22.2,34.9,13.2,22.8,31.4,39.4,Asia,26.62
+2023,80,The University of Texas M. D. Anderson Cancer Center,United States,us,0,13.8,36.6,20,34,53.1,North America,26.19
+2023,81,University of Basel,Switzerland,ch,21.6,14.1,17.4,31.1,37.1,39.2,Europe,26.02
+2023,82,Uppsala University,Sweden,se,20.3,20.6,17.4,21.7,46.1,26.5,Europe,25.84
+2023,83,University of Pittsburgh,United States,us,16.6,0,32.2,25,53.9,18.4,North America,25.72
+2023,84,Ghent University,Belgium,be,0,9.2,32.9,18.6,51.4,32.7,Europe,25.69
+2023,85,The Australian National University,Australia,au,12.8,17.4,22.8,25.1,41.1,30.8,Oceania,25.64
+2023,87,KU Leuven,Belgium,be,0,0,30.2,26.6,55.1,31.1,Europe,25.49
+2023,86,The Hebrew University of Jerusalem,Israel,il,30.1,26.1,11.4,20.7,39.6,29.4,Asia,25.51
+2023,89,Erasmus University Rotterdam,Netherlands,nl,13.8,13,27.9,14.9,48,32.3,Europe,25.37
+2023,88,The University of Hong Kong,China-Hong Kong,hk,0,0,41.1,21.6,51,26.7,Asia,25.41
+2023,90,University of Bristol,United Kingdom,gb,5.2,13,27.1,28.2,42.1,27.1,Europe,25.31
+2023,92,Huazhong University of Science and Technology,China,cn,0,0,24.6,17.9,72.8,21.6,Asia,25.22
+2023,91,University of Alberta,Canada,ca,10.5,16,23.7,16.3,52,26.4,North America,25.29
+2023,93,Nanyang Technological University,Singapore,sg,0,0,42.1,20.5,48.5,29.1,Asia,25.13
+2023,94,Seoul National University,South Korea,kr,15.7,0,19.7,22.8,62.6,24.6,Asia,25.05
+2023,95,Central South University,China,cn,0,0,27.1,10.1,74.1,23,Asia,24.56
+2023,96,Nanjing University,China,cn,0,0,25.5,24.3,60.5,24.9,Asia,24.55
+2023,97,Purdue University - West Lafayette,United States,us,11.7,20.9,17.4,21.7,45.5,22.7,North America,24.54
+2023,99,Brown University,United States,us,24,18.2,13.2,20.9,41.2,33.1,North America,24.41
+2023,100,McMaster University,Canada,ca,18.1,17.2,27.1,11.3,41.9,30.3,North America,24.34
+2023,98,Stockholm University,Sweden,se,20.9,22.6,16.1,22.3,38,25.6,Europe,24.45
+2023,150,Arizona State University,United States,us,0,18.4,20.8,16.9,39.4,17.7,North America,20.87
+2023,129,Beijing Institute of Technology,China,cn,0,0,34.2,12,53.3,21.2,Asia,22.02
+2023,115,Boston University,United States,us,10.5,10.6,21.8,20.3,46.9,21.1,North America,23.08
+2023,111,Carnegie Mellon University,United States,us,29.1,27.6,11.4,20.4,29,27.3,North America,23.32
+2023,125,City University of Hong Kong,China-Hong Kong,hk,0,0,35.4,16.7,45.4,29.2,Asia,22.42
+2023,124,Emory University,United States,us,0,0,26.3,22.5,48.9,28.9,North America,22.43
+2023,110,Harbin Institute of Technology,China,cn,0,0,27.1,12.8,65.8,22.7,Asia,23.41
+2023,149,Jilin University,China,cn,0,0,22.8,13.5,60.5,15.9,Asia,20.95
+2023,116,King Saud University,Saudi Arabia,sa,0,0,41.1,5.6,57.6,21.5,Asia,23.01
+2023,105,Leiden University,Netherlands,nl,14.8,0,30.9,20.1,47.6,26.5,Europe,23.85
+2023,119,Mayo Clinic College of Medicine and Science,United States,us,0,0,37.8,17.7,44.8,26.3,North America,22.69
+2023,104,Moscow State University,Russia,ru,38.1,29.1,0,11.9,46,26.7,Europe,23.88
+2023,126,Icahn School of Medicine at Mount Sinai,United States,us,0,0,36.6,27.3,39,17.8,North America,22.36
+2023,121,Nagoya University,Japan,jp,27.2,23.5,6.6,20.2,39.7,18.7,Asia,22.59
+2023,140,Norwegian University of Science and Technology - NTNU,Norway,no,11.7,19.5,14.7,15.5,42.1,19.7,Europe,21.5
+2023,123,Radboud University Nijmegen,Netherlands,nl,15.7,0,24.6,19.6,45.7,28.9,Europe,22.44
+2023,109,Rice University,United States,us,14.8,19.9,22.8,23.4,26.8,34.3,North America,23.49
+2023,137,Rutgers - The State University of New Jersey - New Brunswick,United States,us,7.4,16,20.8,18.6,41.4,15.5,North America,21.65
+2023,131,Sapienza University of Rome,Italy,it,14.8,22.6,6.6,14.5,48.4,19.8,Europe,21.88
+2023,132,Shandong University,China,cn,0,0,20.8,12.5,67.2,17.4,Asia,21.84
+2023,108,Sichuan University,China,cn,0,0,23.7,11.2,73,20.8,Asia,23.66
+2023,144,Soochow University,China,cn,0,0,34.2,9,53.5,18.3,Asia,21.17
+2023,148,South China University of Technology,China,cn,0,0,28.7,9.8,56.1,20.6,Asia,20.98
+2023,145,Southern University of Science and Technology,China,cn,0,0,24.6,18.8,44.2,36,Asia,21.12
+2023,138,Southeast University,China,cn,0,0,25.5,9.3,63.1,20.1,Asia,21.59
+2023,142,The Chinese University of Hong Kong,China-Hong Kong,hk,0,13,18.6,11.8,51.1,23.5,Asia,21.25
+2023,134,The Ohio State University - Columbus,United States,us,10.5,0,17.4,20.9,57.5,15.7,North America,21.78
+2023,122,Pennsylvania State University - University Park,United States,us,9.1,0,21.8,33.1,46.2,14.2,North America,22.55
+2023,141,The University of Glasgow,United Kingdom,gb,14.8,0,24.6,21.5,40.8,24.7,Europe,21.33
+2023,102,The University of Western Australia,Australia,au,19.6,13,25.5,13.5,43.7,32.1,Oceania,24.31
+2023,136,Tianjin University,China,cn,0,0,27.9,9.8,60.7,20.6,Asia,21.74
+2023,147,University of Electronic Science and Technology of China,China,cn,0,0,32.9,11.3,50.6,21,Asia,21.06
+2023,128,Université Grenoble Alpes,France,fr,11.7,13,17.4,22.9,41.6,19.8,Europe,22.13
+2023,117,Université libre de Bruxelles (ULB),Belgium,be,18.1,24.4,14.7,18.9,30,34.4,Europe,22.85
+2023,120,University of Amsterdam,Netherlands,nl,0,0,32.2,20.3,48.8,23.6,Europe,22.62
+2023,143,University of Bern,Switzerland,ch,11.7,0,17.4,23.6,42.9,32.3,Europe,21.18
+2023,113,University of California - Davis,United States,us,12.8,0,23.7,25.4,50.2,21.1,North America,23.25
+2023,106,University of Florida,United States,us,15.7,0,23.7,19.1,56.9,22.5,North America,23.76
+2023,127,University of Freiburg,Germany,de,20.9,14.6,16.1,23.5,35.6,21.6,Europe,22.21
+2023,133,University of Gothenburg,Sweden,se,0,14.1,25.5,16,41.9,22.9,Europe,21.79
+2023,101,University of Helsinki,Finland,fi,15.7,16,17.4,19,48.8,25.2,Europe,24.33
+2023,135,University of Lausanne,Switzerland,ch,16.6,16,17.4,21.2,33.8,24.3,Europe,21.77
+2023,139,University of Liverpool,United Kingdom,gb,14.8,9.2,17.4,18.7,42.6,25,Europe,21.56
+2023,118,University of Nottingham,United Kingdom,gb,18.9,18.4,17.4,15,42.1,23,Europe,22.77
+2023,130,University of Sao Paulo,Brazil,br,0,0,18.6,14.7,67.8,17.3,South America,21.95
+2023,146,University of Utah,United States,us,0,10.6,13.2,24,47,21.1,North America,21.07
+2023,107,University of Vienna,Austria,at,16.6,16.8,19.7,22.9,36.1,29.2,Europe,23.68
+2023,112,University of Warwick,United Kingdom,gb,12.8,27.6,13.2,18.2,37.7,26.4,Europe,23.26
+2023,103,Wuhan University,China,cn,0,0,27.1,17.3,65.3,19.5,Asia,23.89
+2023,114,Xi'an Jiaotong University,China,cn,0,0,18.6,16.4,70.6,20.3,Asia,23.15
+2023,154,Aix Marseille University,France,fr,11.7,0,18.6,21.5,48.1,19,Europe,20.71
+2023,189,Baylor College of Medicine,United States,us,0,0,23.7,23.6,38.7,16.3,North America,18.83
+2023,182,Beihang University,China,cn,0,0,20.8,14.3,51.2,17.6,Asia,19.02
+2023,191,Beijing Normal University,China,cn,14.8,0,13.2,12.7,51.2,18.3,Asia,18.73
+2023,170,Cardiff University,United Kingdom,gb,0,15,19.7,17.8,35.9,22.3,Europe,19.91
+2023,156,Case Western Reserve University,United States,us,30.1,9.2,17.4,14.2,34.6,25.5,North America,20.64
+2023,161,Delft University of Technology,Netherlands,nl,10.5,0,18.6,26.8,39.2,22.4,Europe,20.21
+2023,166,Georgia Institute of Technology,United States,us,11.7,0,23.7,18,38.4,28.2,North America,20.01
+2023,176,Goethe University Frankfurt,Germany,de,31.8,0,16.1,18.9,35.9,21.2,Europe,19.48
+2023,152,Hunan University,China,cn,0,0,37.2,10.4,45.9,20.8,Asia,20.78
+2023,163,Indiana University Bloomington,United States,us,15.7,18.4,16.1,13.2,35.1,19,North America,20.03
+2023,163,King Abdulaziz University,Saudi Arabia,sa,0,0,37.2,4.5,49.8,17.3,Asia,20.03
+2023,233,London School of Economics and Political Science,United Kingdom,gb,22.2,15,11.4,0,29.5,29.7,Europe,16.37
+2023,181,London School of Hygiene & Tropical Medicine,United Kingdom,gb,5.2,0,27.9,14.1,33.4,34.6,Europe,19.06
+2023,165,Lund University,Sweden,se,18.1,0,16.1,17.4,46.4,22.3,Europe,20.02
+2023,171,Michigan State University,United States,us,7.4,0,21.8,17.8,47,18.3,North America,19.89
+2023,172,Nankai University,China,cn,0,0,28.7,15.7,45.2,19.4,Asia,19.86
+2023,174,Northwestern Polytechnical University,China,cn,0,0,26.3,10.6,51.7,18.3,Asia,19.55
+2023,192,Osaka University,Japan,jp,17.4,0,13.2,18,45.9,15.3,Asia,18.69
+2023,193,Shenzhen University,China,cn,0,0,19.7,12.1,52.2,18.6,Asia,18.66
+2023,196,Sungkyunkwan University,South Korea,kr,0,0,20.8,14.3,46,22.4,Asia,18.46
+2023,159,Technical University of Denmark,Denmark,dk,13.8,9.2,20.8,18.7,36.6,20.7,Europe,20.51
+2023,195,Texas A&M University,United States,us,0,0,17.4,19.3,47.4,17.9,North America,18.61
+2023,190,The Hong Kong Polytechnic University,China-Hong Kong,hk,0,0,23.7,8.4,50.8,21.6,Asia,18.74
+2023,157,The University of Adelaide,Australia,au,12.8,0,29.4,12.2,39.3,31.3,Oceania,20.59
+2023,153,The University of Sheffield,United Kingdom,gb,16.6,11.3,16.1,17.3,39.5,22.7,Europe,20.77
+2023,187,Tokyo Institute of Technology,Japan,jp,11.7,27.6,6.6,11.7,31.2,22.9,Asia,18.88
+2023,162,Tongji University,China,cn,0,0,14.7,11.3,64.7,20.6,Asia,20.2
+2023,188,Tufts University,United States,us,17.4,14.6,17.4,12.3,29.1,24.5,North America,18.87
+2023,155,University of Arizona,United States,us,13.8,0,16.1,25.7,44.2,21.2,North America,20.7
+2023,158,University of Birmingham,United Kingdom,gb,16.6,6.5,14.7,18.2,44.1,22.1,Europe,20.57
+2023,173,University of California - Santa Cruz,United States,us,0,0,32.2,24.7,24.6,33.1,North America,19.61
+2023,180,University of Cologne,Germany,de,0,9.2,17.4,22.3,37.1,20.5,Europe,19.25
+2023,160,University of Exeter,United Kingdom,gb,0,0,27.1,24.1,37.3,25.4,Europe,20.24
+2023,183,University of Goettingen,Germany,de,29.6,0,13.2,24.3,32.5,20.5,Europe,19.01
+2023,175,University of Leeds,United Kingdom,gb,15.7,0,17.4,19.3,42.5,21,Europe,19.51
+2023,199,University of Massachusetts Amherst,United States,us,12.8,0,22.8,18.6,32.2,22.4,North America,18.24
+2023,185,University of Milan,Italy,it,15.7,0,16.1,12.6,47,21.9,Europe,18.9
+2023,198,University of Montpellier,France,fr,9.1,0,11.4,20.9,43.7,22.4,Europe,18.35
+2023,177,University of Montreal,Canada,ca,10.5,0,14.7,17.7,47.8,23.1,North America,19.4
+2023,184,University of Padua,Italy,it,0,0,18.6,15.8,49.3,22.3,Europe,18.97
+2023,197,University of Pisa,Italy,it,19.6,20.6,6.6,7,36.7,23,Europe,18.44
+2023,194,University of Southampton,United Kingdom,gb,0,0,21.8,19,40.3,24.3,Europe,18.65
+2023,151,University of Strasbourg,France,fr,26.2,30.2,0,17.9,32,21.8,Europe,20.82
+2023,167,University of Tuebingen,Germany,de,20.9,0,17.4,23.3,37.9,21.6,Europe,19.97
+2023,168,University of Waterloo,Canada,ca,0,13.8,24.6,10.5,39.7,22.4,North America,19.96
+2023,169,Vrije Universiteit Amsterdam,Netherlands,nl,0,0,25.5,17.9,43.9,24.8,Europe,19.94
+2023,178,Wageningen University & Research,Netherlands,nl,0,0,30.2,14.8,37.7,28.5,Europe,19.39
+2023,179,Xiamen University,China,cn,0,0,20.8,15.4,51.5,17.9,Asia,19.33
+2023,186,Zhengzhou University,China,cn,0,0,14.7,7.5,63.5,17.5,Asia,18.89
+2023,294,Beijing University of Chemical Technology,China,cn,0,0,20.8,7.8,34.8,18.3,Asia,14.51
+2023,263,Capital Medical University,China,cn,0,0,0,8.2,53.6,30.7,Asia,15.43
+2023,218,Catholic University of Louvain,Belgium,be,9.1,11.9,18.6,11,27,24.8,Europe,17.09
+2023,201,China Agricultural University,China,cn,0,0,26.3,9.5,44.9,20,Asia,18.14
+2023,251,China Medical University (Taichung),China-Taiwan,tw,0,0,20.8,2.5,39,32.5,Asia,15.71
+2023,262,China University of Geosciences,China,cn,0,0,18.6,9.1,41.1,16.8,Asia,15.44
+2023,216,Chongqing University,China,cn,0,0,17.4,4.8,55.7,17.3,Asia,17.31
+2023,232,Claude Bernard University Lyon 1,France,fr,9.1,0,11.4,20,36.8,19.4,Europe,16.49
+2023,212,Curtin University,Australia,au,0,0,19.7,14.7,37.9,29.9,Oceania,17.45
+2023,225,Dalian University of Technology,China,cn,0,0,18.6,5.9,51.9,15.4,Asia,16.82
+2023,220,Deakin University,Australia,au,0,0,22.8,8.6,41.1,25.5,Oceania,17.05
+2023,241,East China Normal University,China,cn,0,0,17.4,13.6,41.4,15.9,Asia,16.07
+2023,264,Ecole Normale Superieure - Lyon,France,fr,15.7,18.4,6.6,5.9,19.4,37.9,Europe,15.42
+2023,284,Florida State University,United States,us,0,0,14.7,15.8,34,19.4,North America,14.84
+2023,285,Fuzhou University,China,cn,0,0,21.8,6.8,37.8,15.5,Asia,14.83
+2023,231,George Mason University,United States,us,0,29.1,6.6,10.2,27.2,18.8,North America,16.5
+2023,287,Hanyang University,South Korea,kr,0,0,16.1,8,39.1,21.3,Asia,14.77
+2023,206,Hokkaido University,Japan,jp,10.5,15,6.6,14.5,39.1,15.7,Asia,17.66
+2023,276,Jiangsu University,China,cn,0,0,18.6,2.7,46.3,15.7,Asia,15.09
+2023,260,Jinan University,China,cn,0,0,13.2,9.4,46.4,16.7,Asia,15.47
+2023,259,King Abdullah University of Science and Technology,Saudi Arabia,sa,0,0,27.1,13.8,27.9,17.8,Asia,15.54
+2023,246,Korea Advanced Institute of Science and Technology,South Korea,kr,0,0,11.4,20.8,33.6,26.6,Asia,15.82
+2023,215,Korea University,South Korea,kr,0,0,17.4,11.9,46.5,21.9,Asia,17.35
+2023,250,KTH Royal Institute of Technology,Sweden,se,0,13,6.6,12.9,33.3,25.6,Europe,15.72
+2023,278,Lanzhou University,China,cn,0,0,11.4,9.9,45.6,16.5,Asia,15.03
+2023,271,Maastricht University,Netherlands,nl,0,0,13.2,8.6,41.6,26.3,Europe,15.31
+2023,280,Macquarie University,Australia,au,0,0,9.3,14.5,38,25.8,Oceania,14.94
+2023,227,Medical University of Vienna,Austria,at,7.4,0,14.7,17.5,34.8,25.4,Europe,16.68
+2023,239,Nanjing Medical University,China,cn,0,0,9.3,9.6,49.4,24.5,Asia,16.11
+2023,274,NanJing Tech University,China,cn,0,0,19.7,12.2,36.9,14.5,Asia,15.21
+2023,222,National Taiwan University,China-Taiwan,tw,10.5,0,13.2,8.2,48.8,19.2,Asia,17.01
+2023,255,Newcastle University,United Kingdom,gb,0,0,13.2,16.7,37.9,20,Europe,15.56
+2023,290,North Carolina State University - Raleigh,United States,us,0,0,14.7,12,37.8,17.4,North America,14.64
+2023,292,Northeastern University (Boston),United States,us,0,0,18.6,15.8,29.6,18.1,North America,14.61
+2023,247,Oregon Health and Science University,United States,us,0,0,16.1,19.4,33.8,19.5,North America,15.81
+2023,260,Oregon State University,United States,us,7.4,0,13.2,18.3,31.1,22.1,North America,15.47
+2023,236,Peking Union Medical College,China,cn,0,0,11.4,7.5,47.1,30.4,Asia,16.24
+2023,283,Polytechnic University of Milan,Italy,it,5.2,13,6.6,8.4,34.1,19.2,Europe,14.86
+2023,300,Qingdao University,China,cn,0,0,17.4,3.7,43.3,15.1,Asia,14.39
+2023,223,Queen Mary University of London,United Kingdom,gb,15.7,0,13.2,15.8,36.6,23,Europe,16.99
+2023,209,Queen's University,Canada,ca,12.8,19.5,9.3,9,32.1,23.3,North America,17.59
+2023,237,RWTH Aachen University,Germany,de,0,0,11.4,19,40.5,19.9,Europe,16.17
+2023,275,Shanghai University,China,cn,0,0,17.4,7.3,44.1,13.6,Asia,15.12
+2023,266,Swinburne University of Technology,Australia,au,0,0,21.8,10.8,28.9,30.9,Oceania,15.39
+2023,289,Taif University,Saudi Arabia,sa,0,0,20.8,0,42.5,20.4,Asia,14.7
+2023,293,Technical University of Berlin,Germany,de,12.8,0,14.7,14.7,29,15.8,Europe,14.54
+2023,208,Tel Aviv University,Israel,il,0,0,6.6,20.8,47.3,26.6,Asia,17.6
+2023,286,The George Washington University,United States,us,10.5,0,9.3,14.4,34.9,20.2,North America,14.79
+2023,226,The University of Auckland,New Zealand,nz,12.8,0,17.4,7.9,40.4,22.9,Oceania,16.71
+2023,203,The University of Calgary,Canada,ca,0,0,20.8,13.9,45.2,20.3,North America,18.01
+2023,202,Tohoku University,Japan,jp,13.8,0,14.7,15.9,45.4,15.3,Asia,18.11
+2023,204,Trinity College Dublin,Ireland,ie,12.8,11.3,18.6,12.1,31.7,17.8,Europe,17.8
+2023,207,TU Dresden,Germany,de,0,0,23.7,14.9,39.2,20.8,Europe,17.64
+2023,270,Ulsan National Institute of Science and Technology,South Korea,kr,0,0,20.8,17.2,22.5,32.6,Asia,15.36
+2023,229,University of Massachusetts Chan Medical School,United States,us,0,18.4,14.7,18.6,21.7,19.1,North America,16.59
+2023,277,National Autonomous University of Mexico,Mexico,mx,11.7,0,0,11.4,47.3,21.3,North America,15.04
+2023,249,University of Science and Technology Beijing,China,cn,0,0,14.7,8.6,46.2,18.4,Asia,15.74
+2023,295,The University of Texas Health Science Center at Houston,United States,us,0,14.1,9.3,12,29.9,14.2,North America,14.48
+2023,248,University of Aberdeen,United Kingdom,gb,0,11.3,20.8,8.4,26.1,24.4,Europe,15.76
+2023,298,University of Antwerp,Belgium,be,0,0,14.7,9.1,34,28.5,Europe,14.41
+2023,200,University of Barcelona,Spain,es,0,0,19.7,13.7,46.7,21.9,Europe,18.21
+2023,251,University of Bologna,Italy,it,0,0,11.4,9.8,48.3,18.1,Europe,15.71
+2023,240,University of Bordeaux,France,fr,12.8,0,11.4,18.4,35.2,18.1,Europe,16.09
+2023,258,University of Buenos Aires,Argentina,ar,11.7,20.6,6.6,6.3,30.1,16.6,South America,15.55
+2023,219,University of California - Riverside,United States,us,11.7,0,17.4,19.9,30.4,23.6,North America,17.07
+2023,273,University of Cape Town,South Africa,za,16.6,0,11.4,12.8,35.1,17.5,Africa,15.27
+2023,297,University of Cincinnati,United States,us,0,0,13.2,12.9,38.2,15.6,North America,14.42
+2023,234,University of Colorado at Denver,United States,us,0,0,9.3,20.4,44,15.3,North America,16.27
+2023,255,University of Delaware,United States,us,9.1,15,9.3,10.7,29.3,17.9,North America,15.56
+2023,254,University of East Anglia,United Kingdom,gb,22.2,0,17.4,12.9,24.8,23.3,Europe,15.57
+2023,253,University of Erlangen-Nuremberg,Germany,de,0,0,14.7,16.8,37.3,18.7,Europe,15.63
+2023,291,University of Granada,Spain,es,0,0,19.7,6.9,38.4,16.3,Europe,14.63
+2023,238,University of Hamburg,Germany,de,13.8,0,11.4,18.4,34.9,18.2,Europe,16.14
+2023,266,University of Iowa,United States,us,0,0,14.7,15.5,39,15.5,North America,15.39
+2023,265,Kiel University,Germany,de,7.4,9.2,17.4,11.2,27.7,15.6,Europe,15.4
+2023,242,University of Leipzig,Germany,de,9.1,9.2,13.2,11.1,33.5,16.9,Europe,16
+2023,213,University of Lisbon,Portugal,pt,0,6.5,11.4,12.5,47.8,18,Portugal,17.44
+2023,245,University of Lorraine,France,fr,10.5,13,11.4,9.5,33.1,14,Europe,15.85
+2023,235,University of Mainz,Germany,de,0,6.5,13.2,19.6,33.1,17.7,Europe,16.25
+2023,288,University of Manitoba,Canada,ca,10.5,0,19.7,5.9,33.1,19.6,North America,14.75
+2023,243,University of Missouri - Columbia,United States,us,7.4,13.8,11.4,9.6,33.4,15.9,North America,15.97
+2023,210,University of Muenster,Germany,de,18.1,9.2,9.3,19.9,31.5,17.9,Europe,17.58
+2023,282,University of Naples Federico II,Italy,it,0,0,9.3,9.4,46.2,18.9,Europe,14.87
+2023,298,University of Nebraska - Lincoln,United States,us,14.8,0,13.2,12.6,30,17.7,North America,14.41
+2023,220,University of Ottawa,Canada,ca,0,0,19.7,11.9,42.7,21.9,North America,17.05
+2023,268,University of Porto,Portugal,pt,0,0,11.4,11.1,44.1,20.6,Portugal,15.38
+2023,244,University of Rochester,United States,us,31,5.3,0,17.2,33.7,15.6,North America,15.9
+2023,217,University of Sussex,United Kingdom,gb,0,20.3,14.7,12.8,26.4,23.5,Europe,17.19
+2023,272,University of Tasmania,Australia,au,0,0,19.7,13.2,30.1,26.9,Oceania,15.29
+2023,213,University of Technology Sydney,Australia,au,0,0,25.5,9.1,38.5,28.2,Oceania,17.44
+2023,269,University of Tennessee - Knoxville,United States,us,9.1,0,14.7,11.2,36.7,19.4,North America,15.37
+2023,279,University of Tsukuba,Japan,jp,0,17.6,0,14.6,34.8,16.1,Asia,15.01
+2023,230,University of Turin,Italy,it,12.8,0,14.7,9.8,41.9,19.9,Europe,16.55
+2023,224,University of Virginia,United States,us,0,0,11.4,23.4,41.1,16.7,North America,16.85
+2023,296,University of Wollongong,Australia,au,0,0,13.2,13.2,32.4,26.7,Oceania,14.43
+2023,211,University of Wuerzburg,Germany,de,18.1,0,16.1,21.2,31.8,18.7,Europe,17.5
+2023,281,Virginia Commonwealth University,United States,us,9.1,13,11.4,6.6,32.1,14,North America,14.93
+2023,228,Virginia Polytechnic Institute and State University,United States,us,10.5,0,16.1,15.1,37.8,17.6,North America,16.61
+2023,255,Wuhan University of Technology,China,cn,0,0,21.8,7.4,41.6,14,Asia,15.56
+2023,205,Yonsei University,South Korea,kr,0,0,13.2,11.5,53,22.4,Asia,17.78
+2023,353,Aalborg University,Denmark,dk,0,0,17.4,5,34.6,16.8,Europe,13.08
+2023,387,Aalto University,Finland,fi,0,0,11.4,13,30,14.9,Europe,12.37
+2023,376,Autonomous University of Barcelona,Spain,es,0,0,0,10.4,41.8,22.3,Europe,12.67
+2023,347,Autonomous University of Madrid,Spain,es,0,0,9.3,11.2,35.7,19.3,Europe,13.17
+2023,361,Beijing University of Technology,China,cn,0,0,9.3,7.1,40.9,15.1,Asia,12.97
+2023,390,Brandeis University,United States,us,18.1,11.3,0,14.2,15,24.2,North America,12.33
+2023,389,Cairo University,Egypt,eg,17.4,0,0,3.2,40.7,18.3,Africa,12.35
+2023,331,Charles University in Prague,Czech Republic,cz,0,0,6.6,11.1,41.5,18.9,Europe,13.73
+2023,384,China University of Geosciences Beijing,China,cn,0,0,13.2,4.8,33.8,20.5,Asia,12.41
+2023,302,Colorado State University,United States,us,0,0,13.2,15.3,33.9,18.8,North America,14.36
+2023,339,Complutense University of Madrid,Spain,es,16.6,0,0,9.5,42.1,15.2,Europe,13.5
+2023,321,Dalhousie University,Canada,ca,11.7,0,9.3,12,33,20.1,North America,14.04
+2023,338,Dartmouth College,United States,us,19.6,0,9.3,11,26.5,21.9,North America,13.51
+2023,352,Durham University,United Kingdom,gb,0,0,11.4,12.8,31.9,18.8,Europe,13.1
+2023,304,East China University of Science and Technology,China,cn,0,0,19.7,6.1,37.6,16.3,Asia,14.31
+2023,367,Flinders University,Australia,au,14.8,0,6.6,7.6,29.7,25.2,Oceania,12.78
+2023,313,Griffith University,Australia,au,0,0,6.6,14.9,37.4,24,Oceania,14.18
+2023,388,Guangdong University of Technology,China,cn,0,0,14.7,1.4,38.6,14.2,Asia,12.36
+2023,362,Guangxi University,China,cn,0,0,11.4,6.3,39.3,15.1,Asia,12.91
+2023,321,Heinrich Heine University Duesseldorf,Germany,de,10.5,0,16.1,11.2,29.8,15.7,Europe,14.04
+2023,336,The Hong Kong University of Science and Technology,China-Hong Kong,hk,0,0,14.7,9.9,34.1,18.6,Asia,13.6
+2023,330,Huazhong Agricultural University,China,cn,0,0,16.1,8,36.6,16.5,Asia,13.79
+2023,369,Indian Institute of Science,India,in,0,0,9.3,6.8,39,17.5,Asia,12.77
+2023,349,Indiana University-Purdue University at Indianapolis,United States,us,0,0,14.7,8.2,36,13.7,North America,13.15
+2023,303,Institut Polytechnique de Paris,France,fr,20.3,15.4,0,8.9,24.2,25.9,Europe,14.32
+2023,332,James Cook University,Australia,au,0,0,16.1,14.4,24.3,27.5,Oceania,13.71
+2023,378,Jiangnan University,China,cn,0,0,9.3,5,41.4,15.2,Asia,12.66
+2023,337,Karlsruhe Institute of Technology (KIT),Germany,de,0,0,13.2,9.4,36.4,17.2,Europe,13.52
+2023,325,Keio University,Japan,jp,0,0,11.4,17.5,32.6,16.7,Asia,13.97
+2023,342,Kyushu University,Japan,jp,0,0,6.6,14.1,39,14.3,Asia,13.37
+2023,304,La Trobe University,Australia,au,0,0,13.2,11.1,33.6,27.3,Oceania,14.31
+2023,398,Lancaster University,United Kingdom,gb,0,0,9.3,12.6,29.4,18.8,Europe,12.14
+2023,374,Laval University,Canada,ca,0,0,11.4,7.5,36.1,16.9,North America,12.69
+2023,354,Linkoping University,Sweden,se,0,0,13.2,10.6,32,19.1,Europe,13.07
+2023,310,Nanchang University,China,cn,0,0,16.1,5.7,42,15,Asia,14.26
+2023,311,Nanjing Agricultural University,China,cn,0,0,14.7,9.1,38.8,17.3,Asia,14.25
+2023,320,Nanjing University of Aeronautics and Astronautics,China,cn,0,0,16.1,1.4,44.5,16.7,Asia,14.07
+2023,394,Nanjing University of Information Science & Technology,China,cn,0,0,11.4,3.8,38.6,14.9,Asia,12.25
+2023,312,Nanjing University of Science and Technology,China,cn,0,0,17.4,4.1,41.9,15.6,Asia,14.24
+2023,357,National Cheng Kung University,China-Taiwan,tw,0,0,13.2,6.7,36.1,18.1,Asia,13.01
+2023,325,Northeastern University (Shenyang),China,cn,0,0,13.2,0,48,17.3,Asia,13.97
+2023,376,Northwest A&F University,China,cn,0,0,11.4,7.2,38.1,13.3,Asia,12.67
+2023,345,Ocean University of China,China,cn,0,0,9.3,9.2,39.9,15.8,Asia,13.26
+2023,399,Okinawa Institute of Science and Technology Graduate University,Japan,jp,0,20.6,9.3,11.1,13.5,12.3,Asia,12.13
+2023,323,Paul Sabatier University (Toulouse 3),France,fr,0,0,14.7,15.8,31.3,16.7,Europe,14.03
+2023,392,Pohang University of Science and Technology,South Korea,kr,0,0,6.6,14.1,25.9,29.9,Asia,12.31
+2023,328,Pompeu Fabra University,Spain,es,0,0,9.3,15.8,26,36.6,Europe,13.88
+2023,386,Princess Nourah bint Abdulrahman University,Saudi Arabia,sa,0,0,17.4,0,36,17.2,Asia,12.4
+2023,354,Queen's University Belfast,United Kingdom,gb,16.6,0,9.3,8.4,29.9,18.9,Europe,13.07
+2023,316,Queensland University of Technology,Australia,au,0,0,17.4,5.6,36.4,22.3,Oceania,14.11
+2023,343,RMIT University,Australia,au,0,0,13.2,8.2,34.1,22.3,Oceania,13.33
+2023,397,ShanghaiTech University,China,cn,0,0,0,21.6,25.9,26.9,Asia,12.19
+2023,383,Simon Fraser University,Canada,ca,0,0,9.3,14.5,29.5,17.6,North America,12.42
+2023,367,University at Buffalo - the State University of New York,United States,us,0,0,13.2,9.4,33.5,15.6,North America,12.78
+2023,372,Stony Brook University,United States,us,0,0,9.3,15.1,31.9,14.9,North America,12.75
+2023,349,Swedish University of Agricultural Sciences,Sweden,se,0,0,13.2,10.9,27.4,28.5,Europe,13.15
+2023,307,The University of Georgia,United States,us,0,0,11.4,12.6,38.7,17.5,North America,14.29
+2023,380,The University of Reading,United Kingdom,gb,0,0,14.7,11,26.3,21.6,Europe,12.56
+2023,395,Sao Paulo State University,Brazil,br,0,0,6.6,4.1,41.4,18.1,South America,12.23
+2023,363,National and Kapodistrian University of Athens,Greece,gr,0,0,11.4,7.7,36.9,17,Europe,12.9
+2023,341,University College Cork,Ireland,ie,0,0,25.5,9.3,24.3,15.7,Europe,13.39
+2023,358,University College Dublin,Ireland,ie,0,0,11.4,11.1,34.3,16.3,Europe,12.99
+2023,396,University of Belgrade,Serbia,rs,0,0,9.3,4.5,38.6,17.2,Europe,12.2
+2023,327,University of Bergen,Norway,no,0,0,9.3,17,33.4,19.8,Europe,13.92
+2023,371,Ruhr University Bochum,Germany,de,0,0,11.4,11.5,33,15.8,Europe,12.76
+2023,384,University of Central Florida,United States,us,0,0,11.4,12.1,29.8,17.5,North America,12.41
+2023,306,University of Connecticut,United States,us,10.5,0,13.2,14.1,31.9,14.1,North America,14.3
+2023,366,University of Duisburg-Essen,Germany,de,0,0,14.7,10.9,30.9,15.5,Europe,12.85
+2023,319,University of Florence,Italy,it,0,0,11.4,9.2,39.7,20.2,Europe,14.08
+2023,334,University of Hawaii at Manoa,United States,us,0,0,14.7,13.7,30.1,19.5,North America,13.65
+2023,301,University of Houston,United States,us,0,0,13.2,14.1,34.4,20.4,North America,14.38
+2023,347,University of Illinois at Chicago,United States,us,0,0,6.6,12.7,38.7,15.7,North America,13.17
+2023,315,University of Innsbruck,Austria,at,0,6.5,11.4,17.9,23.9,22,Europe,14.14
+2023,309,University of Kansas,United States,us,16.6,0,9.3,11.7,35,14.1,North America,14.27
+2023,393,University of Kentucky,United States,us,9.1,0,6.6,5.9,36.1,16.3,North America,12.26
+2023,340,University of Leicester,United Kingdom,gb,0,0,13.2,11.6,30.9,23,Europe,13.44
+2023,373,University of Liege,Belgium,be,5.2,0,6.6,13.1,29.2,24.2,Europe,12.72
+2023,381,University of Lille,France,fr,0,0,9.3,9.4,36.6,13.9,Europe,12.45
+2023,375,University of Macau,China-Macau,mo,0,0,13.2,2,35.2,26,Asia,12.68
+2023,333,University of Maryland - Baltimore,United States,us,0,0,11.4,13.8,35.2,16,North America,13.68
+2023,324,University of Miami,United States,us,0,0,9.3,12.6,38.1,20.2,North America,14.02
+2023,364,University of Milano-Bicocca,Italy,it,0,0,11.4,7.2,34.2,23.1,Europe,12.87
+2023,358,University of Saskatchewan,Canada,ca,7.4,0,13.2,9,30,18.1,North America,12.99
+2023,329,University of South Florida,United States,us,0,0,11.4,13.6,35.6,17,North America,13.82
+2023,316,University of Southern Denmark,Denmark,dk,0,0,13.2,10.2,38.2,17.9,Europe,14.11
+2023,344,University of St Andrews,United Kingdom,gb,9.1,0,11.4,16,23.8,21.2,Europe,13.27
+2023,390,University of Stuttgart,Germany,de,17.4,0,9.3,12.6,24.3,13.5,Europe,12.33
+2023,360,University of Surrey,United Kingdom,gb,0,0,17.4,5.8,29.6,24.2,Europe,12.98
+2023,307,University of the Witwatersrand,South Africa,za,16.6,0,6.6,12.8,35.2,17.1,Africa,14.29
+2023,488,Toulouse Capitole University,France,fr,0,27.6,0,0,9.7,32.3,Europe,10.69
+2023,381,University of Turku,Finland,fi,0,0,9.3,11.8,33.3,15.7,Europe,12.45
+2023,316,University of Valencia,Spain,es,0,0,11.4,9.2,41.3,17.3,Europe,14.11
+2023,379,University of Victoria,Canada,ca,0,0,16.1,10.3,27.4,18.7,North America,12.63
+2023,354,University of York,United Kingdom,gb,0,0,9.3,14.3,31.5,20.5,Europe,13.07
+2023,365,Vienna University of Technology,Austria,at,0,0,9.3,18.9,23.4,25.4,Europe,12.86
+2023,351,Vrije Universiteit Brussel (VUB),Belgium,be,12.8,0,6.6,9.9,29.4,26.8,Europe,13.14
+2023,334,Western Sydney University,Australia,au,0,0,16.1,9.6,30.1,24.9,Oceania,13.65
+2023,314,Western University,Canada,ca,0,0,14.7,6.1,39.9,20.2,North America,14.16
+2023,369,Yangzhou University,China,cn,0,0,11.4,4.5,41.2,13.5,Asia,12.77
+2023,346,Zhejiang University of Technology,China,cn,0,0,14.7,6.9,37.7,13.9,Asia,13.25
+2023,452,Albert Einstein College of Medicine,United States,us,0,0,6.6,16.1,26.7,13.7,North America,11.25
+2023,450,Bar-Ilan University,Israel,il,0,0,11.4,8.1,27.4,18.8,Asia,11.26
+2023,422,Chalmers University of Technology,Sweden,se,0,0,9.3,11.2,27.4,21.2,Europe,11.7
+2023,412,China University of Mining and Technology,China,cn,0,0,9.3,1.4,40.8,15.5,Asia,11.85
+2023,418,China University of Petroleum (East China),China,cn,0,0,13.2,1.4,36.1,16.1,Asia,11.75
+2023,439,CUNY Graduate School and University Center,United States,us,0,0,11.4,9.2,22.1,28.8,North America,11.42
+2023,419,Drexel University,United States,us,0,0,13.2,8.4,26.5,21,North America,11.72
+2023,403,Eindhoven University of Technology,Netherlands,nl,0,0,11.4,10.2,28.4,20.4,Europe,12.04
+2023,414,Federal University of Minas Gerais,Brazil,br,0,0,6.6,8.1,36.1,16.2,South America,11.78
+2023,447,Georgetown University,United States,us,0,0,9.3,7.5,30.1,19,North America,11.28
+2023,449,Guangzhou Medical University,China,cn,0,0,9.3,4.6,33.8,17.3,Asia,11.27
+2023,472,Guangzhou University,China,cn,0,0,9.3,4.5,34.3,13.3,Asia,10.95
+2023,498,Hainan University,China,cn,0,0,9.3,3.2,34.3,12.1,Asia,10.57
+2023,481,Hannover Medical School,Germany,de,0,0,11.4,8.4,27.7,13.4,Europe,10.84
+2023,447,Henan University,China,cn,0,0,9.3,7.9,33.6,11.2,Asia,11.28
+2023,457,Hiroshima University,Japan,jp,0,0,6.6,8.7,33.5,14.1,Asia,11.17
+2023,476,Hohai University,China,cn,0,0,6.6,0,40.7,14.6,Asia,10.92
+2023,495,Humanitas University,Italy,it,0,0,9.3,5.6,16.9,42.5,Europe,10.61
+2023,426,Iowa State University,United States,us,0,0,9.3,8.7,32.6,15.2,North America,11.64
+2023,426,Istanbul University,Turkey,tr,17.4,0,0,5.9,35.4,16.4,Europe,11.64
+2023,487,Jagiellonian University,Poland,pl,9.1,0,0,9.7,34.1,10.4,Europe,10.71
+2023,479,King Fahd University of Petroleum & Minerals,Saudi Arabia,sa,0,0,16.1,0,27.5,21.3,Asia,10.85
+2023,499,King Khalid University,Saudi Arabia,sa,0,0,0,1.4,42.3,18.2,Asia,10.56
+2023,468,Kunming University of Science and Technology,China,cn,0,0,6.6,7.5,35.1,11.5,Asia,10.99
+2023,402,Kyung Hee University,South Korea,kr,0,0,9.3,5.4,37,17.4,Asia,12.08
+2023,440,Kyungpook National University,South Korea,kr,0,0,6.6,7.2,35.1,16.3,Asia,11.41
+2023,461,Louisiana State University - Baton Rouge,United States,us,0,0,6.6,10.2,30.1,17.1,North America,11.09
+2023,485,Macau University of Science and Technology,China-Macau,mo,0,0,13.2,3.5,25.9,22,Asia,10.72
+2023,469,Masaryk University,Czech Republic,cz,0,0,6.6,9.7,28.1,21,Europe,10.98
+2023,464,Murdoch University,Australia,au,0,0,13.2,6.6,22.2,26.6,Oceania,11.06
+2023,413,Nanjing Forestry University,China,cn,0,0,9.3,2.3,39.3,16.1,Asia,11.79
+2023,493,Nanjing Normal University,China,cn,0,0,6.6,5.9,34.4,12.7,Asia,10.65
+2023,479,National Tsing Hua University,China-Taiwan,tw,11.7,0,6.6,5.9,27.3,17.2,Asia,10.85
+2023,425,National Yang Ming Chiao Tung University,China-Taiwan,tw,0,0,0,6.8,41.2,20.8,Asia,11.68
+2023,466,Northern Arizona University,United States,us,0,0,16.1,12.2,18.3,17,North America,11.02
+2023,450,Polytechnic University of Valencia,Spain,es,0,0,13.2,6.3,29.3,15,Europe,11.26
+2023,435,Pusan National University,South Korea,kr,0,0,6.6,8.2,34.7,16.1,Asia,11.51
+2023,624,Renmin University of China,China,cn,0,0,6.6,0,32,13.9,Asia,9.11
+2023,488,Rensselaer Polytechnic Institute,United States,us,11.7,0,9.3,11.4,15.6,22.6,North America,10.69
+2023,444,Saint Petersburg State University,Russia,ru,23.4,0,0,7.6,30,15.1,Europe,11.37
+2023,483,Sejong University,South Korea,kr,0,0,9.3,4.8,28.7,21.7,Asia,10.73
+2023,453,Shandong University of Science and Technology,China,cn,0,0,13.2,2.5,33.9,13.1,Asia,11.23
+2023,443,University of Shanghai for Science and Technology,China,cn,0,0,13.2,3.5,33,14.4,Asia,11.38
+2023,432,South China Agricultural University,China,cn,0,0,11.4,6.3,34,12.4,Asia,11.58
+2023,477,South China Normal University,China,cn,0,0,9.3,4.6,34.6,11.7,Asia,10.87
+2023,429,Southern Medical University,China,cn,0,0,0,3.2,44.1,21.4,Asia,11.6
+2023,406,Southwest Jiaotong University,China,cn,0,0,6.6,4.5,41.9,13.8,Asia,11.98
+2023,474,Stellenbosch University,South Africa,za,0,0,6.6,9.6,31.3,14.4,Africa,10.94
+2023,496,Swansea University,United Kingdom,gb,0,0,11.4,6.4,25,20.2,Europe,10.58
+2023,459,Technical University Darmstadt,Germany,de,12.8,0,6.6,10.5,25.7,12.9,Europe,11.13
+2023,423,Temple University,United States,us,0,0,13.2,8.1,31,12.3,North America,11.69
+2023,420,The University of Dundee,United Kingdom,gb,0,0,16.1,11.3,20,22.3,Europe,11.71
+2023,430,The University of Newcastle - Australia,Australia,au,0,0,9.3,4.5,32.4,23.5,Oceania,11.59
+2023,417,Catholic University of the Sacred Heart,Italy,it,0,0,13.2,2,32.9,21.5,Europe,11.77
+2023,483,Federal University of Rio Grande do Sul,Brazil,br,0,0,6.6,5.4,34.1,15.1,South America,10.73
+2023,456,University of Natural Resources and Life Sciences - Vienna,Austria,at,0,0,14.7,5.6,20.9,29.6,Europe,11.2
+2023,441,University of South Carolina - Columbia,United States,us,0,0,9.3,7.5,32.5,15.3,North America,11.39
+2023,492,The University of Texas Medical Branch at Galveston,United States,us,0,0,11.4,13.1,19.9,17.8,North America,10.66
+2023,460,University of Alabama at Birmingham,United States,us,0,0,0,10.2,38.5,13.6,North America,11.1
+2023,423,University of Aveiro,Portugal,pt,0,0,13.2,3.9,29.7,23.3,Portugal,11.69
+2023,408,University of Bari,Italy,it,0,0,11.4,6.2,32.4,19.6,Europe,11.96
+2023,438,University of Bath,United Kingdom,gb,0,0,9.3,9.6,28.6,19.3,Europe,11.43
+2023,411,University of Campinas,Brazil,br,0,0,6.6,5.9,38.4,17,South America,11.88
+2023,435,University of Canterbury,New Zealand,nz,0,0,13.2,11,22.3,22.1,Oceania,11.51
+2023,428,University of Chile,Chile,cl,5.2,0,6.6,10.3,31.3,14.6,South America,11.62
+2023,454,University of Coimbra,Portugal,pt,0,0,6.6,8.2,32.3,18,Portugal,11.22
+2023,404,University of Côte d'Azur,France,fr,0,0,9.3,15.2,26.8,17.5,Europe,12.01
+2023,496,University of Essex,United Kingdom,gb,18.1,0,6.6,5.2,23.1,17.9,Europe,10.58
+2023,400,University of Genoa,Italy,it,0,0,11.4,5.6,33.6,20,Europe,12.12
+2023,482,University of Jena,Germany,de,0,0,9.3,10.6,27.5,13.3,Europe,10.81
+2023,458,University of Kent,United Kingdom,gb,18.9,0,9.3,5,22.6,18.7,Europe,11.14
+2023,430,University of Malaya,Malaysia,my,0,0,11.4,2.9,35.6,16.1,Asia,11.59
+2023,414,University of Marburg,Germany,de,7.4,0,9.3,13.3,25.9,13.4,Europe,11.78
+2023,490,University of Minho,Portugal,pt,0,0,11.4,6.1,27.3,17.2,Portugal,10.68
+2023,401,University of Notre Dame,United States,us,11.7,0,9.3,9.1,27.5,17.5,North America,12.1
+2023,414,University of Oregon,United States,us,5.2,0,6.6,15.5,24.9,18.6,North America,11.78
+2023,405,University of Otago,New Zealand,nz,0,0,6.6,11.3,31.8,20.6,Oceania,12
+2023,472,University of Oulu,Finland,fi,10.5,0,6.6,7,29.1,13.6,Europe,10.95
+2023,410,University of Pavia,Italy,it,0,0,11.4,6.7,30.3,22.4,Europe,11.92
+2023,420,University of Potsdam,Germany,de,0,0,9.3,14.1,28.1,14.1,Europe,11.71
+2023,469,University of Pretoria,South Africa,za,0,0,9.3,7.2,31.2,14.4,Africa,10.98
+2023,454,University of Regensburg,Germany,de,0,0,9.3,17,23.3,13,Europe,11.22
+2023,471,University of Rennes,France,fr,0,0,6.6,8.8,30.7,17.5,Europe,10.97
+2023,409,University of Tehran,Iran,ir,11.7,0,0,4.1,40.7,18,Asia,11.93
+2023,462,University of the Basque Country,Spain,es,0,0,0,12.9,34.3,16.4,Europe,11.08
+2023,432,University of Trento,Italy,it,0,0,13.2,6.6,27.2,21.8,Europe,11.58
+2023,437,University of Twente,Netherlands,nl,0,0,13.2,6.2,28.9,18.3,Europe,11.49
+2023,406,University of Ulm,Germany,de,0,0,14.7,10.7,27.4,14.2,Europe,11.98
+2023,465,University of Vermont,United States,us,12.8,0,6.6,8.6,23.9,19.5,North America,11.05
+2023,445,University of Warsaw,Poland,pl,18.9,0,0,11.4,30.4,10.8,Europe,11.33
+2023,467,University of Zagreb,Croatia,hr,0,0,6.6,6.6,34.2,15.2,Europe,11
+2023,463,The University of Texas Health Science Center at San Antonio,United States,us,0,0,16.1,7.2,23.2,17.7,North America,11.07
+2023,485,Utah State University,United States,us,12.8,0,6.6,9.1,23.6,15.8,North America,10.72
+2023,441,Victoria University of Wellington,New Zealand,nz,10.5,0,6.6,10.3,24.8,20,Oceania,11.39
+2023,478,Vita-Salute San Raffaele University,Italy,it,0,0,11.4,5,21.2,33.4,Europe,10.86
+2023,445,Washington State University,United States,us,0,0,13.2,8.9,27.3,14.5,North America,11.33
+2023,434,Xidian University,China,cn,0,0,9.3,1.4,40.1,13.7,Asia,11.53
+2023,491,York University,Canada,ca,0,0,9.3,7.5,29.7,13.7,North America,10.67
+2023,474,Yunnan University,China,cn,0,0,6.6,9.5,32.4,12.4,Asia,10.94
+2023,494,Zhejiang Normal University,China,cn,0,0,14.7,4.6,28,11.8,Asia,10.64
+2023,543,Anhui Medical University,China,cn,0,0,0,5.4,35,18,Asia,9.88
+2023,567,Anhui University,China,cn,0,0,6.6,3.8,31.9,11.6,Asia,9.62
+2023,525,Aristotle University of Thessaloniki,Greece,gr,0,0,6.6,3.5,33.1,14.6,Europe,10.1
+2023,587,Australian Catholic University,Australia,au,0,0,16.1,1.4,19,21.6,Oceania,9.46
+2023,502,Beijing Jiaotong University,China,cn,0,0,9.3,0,36.4,14,Asia,10.54
+2023,531,Ben-Gurion University of the Negev,Israel,il,0,0,0,8.1,32.2,19.4,Asia,10
+2023,578,Binghamton University,United States,us,0,16,0,6.3,17.3,16.3,North America,9.55
+2023,512,Boston College,United States,us,0,0,9.3,13.3,21.3,15.9,North America,10.37
+2023,581,Brigham Young University,United States,us,7.4,0,6.6,8.1,23.2,12.2,North America,9.54
+2023,515,Carleton University,Canada,ca,0,0,11.4,5.7,26.5,15.5,North America,10.27
+2023,530,Central China Normal University,China,cn,0,0,13.2,2.5,28.2,12.3,Asia,10.01
+2023,540,Chang'an University,China,cn,0,0,9.3,1.4,32.9,12.1,Asia,9.93
+2023,520,China University of Petroleum - Beijing,China,cn,0,0,6.6,5,31.1,16.6,Asia,10.2
+2023,576,The Chinese University of Hong Kong - Shenzhen,China,cn,0,0,11.4,6.9,20,19.1,Asia,9.57
+2023,551,Chulalongkorn University,Thailand,th,0,0,6.6,2.5,32.8,14.5,Asia,9.83
+2023,563,COMSATS University Islamabad,Pakistan,pk,0,0,0,3.2,37,16,Asia,9.64
+2023,575,Concordia University,Canada,ca,0,0,9.3,5,26.3,14.6,North America,9.58
+2023,545,Duke-NUS Medical School,Singapore,sg,0,0,11.4,12.3,20,11.2,Asia,9.86
+2023,505,Eotvos Lorand University,Hungary,hu,10.5,0,6.6,8.4,25.9,12.5,Europe,10.48
+2023,550,Federal University of Rio de Janeiro,Brazil,br,0,0,0,6.2,35.3,15.4,South America,9.84
+2023,513,Florida International University,United States,us,0,0,6.6,8.1,28.7,16.4,North America,10.32
+2023,545,Georgia State University,United States,us,0,0,9.3,4.5,27.2,16.6,North America,9.86
+2023,565,Hangzhou Dianzi University,China,cn,0,0,11.4,1.4,28.9,12.9,Asia,9.63
+2023,576,Harbin Engineering University,China,cn,0,0,9.3,0,32.1,12.9,Asia,9.57
+2023,519,Hefei University of Technology,China,cn,0,0,6.6,1.4,36.6,13,Asia,10.22
+2023,560,Hunan Normal University,China,cn,0,0,9.3,3.7,29.7,11.6,Asia,9.7
+2023,565,Kansas State University,United States,us,0,0,9.3,5.2,25.2,16.9,North America,9.63
+2023,516,Kobe University,Japan,jp,13.8,0,0,9.2,28.5,13.4,Asia,10.26
+2023,536,Leibniz University Hannover,Germany,de,0,0,9.3,9.6,24.9,12.2,Europe,9.98
+2023,501,Medical University of Innsbruck,Austria,at,0,0,11.4,6.6,21.6,26.3,Europe,10.55
+2023,503,Medical University of South Carolina,United States,us,0,0,6.6,2.5,26.3,34.3,North America,10.51
+2023,535,Mississippi State University,United States,us,0,0,9.3,7.7,24.6,16.7,North America,9.99
+2023,569,Moscow Institute of Physics and Technology,Russia,ru,20.3,0,0,7.2,24.4,12.6,Europe,9.61
+2023,505,Nanjing University of Posts and Telecommunications,China,cn,0,0,11.4,4.6,30.4,12,Asia,10.48
+2023,596,University of Galway,Ireland,ie,0,0,9.3,7.5,24.4,11.7,Europe,9.41
+2023,545,National University of Malaysia,Malaysia,my,0,0,6.6,2.9,32.6,14.4,Asia,9.86
+2023,582,National University of Defense Technology,China,cn,0,0,0,4.8,35.2,15.3,Asia,9.53
+2023,559,Ningbo University,China,cn,0,0,0,2.5,38.6,15,Asia,9.72
+2023,523,Northwest University,China,cn,0,0,0,10.8,33.2,13.2,Asia,10.12
+2023,569,North-West University,South Africa,za,10.5,0,6.6,5.9,24.5,11.6,Africa,9.61
+2023,503,Okayama University,Japan,jp,0,0,9.3,10.9,25.9,12.9,Asia,10.51
+2023,551,Oklahoma State University,United States,us,0,0,9.3,5.6,26.3,15.9,North America,9.83
+2023,592,Prince Sattam Bin Abdulaziz University,Saudi Arabia,sa,0,0,0,0,38.8,16.7,Asia,9.43
+2023,510,Qatar University,Qatar,qa,0,0,14.7,2.9,27.6,13.5,Asia,10.39
+2023,562,Rush University,United States,us,0,0,11.4,5,24.6,14.7,North America,9.67
+2023,592,Saarland University,Germany,de,0,0,9.3,7.7,24.3,11.7,Europe,9.43
+2023,544,Saint Louis University,United States,us,0,9.2,6.6,6.7,20.8,12.1,North America,9.87
+2023,538,Scuola Normale Superiore - Pisa,Italy,it,15.7,0,0,5.1,14.8,44,Europe,9.95
+2023,551,Shaanxi Normal University,China,cn,0,0,11.4,1.4,30.5,11.7,Asia,9.83
+2023,597,Southwest University,China,cn,0,0,0,2.5,38.7,11.3,Asia,9.37
+2023,792,Southwestern University of Finance and Economics,China,cn,0,0,6.6,0,25,12.9,Asia,7.61
+2023,539,St George's - University of London,United Kingdom,gb,0,0,11.4,3.2,18,34.2,Europe,9.94
+2023,615,Stockholm School of Economics,Sweden,se,0,14.6,0,0,10,42.2,Europe,9.14
+2023,507,Tampere University,Finland,fi,0,0,6.6,7.7,31,14.1,Europe,10.47
+2023,594,Tehran University of Medical Sciences,Iran,ir,0,0,0,3.2,36.1,15.6,Asia,9.42
+2023,499,Texas Tech University,United States,us,0,0,9.3,5.6,30.1,15.6,North America,10.56
+2023,518,The City College of New York,United States,us,27.2,0,6.6,6.7,14.5,19.7,North America,10.25
+2023,508,The University of Texas at Dallas,United States,us,12.8,0,0,12.1,23.5,20,North America,10.4
+2023,574,The University of Texas at San Antonio,United States,us,0,0,9.3,6.4,24.5,15.5,North America,9.59
+2023,536,Thomas Jefferson University,United States,us,0,0,6.6,4.2,25.6,27,North America,9.98
+2023,583,Tianjin Medical University,China,cn,0,0,0,3.2,33.5,21.8,Asia,9.52
+2023,551,Tulane University,United States,us,0,0,6.6,8.8,26.8,13.9,North America,9.83
+2023,557,The University of New Mexico - Albuquerque,United States,us,0,0,0,12.2,29.9,13.3,North America,9.75
+2023,540,Università Della Svizzera Italiana,Switzerland,ch,0,0,9.3,13.6,14.3,24.9,Europe,9.93
+2023,569,University of Alicante,Spain,es,0,0,9.3,7,24,15.5,Europe,9.61
+2023,589,University of Arkansas at Fayetteville,United States,us,0,0,6.6,7.3,25.5,15.7,North America,9.45
+2023,573,University of Bayreuth,Germany,de,0,0,6.6,14.7,21,11.4,Europe,9.6
+2023,514,University of California-Merced,United States,us,0,0,11.4,10.5,18,23.1,North America,10.29
+2023,525,University of Catania,Italy,it,0,0,9.3,4.1,28.5,17.2,Europe,10.1
+2023,563,University of Eastern Finland,Finland,fi,0,0,6.6,6.4,28.7,13,Europe,9.64
+2023,549,University of Fribourg,Switzerland,ch,0,0,14.7,6.2,18.9,18.9,Europe,9.85
+2023,558,University of Graz,Austria,at,12.8,0,6.6,7,19.4,18.6,Europe,9.74
+2023,545,University of Guelph,Canada,ca,0,0,6.6,5,29,17.4,North America,9.86
+2023,578,University of Johannesburg,South Africa,za,0,0,0,7,33.4,14.7,Africa,9.55
+2023,531,University of Konstanz,Germany,de,0,0,6.6,16.9,20.6,11.8,Europe,10
+2023,531,University of KwaZulu-Natal,South Africa,za,0,0,0,12.3,30.6,14.2,Africa,10
+2023,560,University of Maine,United States,us,0,16,0,7.9,15.4,18.4,North America,9.7
+2023,578,University of Navarra,Spain,es,0,0,11.4,6.7,23.8,11.7,Europe,9.55
+2023,555,University of Nevada - Reno,United States,us,0,0,6.6,10.5,23.3,17.1,North America,9.79
+2023,587,University of Nevada-Las Vegas,United States,us,0,0,6.6,11.2,21.6,15.8,North America,9.46
+2023,522,University of North Texas,United States,us,0,0,9.3,6.1,26.7,17.2,North America,10.14
+2023,584,University of Oklahoma - Oklahoma City,United States,us,0,0,11.4,3.7,18.5,27.6,North America,9.48
+2023,567,University of Palermo,Italy,it,0,0,6.6,4.1,29.3,16.2,Europe,9.62
+2023,586,University of Parma,Italy,it,0,0,11.4,1.4,25.4,18.3,Europe,9.47
+2023,556,University of Perugia,Italy,it,0,0,6.6,5.6,27.1,19,Europe,9.76
+2023,516,University of Roma - Tor Vergata,Italy,it,0,0,0,9.1,32.2,20,Europe,10.26
+2023,531,University of Rostock,Germany,de,0,0,9.3,13.5,21.4,11.6,Europe,10
+2023,524,University of Salamanca,Spain,es,0,0,9.3,8.1,25.4,15.5,Europe,10.11
+2023,540,University of Sherbrooke,Canada,ca,0,0,6.6,12,24.4,13.3,North America,9.93
+2023,528,University of South Australia,Australia,au,0,0,9.3,4.5,26.4,19.9,Oceania,10.03
+2023,529,University of Strathclyde,United Kingdom,gb,0,0,6.6,6.8,27.6,18.2,Europe,10.02
+2023,521,University of Verona,Italy,it,0,0,11.4,3.2,26.1,20.5,Europe,10.19
+2023,591,University of Vigo,Spain,es,0,0,9.3,4.1,25.4,16.8,Europe,9.44
+2023,584,Vilnius University,Lithuania,lt,7.4,0,6.6,7.6,23.8,11.4,Europe,9.48
+2023,594,Wake Forest University,United States,us,0,0,9.3,2.9,28.8,12.2,North America,9.42
+2023,527,Wenzhou Medical University,China,cn,0,0,0,7.1,35.9,14.8,Asia,10.08
+2023,511,West Virginia University,United States,us,0,0,9.3,8.5,27.1,14,North America,10.38
+2023,589,Westlake University,China,cn,0,0,9.3,15.2,17.4,10.7,Asia,9.45
+2023,569,Xi'an University of Technology,China,cn,0,0,6.6,0,34.2,14.5,Asia,9.61
+2023,508,Yeungnam University,South Korea,kr,0,0,13.2,1.4,28.8,17.2,Asia,10.4
+2023,679,Addis Ababa University,Ethiopia,et,16.6,0,0,5.4,23,11.4,Africa,8.48
+2023,675,Ain Shams University,Egypt,eg,0,0,0,4.4,31.3,13.6,Africa,8.5
+2023,608,Alexandria University,Egypt,eg,11.7,0,0,2.5,31,13.9,Africa,9.26
+2023,683,Amirkabir University of Technology,Iran,ir,0,0,9.3,0,26.7,12.2,Asia,8.42
+2023,645,Asia University,China-Taiwan,tw,0,0,6.6,1.4,24.8,22.8,Asia,8.84
+2023,665,Auburn University,United States,us,0,0,0,7,29.1,14.5,North America,8.67
+2023,606,Bangor University,United Kingdom,gb,10.5,0,9.3,4.5,16.3,22,Europe,9.27
+2023,615,Baylor University,United States,us,0,0,9.3,6.1,22.9,14.8,North America,9.14
+2023,598,Beijing University of Posts and Telecommunications,China,cn,0,0,9.3,0,31,13,Asia,9.36
+2023,638,Brescia University,Italy,it,0,0,6.6,3.8,24,20.5,Europe,8.93
+2023,609,Chang Gung University,China-Taiwan,tw,0,0,0,2,32.7,23,Asia,9.24
+2023,682,Changzhou University,China,cn,0,0,9.3,1.4,25.6,11.7,Asia,8.43
+2023,642,Charles Darwin University,Australia,au,0,0,6.6,3.7,17.8,32.8,Oceania,8.9
+2023,615,Chiang Mai University,Thailand,th,0,0,6.6,4.1,28.6,12.8,Asia,9.14
+2023,660,Chiba University,Japan,jp,0,0,0,10,26.9,13.2,Asia,8.7
+2023,659,China Medical University (Shenyang),China,cn,0,0,0,2,32.4,18.3,Asia,8.71
+2023,651,China University of Mining & Technology-Beijing,China,cn,0,0,6.6,0,28.6,17.4,Asia,8.78
+2023,610,Chongqing Medical University,China,cn,0,0,0,2,37,14.2,Asia,9.22
+2023,614,Chonnam National University,South Korea,kr,0,0,0,7.7,30.7,14.7,Asia,9.15
+2023,661,Clemson University,United States,us,0,0,0,8.6,27.2,15.3,North America,8.69
+2023,683,Czech University of Life Sciences Prague,Czech Republic,cz,0,0,6.6,3.5,20.1,23.8,Europe,8.42
+2023,633,Dalian Maritime University,China,cn,0,0,9.3,1.4,28,12.6,Asia,9
+2023,647,Edith Cowan University,Australia,au,0,0,6.6,2.5,23,23.7,Oceania,8.79
+2023,637,Ewha Womans University,South Korea,kr,0,0,6.6,5,25.9,14.4,Asia,8.94
+2023,647,Fujian Agriculture and Forestry University,China,cn,0,0,0,10.5,27.6,11.7,Asia,8.79
+2023,640,Fujian Medical University,China,cn,0,0,0,2,35.3,14.5,Asia,8.91
+2023,696,Fujian Normal University,China,cn,0,0,6.6,4.5,25.7,9.8,Asia,8.34
+2023,627,Guizhou University,China,cn,0,0,0,3.2,36.3,11.8,Asia,9.08
+2023,688,Harbin Medical University,China,cn,0,0,0,1.4,30.2,20.8,Asia,8.4
+2023,633,Hasselt University,Belgium,be,0,0,9.3,4.1,18.6,26,Europe,9
+2023,696,Henan Normal University,China,cn,0,0,6.6,4.4,26,9.4,Asia,8.34
+2023,602,Hong Kong Baptist University,China-Hong Kong,hk,0,0,6.6,6.9,25,16.3,Asia,9.33
+2023,692,Indian Institute of Technology Kharagpur,India,in,0,0,6.6,0,28.9,12.7,Asia,8.37
+2023,689,Indian Institute of Technology Delhi,India,in,0,0,0,5.4,30,13.1,Asia,8.39
+2023,658,INHA University,South Korea,kr,0,0,6.6,3.8,25.6,15.2,Asia,8.72
+2023,673,Kitasato University,Japan,jp,0,13.8,0,5.2,18.6,10.2,Asia,8.54
+2023,647,Konkuk University,South Korea,kr,0,0,6.6,4.8,25.7,13.7,Asia,8.79
+2023,683,Liverpool John Moores University,United Kingdom,gb,0,0,6.6,8,21.3,12.4,Europe,8.42
+2023,621,Loughborough University,United Kingdom,gb,0,0,6.6,4.3,26.7,16.1,Europe,9.13
+2023,600,Mahidol University,Thailand,th,0,0,0,5.6,33.8,14.7,Asia,9.35
+2023,698,Mansoura University,Egypt,eg,0,0,0,1.4,33.1,14.3,Africa,8.33
+2023,662,Marche Polytechnic University,Italy,it,0,0,9.3,3.4,21.1,19.2,Europe,8.68
+2023,638,Medical University of Graz,Austria,at,0,6.5,0,3.8,22.4,23.9,Europe,8.93
+2023,628,Nanjing University of Chinese Medicine,China,cn,0,0,6.6,5.1,27,13.3,Asia,9.07
+2023,678,Nantong University,China,cn,0,0,0,3.8,32.9,11.5,Asia,8.49
+2023,654,National Polytechnic Institute,Mexico,mx,0,0,0,4.3,32.4,14.1,North America,8.75
+2023,625,National Sun Yat-Sen University,China-Taiwan,tw,0,0,9.3,3,24.1,18.2,Asia,9.1
+2023,668,National Taiwan University of Science and Technology,China-Taiwan,tw,0,0,9.3,1.4,23.1,18.7,Asia,8.63
+2023,604,Naval Medical University,China,cn,0,0,6.6,6.7,27,12.3,Asia,9.29
+2023,623,NOVA University Lisbon,Portugal,pt,0,0,6.6,7.2,24.3,15,Portugal,9.12
+2023,671,Osaka Metropolitan University,Japan,jp,14.8,0,0,3.8,25.8,12.1,Asia,8.61
+2023,631,Palacký University Olomouc,Czech Republic,cz,0,0,6.6,6.6,21.8,20.5,Europe,9.05
+2023,672,Polytechnic University of Turin,Italy,it,0,0,0,5.9,28,17.8,Europe,8.56
+2023,615,Pontifical Catholic University of Chile,Chile,cl,0,0,0,9.4,29.6,13.4,South America,9.14
+2023,653,San Diego State University,United States,us,0,0,6.6,5,24.4,15.7,North America,8.77
+2023,656,Semmelweis University,Hungary,hu,0,0,9.3,6.9,22.1,10.7,Europe,8.73
+2023,615,Shandong Agricultural University,China,cn,0,0,9.3,5.2,25.4,11.6,Asia,9.14
+2023,615,Shandong Normal University,China,cn,0,0,9.3,1.4,29.2,11.6,Asia,9.14
+2023,694,Shinshu University,Japan,jp,0,0,9.3,6.1,20.4,12,Asia,8.36
+2023,673,University at Albany (State University of New York),United States,us,0,0,6.6,5,22.4,17.4,North America,8.54
+2023,690,SUNY Downstate Health Sciences University,United States,us,0,14.1,0,4.8,14.7,16.6,North America,8.38
+2023,683,Taipei Medical University,China-Taiwan,tw,0,0,0,2.9,29.6,19.2,Asia,8.42
+2023,665,The University of Alabama - Tuscaloosa,United States,us,0,0,0,7.2,29,14.3,North America,8.67
+2023,687,The University of Texas at Arlington,United States,us,0,0,6.6,4.1,23.2,16.3,North America,8.41
+2023,656,Tokyo University of Science,Japan,jp,11.7,0,6.6,5.7,20.4,10.2,Asia,8.73
+2023,603,Umea University,Sweden,se,0,0,0,9.7,29.1,15.5,Europe,9.31
+2023,651,University of Arkansas for Medical Sciences,United States,us,0,0,6.6,3.5,20.2,27.2,North America,8.78
+2023,601,University of Campania Luigi Vanvitelli,Italy,it,0,0,6.6,2.5,28.2,18.8,Europe,9.34
+2023,680,Universitat Jaume I,Spain,es,0,0,11.4,1.4,20.1,18.9,Europe,8.47
+2023,629,University of Alaska - Fairbanks,United States,us,0,0,9.3,8.7,16.1,22.4,North America,9.06
+2023,633,University of Bremen,Germany,de,0,0,0,14.3,24.6,12.2,Europe,9
+2023,681,University of Castilla–La Mancha,Spain,es,0,0,6.6,2.9,25,15.5,Europe,8.45
+2023,662,University of Clermont Auvergne,France,fr,0,0,6.6,4.5,25.5,13.6,Europe,8.68
+2023,692,University of Delhi,India,in,0,0,6.6,2.5,26.8,11.9,Asia,8.37
+2023,606,University of Ferrara,Italy,it,0,0,6.6,5.2,24.6,19.9,Europe,9.27
+2023,636,University of Giessen,Germany,de,0,0,6.6,5.7,26.5,12,Europe,8.96
+2023,694,University of Greenwich,United Kingdom,gb,16.6,0,6.6,4.3,16,13.2,Europe,8.36
+2023,642,University of Haifa,Israel,il,0,0,0,6.1,28.5,19.8,Asia,8.9
+2023,698,University of Halle-Wittenberg,Germany,de,0,0,0,12.2,23.7,11.5,Europe,8.33
+2023,690,University of Health Sciences Turkey,Turkey,tr,0,0,0,1.4,33.3,14.4,Europe,8.38
+2023,640,University of Iceland,Iceland,is,0,0,6.6,11.4,21.2,10.7,Europe,8.91
+2023,629,University of Ljubljana,Slovenia,si,0,0,0,4.5,33.2,15.2,Europe,9.06
+2023,645,University of Luebeck,Germany,de,0,0,13.2,6.6,19.2,10.4,Europe,8.84
+2023,612,University of Luxembourg,Luxembourg,lu,0,0,13.2,5.6,21.6,11.1,Europe,9.19
+2023,675,University of New Hampshire,United States,us,0,0,6.6,8.1,19.8,16,North America,8.5
+2023,626,University of Oviedo,Spain,es,0,0,6.6,6.3,25.8,13.5,Europe,9.09
+2023,621,University of Plymouth,United Kingdom,gb,0,0,9.3,7.8,19.4,18.3,Europe,9.13
+2023,613,University of Santiago Compostela,Spain,es,0,0,0,9.2,29.2,15,Europe,9.18
+2023,668,University of Science - Malaysia,Malaysia,my,0,0,0,2.9,33.1,14.3,Asia,8.63
+2023,604,University of Seville,Spain,es,0,0,0,5.5,34.3,13.3,Europe,9.29
+2023,611,University of Siena,Italy,it,0,0,6.6,6.6,23.4,18.9,Europe,9.21
+2023,655,University of the Balearic Islands,Spain,es,0,0,9.3,4.9,20.1,18.8,Europe,8.74
+2023,647,University of Toledo,United States,us,0,0,9.3,8.2,18.3,16.3,North America,8.79
+2023,665,University of Trieste,Italy,it,0,0,0,8.6,24.7,20.1,Europe,8.67
+2023,598,University of Tromso,Norway,no,0,0,6.6,6.1,26.5,15.2,Europe,9.36
+2023,632,University of Ulsan,South Korea,kr,0,0,0,5.6,31.5,15.9,Asia,9.01
+2023,642,University of Zaragoza,Spain,es,0,0,0,6.7,30.7,14.2,Europe,8.9
+2023,662,Wayne State University,United States,us,0,0,0,5.7,30.5,14.4,North America,8.68
+2023,670,Wenzhou University,China,cn,0,0,9.3,2,25.7,12.2,Asia,8.62
+2023,675,Yanshan University,China,cn,0,0,0,6.8,29.7,12,Asia,8.5
+2023,745,Air Force Medical University,China,cn,0,0,0,6.3,27.3,12,Asia,7.92
+2023,751,Al-Azhar University,Egypt,eg,0,0,0,2,30.7,13.3,Africa,7.87
+2023,789,American University of Beirut,Lebanon,lb,0,0,11.4,2,19.8,9.9,Asia,7.63
+2023,705,Army Medical University,China,cn,0,0,0,9.2,26.2,12,Asia,8.28
+2023,739,Banaras Hindu University,India,in,0,0,6.6,2.5,25.1,11.2,Asia,7.96
+2023,710,Beijing Forestry University,China,cn,0,0,0,3.7,30.1,14,Asia,8.16
+2023,726,Bielefeld University,Germany,de,0,0,6.6,4.2,24,10.9,Europe,8.05
+2023,784,Brno University of Technology,Czech Republic,cz,0,0,6.6,4.1,19.7,16,Europe,7.68
+2023,739,Brunel University London,United Kingdom,gb,0,0,6.6,2,23.1,16.2,Europe,7.96
+2023,796,Catholic University of Korea,South Korea,kr,0,0,0,2.5,28.6,13.7,Asia,7.59
+2023,779,Changsha University of Science and Technology,China,cn,0,0,9.3,0,24.4,9.8,Asia,7.72
+2023,749,Chung-Ang University,South Korea,kr,0,0,0,3.2,29,14.5,Asia,7.89
+2023,736,Chungbuk National University,South Korea,kr,0,0,6.6,2.5,23.4,14.8,Asia,7.98
+2023,718,Chungnam National University,South Korea,kr,0,0,0,2.5,30.1,15.7,Asia,8.09
+2023,934,Copenhagen Business School,Denmark,dk,0,0,9.3,0,18.5,10.1,Europe,6.57
+2023,716,Donghua University,China,cn,0,0,0,1.4,31.8,14.6,Asia,8.1
+2023,745,Federal University of Parana,Brazil,br,0,0,0,2.5,30.5,13.2,South America,7.92
+2023,784,Federal University of Santa Catarina,Brazil,br,0,0,0,3.7,28.5,12.4,South America,7.68
+2023,758,Federal University of Sao Paulo,Brazil,br,0,0,0,3.5,29.3,12.7,South America,7.83
+2023,753,Foshan University,China,cn,0,0,9.3,2.9,21.1,11.9,Asia,7.85
+2023,718,Hacettepe University,Turkey,tr,0,0,0,2.5,31.2,13.5,Europe,8.09
+2023,761,Hebei University of Technology,China,cn,0,0,0,1.4,31.5,12.3,Asia,7.81
+2023,798,Heilongjiang University,China,cn,0,0,13.2,1.4,18.7,9.1,Asia,7.57
+2023,921,HSE University,Russia,ru,0,0,0,0,26.7,13,Europe,6.64
+2023,789,Indian Institute of Technology Madras,India,in,0,0,0,2.9,29,12.5,Asia,7.63
+2023,768,INSA Toulouse,France,fr,0,0,11.4,4.5,11.8,22.2,Europe,7.76
+2023,710,Istanbul Technical University,Turkey,tr,0,0,6.6,2.5,25.9,11.6,Europe,8.16
+2023,774,Jawaharlal Nehru University,India,in,13.8,0,6.6,2.5,18,9.3,Asia,7.73
+2023,724,Jeonbuk National University,South Korea,kr,0,0,0,4.2,28.7,14.9,Asia,8.07
+2023,731,Juntendo University,Japan,jp,0,0,6.6,5,23.2,10.6,Asia,8.02
+2023,771,Kent State University,United States,us,0,0,9.3,3.8,19.2,12.8,North America,7.74
+2023,725,Kindai University,Japan,jp,0,0,9.3,5.4,20.6,10,Asia,8.06
+2023,774,Massey University,New Zealand,nz,0,0,0,4.5,25.8,16.7,Oceania,7.73
+2023,709,Medical College of Wisconsin,United States,us,0,0,0,8.7,26.5,11.4,North America,8.18
+2023,745,Memorial University of Newfoundland,Canada,ca,0,0,6.6,5,21.7,12.6,North America,7.92
+2023,792,National Chung Hsing University,China-Taiwan,tw,0,0,0,3.5,26.7,15.7,Asia,7.61
+2023,713,National Yunlin University of Science and Technology,China-Taiwan,tw,0,0,11.4,1.4,18.7,18.4,Asia,8.14
+2023,744,New Jersey Institute of Technology,United States,us,0,0,6.6,7.7,16.4,17.9,North America,7.93
+2023,741,North China Electric Power University,China,cn,0,0,0,0,33.5,12.5,Asia,7.95
+2023,736,Norwegian University of Life Sciences,Norway,no,0,0,6.6,6.1,18.5,17.4,Europe,7.98
+2023,795,Nottingham Trent University,United Kingdom,gb,0,0,6.6,1.4,21.8,16.4,Europe,7.6
+2023,774,Novosibirsk State University,Russia,ru,12.8,0,0,4.3,22.6,10.7,Europe,7.73
+2023,761,Ohio University,United States,us,12.8,0,0,8.4,17.2,14.1,North America,7.81
+2023,734,Old Dominion University,United States,us,0,0,6.6,6.7,19.5,14.4,North America,8
+2023,721,Orebro University,Sweden,se,0,0,6.6,3,21.6,18.4,Europe,8.08
+2023,788,Polytechnic University of Catalonia,Spain,es,0,0,0,5.3,25.6,14.6,Europe,7.64
+2023,706,Polytechnic University of Madrid,Spain,es,0,0,0,6.3,28.5,13,Europe,8.26
+2023,784,Qufu Normal University,China,cn,0,0,9.3,1.4,22.9,9.6,Asia,7.68
+2023,721,Rutgers University-Newark,United States,us,0,0,6.6,7.7,18.6,15,North America,8.08
+2023,765,Shahid Beheshti University of Medical Sciences,Iran,ir,0,0,0,3.2,29.4,12.7,Asia,7.79
+2023,726,Shandong First Medical University,China,cn,0,0,0,2.5,31.3,12.9,Asia,8.05
+2023,783,Shantou University,China,cn,0,0,0,4.8,26.8,13.8,Asia,7.7
+2023,716,Shanxi University,China,cn,0,0,0,6.9,28.3,10.6,Asia,8.1
+2023,718,Sharif University of Technology,Iran,ir,14.8,0,0,2.9,24.4,11.5,Asia,8.09
+2023,728,Sichuan Agricultural University,China,cn,0,0,0,4.8,30.3,10.2,Asia,8.04
+2023,730,Skolkovo Institute of Science and Technology,Russia,ru,0,0,9.3,8.9,17.3,9.3,Europe,8.03
+2023,754,Southern Methodist University,United States,us,10.5,0,6.6,3.5,16.2,15.3,North America,7.84
+2023,741,Syracuse University,United States,us,0,0,0,11.3,22.3,12.3,North America,7.95
+2023,701,Taiyuan University of Technology,China,cn,0,0,0,4.5,31.6,10.7,Asia,8.29
+2023,759,Tarbiat Modares University,Iran,ir,0,0,0,3.8,29,12.6,Asia,7.82
+2023,774,Technical University of Braunschweig,Germany,de,11.7,0,0,7.4,20.4,10,Europe,7.73
+2023,738,The Open University,United Kingdom,gb,0,0,6.6,9.1,18.6,11.1,Europe,7.97
+2023,708,The Royal Veterinary College,United Kingdom,gb,0,0,6.6,9.8,13,23.1,Europe,8.19
+2023,951,Tilburg University,Netherlands,nl,0,0,0,0,24.1,16.7,Europe,6.49
+2023,734,Tokyo Medical and Dental University,Japan,jp,0,0,0,8.2,24.4,14.8,Asia,8
+2023,771,University of Engineering and Technology (UET),Pakistan,pk,0,0,0,1.4,30.7,13.2,Asia,7.74
+2023,715,University of Maryland - Baltimore County,United States,us,0,0,6.6,9.6,16.3,16.1,North America,8.11
+2023,743,University of Tennessee Health Science Center,United States,us,0,0,9.3,4.8,20.2,10.8,North America,7.94
+2023,763,Universitat de Lleida,Spain,es,0,0,9.3,2.5,17.2,20,Europe,7.8
+2023,759,Universiti Teknologi Malaysia,Malaysia,my,0,0,6.6,0,26.6,11.8,Asia,7.82
+2023,770,University of Brasília,Brazil,br,0,0,0,5,27.7,12.1,South America,7.75
+2023,712,University of Burgundy,France,fr,0,0,0,5.5,27.4,15.7,Europe,8.15
+2023,752,University of Crete,Greece,gr,0,0,6.6,8,19.9,9.6,Europe,7.86
+2023,754,University of Cyprus,Cyprus,cy,0,0,6.6,2,20.9,19.4,Europe,7.84
+2023,714,University of Extremadura,Spain,es,0,0,6.6,3.2,23.2,15.2,Europe,8.12
+2023,721,University of Hull,United Kingdom,gb,13.8,0,0,6.1,17.7,19.4,Europe,8.08
+2023,779,University of Idaho,United States,us,0,0,6.6,7.5,16.8,15.4,North America,7.72
+2023,789,University of Jinan,China,cn,0,0,9.3,2,22.6,8.5,Asia,7.63
+2023,750,University of Jyvaskyla,Finland,fi,0,0,0,8.5,25.2,11.4,Europe,7.88
+2023,701,University of La Laguna,Spain,es,0,0,0,11,23.1,14.7,Europe,8.29
+2023,779,University of Murcia,Spain,es,0,0,0,5.7,26,13.8,Europe,7.72
+2023,701,University of Nantes,France,fr,0,0,6.6,8.1,21.1,11.3,Europe,8.29
+2023,787,University of Oklahoma - Norman,United States,us,0,0,0,4.5,26.9,13.9,North America,7.67
+2023,774,University of Patras,Greece,gr,0,0,6.6,3.5,23.3,10.5,Europe,7.73
+2023,748,University of Regina,Canada,ca,0,0,9.3,5.6,17.1,15.1,North America,7.91
+2023,768,University of Stirling,United Kingdom,gb,0,0,6.6,7,17,16.4,Europe,7.76
+2023,766,University of Szeged,Hungary,hu,0,9.2,0,2.9,21.7,10.2,Europe,7.78
+2023,754,University of Tabriz,Iran,ir,0,0,6.6,1.4,25.5,11.4,Asia,7.84
+2023,728,University of Tartu,Estonia,ee,0,0,0,10,24.5,11.4,Europe,8.04
+2023,731,University of the Punjab,Pakistan,pk,12.8,0,0,1.4,26.3,12,Asia,8.02
+2023,700,University of the Sunshine Coast,Australia,au,0,0,6.6,5.2,18.3,22.8,Oceania,8.3
+2023,792,University of Udine,Italy,it,0,0,6.6,3.2,19.9,16.7,Europe,7.61
+2023,771,University of Wisconsin-Milwaukee,United States,us,9.1,0,0,6.3,20.8,14.1,North America,7.74
+2023,701,University of Wyoming,United States,us,0,0,6.6,7,19.9,15.9,North America,8.29
+2023,766,University Rovira i Virgili,Spain,es,0,0,0,5.6,22.5,21.6,Europe,7.78
+2023,707,Ural Federal University,Russia,ru,0,0,0,2.5,31.8,13.7,Europe,8.23
+2023,763,Vellore Institute of Technology,India,in,0,0,0,0,32.1,13.8,Asia,7.8
+2023,733,Waseda University,Japan,jp,0,0,0,6.8,27.2,12.1,Asia,8.01
+2023,779,Zhejiang Chinese Medical University,China,cn,0,0,6.6,1.4,24.4,12.4,Asia,7.72
+2023,754,Zhejiang Sci-Tech University,China,cn,0,0,0,4.8,28.8,11.2,Asia,7.84
+2023,898,AGH University of Krakow,Poland,pl,0,0,0,1.4,26.7,11.2,Europe,6.74
+2023,882,Ajou University,South Korea,kr,0,0,0,2.5,24.3,14.9,Asia,6.85
+2023,861,Aligarh Muslim University,India,in,0,0,6.6,2.5,21.1,9.6,Asia,7
+2023,865,Amherst College,United States,us,24.6,0,0,4.4,7.5,21.4,North America,6.98
+2023,876,Anhui University of Technology,China,cn,0,0,9.3,0,20.2,9.8,Asia,6.88
+2023,846,Ankara University,Turkey,tr,0,0,0,3.8,26.1,11.4,Europe,7.12
+2023,811,AUT University,New Zealand,nz,0,0,6.6,2.7,20.5,14.9,Oceania,7.45
+2023,858,Bournemouth University,United Kingdom,gb,0,0,6.6,5.4,16.9,12.5,Europe,7.03
+2023,873,Chengdu University of Technology,China,cn,0,0,0,0,29,11.1,Asia,6.91
+2023,843,China Pharmaceutical University,China,cn,0,0,0,5,24.3,13.1,Asia,7.17
+2023,866,Chongqing University of Posts and Telecommunications,China,cn,0,0,6.6,0,23.1,10.3,Asia,6.97
+2023,817,Colorado School of Mines,United States,us,0,0,0,8.3,17.6,22.2,North America,7.4
+2023,837,Cranfield University,United Kingdom,gb,0,0,6.6,2.9,17.6,17.9,Europe,7.21
+2023,873,Czech Technical University in Prague,Czech Republic,cz,5.2,0,0,3.4,21.9,13.3,Europe,6.91
+2023,887,Dongguk University,South Korea,kr,0,0,0,2,25.4,13.3,Asia,6.81
+2023,835,Federal University of Santa Maria,Brazil,br,0,0,6.6,1.4,23,10.3,South America,7.23
+2023,850,Federal University of Sao Carlos,Brazil,br,0,0,0,4.4,25.5,11.2,South America,7.1
+2023,828,Federal University of Viçosa,Brazil,br,0,0,6.6,2,22.8,10.2,South America,7.3
+2023,852,Fluminense Federal University,Brazil,br,0,0,6.6,3.8,20.3,9.3,South America,7.07
+2023,892,Fordham University,United States,us,0,0,6.6,3.8,16.9,13.1,North America,6.77
+2023,804,Free University of Bozen-Bolzano,Italy,it,0,0,9.3,1.4,14.6,24.5,Europe,7.51
+2023,813,Gachon University,South Korea,kr,0,0,0,2,27.6,15.1,Asia,7.43
+2023,882,The Graduate University for Advanced Studies,Japan,jp,0,0,0,11.1,18.5,9.3,Asia,6.85
+2023,863,Graz University of Technology,Austria,at,0,0,0,5.6,19.7,19.3,Europe,6.99
+2023,876,Guangzhou University of Chinese Medicine,China,cn,0,0,0,2,26.9,11,Asia,6.88
+2023,880,Gwangju Institute of Science and Technology,South Korea,kr,0,0,0,5.5,17.6,22.5,Asia,6.87
+2023,894,Hallym University,South Korea,kr,0,0,0,3.5,23.2,14.2,Asia,6.76
+2023,859,Hangzhou Normal University,China,cn,0,0,0,2.9,26.6,11.1,Asia,7.01
+2023,822,Hebei Medical University,China,cn,0,0,0,0,28.4,16.7,Asia,7.35
+2023,810,Homi Bhabha National Institute,India,in,0,0,0,4.8,26.7,11.7,Asia,7.47
+2023,830,Hunan Agricultural University,China,cn,0,0,6.6,1.4,23.2,10.3,Asia,7.27
+2023,870,Johannes Kepler University Linz,Austria,at,0,0,0,6.3,18.9,18.8,Europe,6.92
+2023,801,Kanazawa University,Japan,jp,0,0,0,8.1,23.2,12.7,Asia,7.53
+2023,876,Kangwon National University,South Korea,kr,0,0,0,3.5,24.4,13,Asia,6.88
+2023,802,Kaohsiung Medical University,China-Taiwan,tw,0,0,0,0,27.5,20.2,Asia,7.52
+2023,800,Keele University,United Kingdom,gb,0,0,6.6,4.8,18.1,16.4,Europe,7.54
+2023,811,Khalifa University,United Arab Emirates,ae,0,0,6.6,1.4,23.9,10.7,Asia,7.45
+2023,868,King Faisal University,Saudi Arabia,sa,0,0,0,3.9,25.3,11,Asia,6.94
+2023,852,Liaocheng University,China,cn,0,0,6.6,1.4,22.7,9.3,Asia,7.07
+2023,850,Liaoning University of Technology,China,cn,0,0,18.6,0,10.6,12.6,Asia,7.1
+2023,799,Lincoln University,New Zealand,nz,0,0,6.6,5,13,26.3,Oceania,7.55
+2023,870,Manipal Academy of Higher Education,India,in,0,0,0,1.4,27.3,11.8,Asia,6.92
+2023,818,Nagasaki University,Japan,jp,10.5,0,0,4.1,21.8,11.5,Asia,7.38
+2023,881,National Central University,China-Taiwan,tw,0,0,0,3.8,22.9,15.2,Asia,6.86
+2023,863,National Technical University of Athens,Greece,gr,0,0,6.6,1.4,22,9.9,Europe,6.99
+2023,841,Northeast Agricultural University,China,cn,0,0,0,2.5,27.5,11.9,Asia,7.19
+2023,852,Northeast Forestry University,China,cn,0,0,0,1.4,27.7,12.5,Asia,7.07
+2023,859,Northeast Normal University,China,cn,0,0,0,2.9,26.9,10.5,Asia,7.01
+2023,806,Northumbria University,United Kingdom,gb,0,0,0,5.3,26.2,12,Europe,7.5
+2023,837,Prince of Songkla University,Thailand,th,0,0,6.6,1.4,22.9,10.3,Asia,7.21
+2023,891,Qassim University,Saudi Arabia,sa,0,0,0,0,27.9,12,Asia,6.78
+2023,829,Qilu University of Technology,China,cn,0,0,0,1.4,29.7,10.6,Asia,7.28
+2023,889,Qingdao University of Science and Technology,China,cn,0,0,0,0,28.4,11.1,Asia,6.79
+2023,821,Royal Holloway - University of London,United Kingdom,gb,0,0,0,9.5,19.3,16,Europe,7.36
+2023,993,School for Advanced Studies in the Social Sciences,France,fr,14.8,0,0,0,11.4,22.3,Europe,5.99
+2023,846,Shanghai Normal University,China,cn,0,0,0,8.1,22.8,9.4,Asia,7.12
+2023,876,Shanghai Ocean University,China,cn,0,0,0,2.5,24.5,14.8,Asia,6.88
+2023,834,Southwest Petroleum University,China,cn,0,0,0,2,28.7,11.1,Asia,7.25
+2023,813,SRM INSTITUTE OF SCIENCE AND TECHNOLOGY,India,in,0,0,0,1.4,29.4,12.7,Asia,7.43
+2023,866,Suzhou University of Science and Technology,China,cn,0,0,6.6,0,23.2,10.1,Asia,6.97
+2023,836,The Education University of Hong Kong,China-Hong Kong,hk,0,0,6.6,0,21.7,15.6,Asia,7.22
+2023,820,The University of Tokushima,Japan,jp,12.8,0,0,7.2,17.6,11.3,Asia,7.37
+2023,818,The University of Waikato,New Zealand,nz,0,0,6.6,2.5,18.8,18,Oceania,7.38
+2023,831,Tianjin University of Technology,China,cn,0,0,6.6,3.8,21.1,9.6,Asia,7.26
+2023,824,Umm Al-Qura University,Saudi Arabia,sa,0,0,0,0,30.2,13,Asia,7.34
+2023,896,Union College,United States,us,14.8,0,0,4.5,6,31.7,North America,6.75
+2023,844,United Arab Emirates University,United Arab Emirates,ae,0,0,0,5.2,25.1,11,Asia,7.16
+2023,861,Paris-East Créteil University,France,fr,0,0,6.6,3.2,20.5,9.4,Europe,7
+2023,885,University of Veterinary Medicine - Vienna,Austria,at,0,0,0,4.1,15.6,28.8,Europe,6.82
+2023,884,University of Cagliari,Italy,it,0,0,0,2.5,23.8,15.8,Europe,6.84
+2023,841,University of Calabria,Italy,it,0,0,6.6,0,21,16.7,Europe,7.19
+2023,852,University of Canberra,Australia,au,0,0,0,2.5,22.2,21.3,Oceania,7.07
+2023,804,University of Eastern Piedmont,Italy,it,0,0,6.6,3.5,17.8,19.3,Europe,7.51
+2023,846,University of Girona,Spain,es,0,0,0,4.4,21.3,19.8,Europe,7.12
+2023,870,University of Jaen,Spain,es,0,0,6.6,1.4,19,15.2,Europe,6.92
+2023,816,University of Jordan,Jordan,jo,0,0,6.6,3.2,22.2,10.1,Asia,7.41
+2023,831,University of Kassel,Germany,de,0,0,11.4,3.2,17.2,9,Europe,7.26
+2023,802,University of Limerick,Ireland,ie,0,0,9.3,3.5,20,9.6,Europe,7.52
+2023,797,University of Louisville,United States,us,0,0,0,5,26,13.8,North America,7.58
+2023,809,University of Malaga,Spain,es,0,0,0,4.3,26.4,13.4,Europe,7.48
+2023,815,University of Messina,Italy,it,0,0,0,2.9,25.9,16.6,Europe,7.42
+2023,831,University of Missouri-Kansas City,United States,us,0,0,6.6,3.4,18.9,14.8,North America,7.26
+2023,826,University of Modena and Reggio Emilia,Italy,it,0,0,0,2,25.9,17.5,Europe,7.33
+2023,837,University of Mons,Belgium,be,0,0,6.6,3.5,14.5,22.9,Europe,7.21
+2023,857,University of Nebraska Medical Center,United States,us,0,0,0,4.3,22.5,16.8,North America,7.04
+2023,875,University of Oldenburg,Germany,de,0,0,0,9.9,19.8,9.5,Europe,6.89
+2023,822,University of Salerno,Italy,it,0,0,0,2.5,26.1,16.3,Europe,7.35
+2023,824,University of Salzburg,Austria,at,0,0,6.6,2,18.5,19.2,Europe,7.34
+2023,885,University Savoie Mont Blanc,France,fr,0,0,0,8,17.9,16.4,Europe,6.82
+2023,889,University of South China,China,cn,0,0,0,1.4,26.8,11.5,Asia,6.79
+2023,806,University of Texas at El Paso,United States,us,0,0,6.6,6.7,16.9,14.6,North America,7.5
+2023,827,University of Thessaly,Greece,gr,0,0,6.6,3.2,21.8,9.9,Europe,7.31
+2023,892,University of Wuppertal,Germany,de,0,0,6.6,7.2,16,8.1,Europe,6.77
+2023,806,University Putra Malaysia,Malaysia,my,0,0,0,1.4,29.7,12.8,Asia,7.5
+2023,845,Western Norway University of Applied Sciences,Norway,no,0,0,9.3,3.2,15.9,14.5,Europe,7.13
+2023,849,Wroclaw Medical University,Poland,pl,0,0,6.6,0,21.5,14.9,Europe,7.11
+2023,868,Wuhan University of Science and Technology,China,cn,0,0,0,2,27.5,10.4,Asia,6.94
+2023,887,Xi'an University of Architecture and Technology,China,cn,0,0,0,0,28.5,11.1,Asia,6.81
+2023,837,Yokohama City University,Japan,jp,0,0,0,9.7,21.3,10.1,Asia,7.21
+2023,852,Zagazig University,Egypt,eg,0,0,0,0,29.1,12.5,Africa,7.07
+2023,959,Adam Mickiewicz University,Poland,pl,0,0,0,4.5,23.3,8.6,Europe,6.42
+2023,942,Al Jouf University,Saudi Arabia,sa,0,0,0,0,26.8,11.6,Asia,6.52
+2023,911,Beijing Technology and Business University,China,cn,0,0,0,1.4,25.6,12.8,Asia,6.68
+2023,967,Beni-Suef University,Egypt,eg,0,0,6.6,0,20.6,9.3,Africa,6.37
+2023,945,Bond University,Australia,au,0,0,6.6,2,13.7,20.5,Oceania,6.51
+2023,921,Budapest University of Technology and Economics,Hungary,hu,9.1,0,0,3.8,20.2,9.3,Europe,6.64
+2023,945,Carlos III University of Madrid,Spain,es,0,0,0,4.6,20.6,14.7,Europe,6.51
+2023,907,Chengdu University,China,cn,0,0,0,0,27.9,11.4,Asia,6.72
+2023,924,China Three Gorges University,China,cn,0,0,6.6,0,21.8,9.4,Asia,6.62
+2023,930,City - University of London,United Kingdom,gb,0,0,6.6,1.4,18.4,13.2,Europe,6.6
+2023,958,Comenius University in Bratislava,Slovakia,sk,0,0,0,4.8,22.4,9.9,Europe,6.43
+2023,931,Dalian Medical University,China,cn,0,0,0,1.4,23.9,15.2,Asia,6.58
+2023,969,Dalian Polytechnic University,China,cn,0,0,6.6,0,19.4,11.6,Asia,6.36
+2023,901,Dublin City University,Ireland,ie,0,0,6.6,4.1,18.6,8.7,Europe,6.73
+2023,954,Ege University,Turkey,tr,0,0,0,2.9,24.2,10.5,Europe,6.47
+2023,913,Erciyes University,Turkey,tr,0,0,6.6,0,21.8,9.8,Europe,6.66
+2023,921,Federal University of Ceara,Brazil,br,0,0,0,4.3,23.7,10.4,South America,6.64
+2023,964,Federal University of Goiás,Brazil,br,0,0,0,4.8,22.3,9.8,South America,6.4
+2023,916,Federal University of Pernambuco,Brazil,br,0,0,0,2,25.7,11.1,South America,6.65
+2023,974,Ferdowsi University of Mashhad,Iran,ir,0,0,0,1.4,24.9,10.8,Asia,6.34
+2023,940,Gazi University,Turkey,tr,0,0,0,2,25.2,10.9,Europe,6.53
+2023,908,Gdansk University of Technology,Poland,pl,0,0,6.6,0,20.5,12.9,Europe,6.71
+2023,998,Guangdong University of Foreign Studies,China,cn,0,0,6.6,0,15.9,8.1,Asia,5.31
+2023,938,Guangxi Medical University,China,cn,0,0,0,2,26.1,9.3,Asia,6.55
+2023,929,Gyeongsang National University,South Korea,kr,0,0,0,2,24.6,12.9,Asia,6.61
+2023,913,Hebei University,China,cn,0,0,0,2,26.4,9.8,Asia,6.66
+2023,969,Henan University of Science and Technology,China,cn,0,0,0,2.7,25,8.2,Asia,6.36
+2023,916,Heriot-Watt University,United Kingdom,gb,0,0,0,6,18.8,16.9,Europe,6.65
+2023,901,Huaqiao University,China,cn,0,0,0,5.6,23.3,9.5,Asia,6.73
+2023,959,Indian Institute of Technology Kanpur,India,in,0,0,0,3.5,23.5,10.2,Asia,6.42
+2023,974,Indian Institute of Technology Roorkee,India,in,0,0,0,0,26.1,11.2,Asia,6.34
+2023,956,Iran University of Science & Technology,Iran,ir,0,0,0,0,26.6,11.4,Asia,6.46
+2023,978,Jiangsu University of Science and Technology,China,cn,0,0,0,0,26.3,10.7,Asia,6.33
+2023,974,Khon Kaen University,Thailand,th,0,0,0,2,24.4,10.6,Asia,6.34
+2023,916,Rey Juan Carlos University,Spain,es,0,0,0,5.6,20.2,14.9,Europe,6.65
+2023,938,Kumamoto University,Japan,jp,0,0,0,5.9,20.7,12.3,Asia,6.55
+2023,913,Linnaeus University,Sweden,se,0,0,6.6,3.8,16.8,12.2,Europe,6.66
+2023,995,London Business School,United Kingdom,gb,0,0,6.6,0,9.7,21.7,Europe,5.43
+2023,934,Loyola University Chicago,United States,us,0,0,0,4.4,20.8,15.3,North America,6.57
+2023,964,Manchester Metropolitan University,United Kingdom,gb,0,0,0,4.8,22.2,10,Europe,6.4
+2023,931,Medical University of Warsaw,Poland,pl,0,0,0,2.9,23.3,13.4,Europe,6.58
+2023,988,Metropolitan Autonomous University,Mexico,mx,0,0,6.6,2,18.6,8.6,North America,6.3
+2023,967,Montana State University - Bozeman,United States,us,0,0,0,7.7,17.1,14.1,North America,6.37
+2023,1000,Montpellier Business School,France,fr,0,0,11.4,0,10.5,7.6,Europe,5.14
+2023,948,National Research Nuclear University MEPhI (Moscow Engineering Physics Institute),Russia,ru,9.1,0,0,3.5,19.9,9.1,Europe,6.5
+2023,956,National University of Colombia,Colombia,co,0,0,0,3.8,23.4,10.2,South America,6.46
+2023,942,National University of Sciences and Technology Pakistan,Pakistan,pk,0,0,0,0,26.8,11.6,Asia,6.52
+2023,997,NHH - Norwegian School of Economics,Norway,no,11.7,0,0,0,10.3,21.2,Europe,5.35
+2023,916,Nicolaus Copernicus University,Poland,pl,0,0,0,5.2,23,10.1,Europe,6.65
+2023,990,Niigata University,Japan,jp,0,0,0,3.8,22.4,10.3,Asia,6.27
+2023,948,Quaid-i-Azam University,Pakistan,pk,0,0,0,1.4,25.6,11,Asia,6.5
+2023,924,Royal College of Surgeons - Ireland,Ireland,ie,0,0,6.6,3.8,18.4,8.6,Europe,6.62
+2023,908,Saitama University,Japan,jp,13.8,0,0,7.1,12.7,13.7,Asia,6.71
+2023,931,Sechenov University,Russia,ru,0,0,0,3.9,23.8,10.4,Europe,6.58
+2023,996,Shandong University of Finance and Economics,China,cn,0,0,6.6,0,16.1,8.3,Asia,5.37
+2023,994,Shanghai University of Finance and Economics,China,cn,0,0,0,0,21.1,13.2,Asia,5.54
+2023,942,Shanghai University of Traditional Chinese Medicine,China,cn,0,0,0,0,25.6,14,Asia,6.52
+2023,984,Shanxi Medical University,China,cn,0,0,0,0,24.4,14.3,Asia,6.31
+2023,991,Shihezi University,China,cn,0,0,0,2,24.3,10,Asia,6.26
+2023,974,Shiraz University of Medical Science,Iran,ir,0,0,0,2.5,24,10.4,Asia,6.34
+2023,924,Singapore University of Technology & Design,Singapore,sg,0,0,9.3,4.3,15.5,8,Asia,6.62
+2023,912,Southern Cross University,Australia,au,0,0,0,7.3,15.1,21.9,Oceania,6.67
+2023,966,SUNY College of Environmental Science and Forestry,United States,us,0,0,6.6,5.9,9.3,20.3,North America,6.39
+2023,972,SUNY Upstate Medical University,United States,us,0,0,6.6,3.8,15.5,11.7,North America,6.35
+2023,940,Swarthmore College,United States,us,23.4,0,0,2.5,8.3,20.3,North America,6.53
+2023,959,Tokyo University of Agriculture and Technology,Japan,jp,0,0,0,6.9,17.3,15.8,Asia,6.42
+2023,978,University of North Carolina at Greensboro,United States,us,0,0,0,6.6,18.7,12.7,North America,6.33
+2023,948,Universidad Andrés Bello,Chile,cl,0,0,6.6,2.9,18.7,8.6,South America,6.5
+2023,988,Universidad de Cadiz,Spain,es,0,0,0,5.6,19.3,13.2,Europe,6.3
+2023,898,Universidad Pablo de Olavide,Spain,es,0,0,0,6.4,17.3,20,Europe,6.74
+2023,980,Universidade Federal de Pelotas,Brazil,br,0,0,6.6,1.4,19.2,8.8,South America,6.32
+2023,901,University of Alcalá,Spain,es,0,0,0,4.1,22.3,14.5,Europe,6.73
+2023,980,University of Arkansas at Little Rock,United States,us,0,0,0,0,21.4,20.4,North America,6.32
+2023,901,University of Calcutta,India,in,17.4,0,0,2,18.2,9.5,Asia,6.73
+2023,984,University of Cantabria,Spain,es,0,0,0,4.1,19.7,15.5,Europe,6.31
+2023,934,University of Central Lancashire,United Kingdom,gb,0,0,9.3,5,14.3,8.5,Europe,6.57
+2023,910,University of Chieti-Pescara,Italy,it,0,0,0,4.6,20.9,16,Europe,6.7
+2023,901,University of Concepcion,Chile,cl,0,0,0,5.9,22.7,10.1,South America,6.73
+2023,916,University of Cordoba,Spain,es,0,0,0,2.5,22.9,15.7,Europe,6.65
+2023,954,University of Ghana,Ghana,gh,0,0,0,5,22.4,9.9,Africa,6.47
+2023,972,University of Hertfordshire,United Kingdom,gb,0,0,6.6,3.7,16.7,9.5,Europe,6.35
+2023,969,University of Lahore,Pakistan,pk,0,0,0,1.4,25,10.8,Asia,6.36
+2023,980,University of Lincoln,United Kingdom,gb,0,0,0,7,16.8,15.6,Europe,6.32
+2023,945,University of New England,Australia,au,0,0,0,4.8,17.8,19.9,Oceania,6.51
+2023,953,University of Novi Sad,Serbia,rs,0,0,0,2,25,10.8,Europe,6.48
+2023,894,University of Poitiers,France,fr,10.5,0,0,5.2,17.9,10.9,Europe,6.76
+2023,896,University of Portsmouth,United Kingdom,gb,0,0,0,6.3,21.6,11.7,Europe,6.75
+2023,924,University of Quebec Montreal,Canada,ca,0,0,0,2.9,24.2,12,North America,6.62
+2023,984,University of Sfax,Tunisia,tn,0,0,0,2,24.3,10.5,Africa,6.31
+2023,984,University of Sharjah,United Arab Emirates,ae,0,0,0,1.4,24.8,10.7,Asia,6.31
+2023,963,University of South Africa,South Africa,za,13.8,0,0,0,20.3,9.7,Africa,6.41
+2023,901,University of Southern Queensland,Australia,au,0,0,0,3,20.7,19.9,Oceania,6.73
+2023,991,University of Valladolid,Spain,es,0,0,0,3.2,22.1,12,Europe,6.26
+2023,951,Warsaw University of Technology,Poland,pl,0,0,0,2.5,24.5,10.9,Europe,6.49
+2023,898,Xiangtan University,China,cn,0,0,0,3.2,25.3,10.4,Asia,6.74
+2023,959,Xinjiang University,China,cn,0,0,0,0,27,10.2,Asia,6.42
+2023,924,Xuzhou Medical University,China,cn,0,0,0,2,24.5,13.2,Asia,6.62
+2023,980,Yangtze University,China,cn,0,0,0,1.4,25.5,9.4,Asia,6.32
+2023,934,Yeshiva University,United States,us,0,0,6.6,8.3,9.6,16.7,North America,6.57
+2023,999,Zhongnan University of Economics and Law,China,cn,0,0,0,0,21,10.1,Asia,5.21

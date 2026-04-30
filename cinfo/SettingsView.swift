@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("appColorScheme") private var colorSchemeKey = "dark"
-    @AppStorage("appLanguage")    private var lang           = "en"
+    @AppStorage("appColorScheme") private var colorSchemeKey  = "dark"
+    @AppStorage("appLanguage")    private var lang            = "en"
+    @AppStorage("homeCurrency")   private var homeCurrency    = "USD"
+    @EnvironmentObject private var apiKeyStore: APIKeyStore
+    @EnvironmentObject private var aiSettings:  AISettings
+    @State private var showKeys = false
 
     var body: some View {
         NavigationStack {
@@ -37,6 +41,126 @@ struct SettingsView: View {
                 Section(l("language", lang)) {
                     LanguageRow(label: l("lang_en", lang), code: "en", selected: $lang)
                     LanguageRow(label: l("lang_zh", lang), code: "zh", selected: $lang)
+                }
+
+                // ── AI Provider ───────────────────────────────────────────────
+                Section(header: Text("AI Provider")) {
+                    ForEach(AIProvider.allCases) { provider in
+                        Button {
+                            aiSettings.selectProvider(provider)
+                        } label: {
+                            HStack(spacing: 12) {
+                                ProviderLogoView(provider: provider, size: 28)
+                                Text(provider.rawValue).foregroundStyle(.primary)
+                                Spacer()
+                                if aiSettings.provider == provider {
+                                    Image(systemName: "checkmark")
+                                        .foregroundStyle(Color.accentColor)
+                                        .fontWeight(.semibold)
+                                }
+                            }
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+
+                // ── AI Model ──────────────────────────────────────────────────
+                Section(header: Text("Model  ·  \(aiSettings.provider.rawValue)")) {
+                    ForEach(aiSettings.provider.models) { model in
+                        Button {
+                            aiSettings.modelId = model.id
+                        } label: {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(model.displayName).foregroundStyle(.primary)
+                                    if let note = model.note {
+                                        Text(note)
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                }
+                                Spacer()
+                                if aiSettings.modelId == model.id {
+                                    Image(systemName: "checkmark")
+                                        .foregroundStyle(Color.accentColor)
+                                        .fontWeight(.semibold)
+                                }
+                            }
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+
+                // ── API Keys ──────────────────────────────────────────────────
+                Section {
+                    ForEach(AIProvider.allCases) { provider in
+                        HStack(spacing: 12) {
+                            ProviderLogoView(provider: provider, size: 28)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(provider.rawValue)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                                if showKeys {
+                                    TextField(provider.keyPlaceholder,
+                                              text: apiKeyStore.binding(for: provider))
+                                        .font(.footnote)
+                                        .autocorrectionDisabled()
+                                        .textInputAutocapitalization(.never)
+                                } else {
+                                    SecureField(provider.keyPlaceholder,
+                                                text: apiKeyStore.binding(for: provider))
+                                        .font(.footnote)
+                                        .autocorrectionDisabled()
+                                        .textInputAutocapitalization(.never)
+                                }
+                            }
+                            Button { showKeys.toggle() } label: {
+                                Image(systemName: showKeys ? "eye.slash" : "eye")
+                                    .foregroundStyle(.secondary)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                } header: {
+                    Text("API Keys")
+                } footer: {
+                    Text("Keys are stored in the device Keychain. Get them at \(aiSettings.provider.keyHelpURL)")
+                }
+
+                // ── Home Currency ─────────────────────────────────────────────
+                Section {
+                    ForEach(SupportedCurrency.all) { cur in
+                        Button {
+                            homeCurrency = cur.code
+                        } label: {
+                            HStack(spacing: 12) {
+                                Image(systemName: cur.sfSymbol)
+                                    .foregroundStyle(Color.accentColor)
+                                    .frame(width: 24)
+                                VStack(alignment: .leading, spacing: 1) {
+                                    Text(cur.name)
+                                        .foregroundStyle(.primary)
+                                    Text(cur.code)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                                Spacer()
+                                Text(cur.symbol)
+                                    .foregroundStyle(.secondary)
+                                    .font(.subheadline)
+                                if homeCurrency == cur.code {
+                                    Image(systemName: "checkmark")
+                                        .foregroundStyle(Color.accentColor)
+                                        .fontWeight(.semibold)
+                                }
+                            }
+                        }
+                        .buttonStyle(.plain)
+                    }
+                } header: {
+                    Text(l("home_currency", lang))
+                } footer: {
+                    Text(l("home_currency_hint", lang))
                 }
             }
             .navigationTitle(l("tab_settings", lang))

@@ -11,12 +11,24 @@
 import Foundation
 
 // Which ranking system is currently active — used both for sorting and card highlighting.
-enum RankingSystem: String, CaseIterable {
+enum RankingSystem: String, CaseIterable, Identifiable {
     case overall  = "Overall"
     case qs       = "QS"
     case times    = "Times"
     case usNews   = "USNews"
     case shanghai = "Shanghai"
+
+    var id: String { rawValue }
+
+    var sfSymbol: String {
+        switch self {
+        case .overall:  return "trophy.fill"
+        case .qs:       return "globe"
+        case .times:    return "clock.fill"
+        case .usNews:   return "newspaper.fill"
+        case .shanghai: return "building.2.fill"
+        }
+    }
 }
 
 // Per-year snapshot of the four ranking values.
@@ -160,6 +172,30 @@ enum Country: String, CaseIterable {
         case .taiwan:      return "TWN"
         case .newZealand:  return "NZL"
         case .israel:      return "ISR"
+        }
+    }
+
+    /// ISO-4217 code for the country's primary currency.
+    var currencyCode: String {
+        switch self {
+        case .us:                                           return "USD"
+        case .uk:                                           return "GBP"
+        case .australia:                                    return "AUD"
+        case .singapore:                                    return "SGD"
+        case .canada:                                       return "CAD"
+        case .china:                                        return "CNY"
+        case .hongKong:                                     return "HKD"
+        case .taiwan:                                       return "TWD"
+        case .switzerland:                                  return "CHF"
+        case .sweden:                                       return "SEK"
+        case .denmark:                                      return "DKK"
+        case .norway:                                       return "NOK"
+        case .japan:                                        return "JPY"
+        case .southKorea:                                   return "KRW"
+        case .newZealand:                                   return "NZD"
+        case .israel:                                       return "ILS"
+        case .germany, .france, .netherlands, .belgium,
+             .italy, .spain, .finland, .austria, .ireland:  return "EUR"
         }
     }
 

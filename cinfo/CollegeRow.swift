@@ -36,13 +36,12 @@ struct CollegeRow: View {
     // and logo visibility, since College itself can't know its position in the list.
     let overallRank: Int
 
-    @State private var webLink: WebLink?
-    @AppStorage("appLanguage") private var lang = "en"
-
-    // All systems except the active one — shown as small secondary badges
-    private var otherSystems: [RankingSystem] {
-        RankingSystem.allCases.filter { $0 != activeRanking }
-    }
+    @EnvironmentObject private var currency: CurrencyService
+    @State private var webLink:          WebLink?
+    @State private var trendSystem:      RankingSystem? = nil
+    @State private var showHomeCurrency  = false
+    @AppStorage("appLanguage")  private var lang         = "en"
+    @AppStorage("homeCurrency") private var homeCurrencyCode = "USD"
 
     // Effective rank for display in the hero badge
     private var heroRank: Int? {
@@ -82,25 +81,22 @@ struct CollegeRow: View {
                 .foregroundStyle(.secondary)
                 .lineLimit(2)
 
-            // Rankings row — active system is the large hero badge on the left
-            HStack(spacing: 10) {
-                HeroBadge(label: activeRanking.rawValue, rank: heroRank)
+            // Ranking badge + tuition side by side
+            HStack(alignment: .center, spacing: 12) {
+                Button { trendSystem = activeRanking } label: {
+                    HeroBadge(label: activeRanking.rawValue, rank: heroRank)
+                }
+                .buttonStyle(.plain)
 
                 Rectangle()
                     .fill(Color(.systemGray4))
                     .frame(width: 1, height: 36)
 
-                ForEach(otherSystems, id: \.self) { system in
-                    RankBadge(label: system.rawValue, rank: college.rank(for: system))
-                }
-            }
-
-            // Tuition
-            HStack {
-                Image(systemName: "dollarsign.circle").foregroundStyle(.green)
-                Text("~\(college.tuitionUSD.formatted(.number)) \(l("per_year_usd", lang))")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
+                TuitionView(tuitionUSD: college.tuitionUSD,
+                            localCode: college.country.currencyCode,
+                            homeCode: homeCurrencyCode,
+                            currency: currency,
+                            lang: lang)
             }
         }
         .padding()
@@ -109,6 +105,66 @@ struct CollegeRow: View {
         .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.separator), lineWidth: 0.5))
         .sheet(item: $webLink) { link in
             SafariView(url: link.url)
+        }
+        .sheet(item: $trendSystem) { system in
+            RankingTrendView(college: college,
+                             overallRank: overallRank,
+                             initialSystem: system)
+        }
+    }
+}
+
+// ── Tuition Toggle View ───────────────────────────────────────────────────────
+/// Shows tuition in the university's local currency.
+/// Tapping once converts to the user's home currency; tapping again reverts.
+/// If local == home currency the row is static (nothing to toggle).
+private struct TuitionView: View {
+
+    let tuitionUSD:  Int
+    let localCode:   String   // e.g. "AUD" for an Australian university
+    let homeCode:    String   // user's chosen home currency
+    let currency:    CurrencyService
+    let lang:        String
+
+    @State private var showHome = false
+
+    private var isSameCurrency: Bool { localCode == homeCode }
+
+    /// Formatted amount for a given currency code.
+    private func formatted(code: String) -> String? {
+        let usd = Double(tuitionUSD)
+        guard let amount = currency.convert(usd, to: code) else { return nil }
+        let meta = currency.meta(for: code)
+        let symbol = meta?.symbol ?? code
+        let value  = Int(amount.rounded()).formatted(.number)
+        return "~\(symbol)\(value) / year (\(code))"
+    }
+
+    var body: some View {
+        let displayCode = (!isSameCurrency && showHome) ? localCode : homeCode
+        let displayText = formatted(code: displayCode)
+                       ?? "~$\(tuitionUSD.formatted(.number)) \(l("per_year_usd", lang))"
+
+        Group {
+            if isSameCurrency {
+                Text(displayText)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            } else {
+                Button {
+                    withAnimation(.easeInOut(duration: 0.18)) { showHome.toggle() }
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "arrow.left.arrow.right")
+                            .font(.system(size: 10, weight: .medium))
+                            .foregroundStyle(Color.accentColor)
+                        Text(displayText)
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .buttonStyle(.plain)
+            }
         }
     }
 }
