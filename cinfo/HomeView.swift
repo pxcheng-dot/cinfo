@@ -312,6 +312,12 @@ private struct TopUniversityRow: View {
 
                 Spacer(minLength: 8)
 
+                if let score = college.compositeScore {
+                    Text(String(format: "SRS: %.1f", score))
+                        .font(.system(size: 12, weight: .semibold, design: .rounded))
+                        .foregroundStyle(.secondary)
+                }
+
                 Image(systemName: "chevron.right")
                     .font(.caption)
                     .foregroundStyle(.tertiary)
@@ -362,10 +368,10 @@ private struct OverallRankingInfoSheet: View {
                 VStack(alignment: .leading, spacing: 20) {
 
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("SRS fuses time-weighted, independent signals into a single, intelligent measure of university performance.")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .fixedSize(horizontal: false, vertical: true)
+                        Text("SRS fuses time-weighted, independent signals into five dimensions below, and intergates them into a single, intelligent measure of university performance.\n\nSRS is designed with students at its core. Unlike traditional rankings that prioritize institutional metrics, SRS estimates which universities are best suited for helping you achieve excellence in your chosen field, maximize your career prospects, and create meaningful impact on society.")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
                     }
                     .padding(.horizontal)
                     .padding(.top, 4)

@@ -25,25 +25,12 @@ private struct RankPoint: Identifiable {
 private extension RankingSystem {
     var color: Color {
         switch self {
-        case .overall:  return .purple
+        case .overall:  return .gray
         case .qs:       return .blue
         case .times:    return .orange
         case .usNews:   return .red
         case .shanghai: return .green
         }
-    }
-
-    /// Display name inside the trend view.
-    /// .overall shows as "Average" here because the line plots the simple
-    /// per-year mean — distinct from the card's weighted positional rank.
-    var trendLabel: String {
-        self == .overall ? "Average" : rawValue
-    }
-
-    /// Color used for the Average chip — teal so it doesn't clash with
-    /// the purple Overall badge in the banner above.
-    var trendColor: Color {
-        self == .overall ? .teal : color
     }
 }
 
@@ -161,11 +148,11 @@ struct RankingTrendView: View {
                                         else  { visible.remove(system) }
                                     }
                                 )) {
-                                    Text(system.trendLabel)
+                                    Text(system == .overall ? "Average" : system.rawValue)
                                         .font(.subheadline)
                                         .fontWeight(.semibold)
                                 }
-                                .toggleStyle(ChipToggleStyle(color: system.trendColor))
+                                .toggleStyle(ChipToggleStyle(color: system.color))
                             }
                         }
                         .padding(.horizontal)
@@ -255,6 +242,7 @@ struct RankingTrendView: View {
                         Text("Raw Data")
                             .font(.headline)
                             .padding(.horizontal)
+                            .padding(.top, 16)
                             .padding(.bottom, 10)
 
                         // Header
@@ -275,7 +263,7 @@ struct RankingTrendView: View {
 
                         ForEach(RankingSystem.allCases, id: \.self) { system in
                             HStack {
-                                Text(system.trendLabel)
+                                Text(system == .overall ? "Average" : system.rawValue)
                                     .font(.caption).fontWeight(.semibold)
                                     .foregroundStyle(system.color)
                                     .frame(width: 72, alignment: .leading)
@@ -334,6 +322,11 @@ private struct OverallRankBanner: View {
                     Text("#\(overallRank)")
                         .font(.system(size: 22, weight: .heavy, design: .rounded))
                         .foregroundStyle(.white)
+                    if let score = college.compositeScore {
+                        Text(String(format: "%.1f / 100", score))
+                            .font(.system(size: 10, weight: .medium, design: .rounded))
+                            .foregroundStyle(.white.opacity(0.75))
+                    }
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)
@@ -343,7 +336,7 @@ private struct OverallRankBanner: View {
 
             // Explanation
             VStack(alignment: .leading, spacing: 3) {
-                Text("SRS is a weighted multi-factor model blending temporally-weighted academic achievement with selectivity, financial strength, concentrated excellence, institutional focus, and career opportunities.")
+                Text("SRS is a multi-factor model that provides student-first ranking for universities around the world. It blends temporally-weighted academic achievement with selectivity, financial strength, concentrated excellence, institutional focus, and career opportunities. SRS measures how well a university enables students to thrive.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)

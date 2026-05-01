@@ -57,14 +57,15 @@ Assumptions:
 - Always prioritize preserving existing functionality unless explicitly told otherwise.
 
 SRS — Synaptic Ranking System:
-- SRS stands for Synaptic Ranking System. Always use this full name on first mention, then SRS.
 - SRS is the app's proprietary university ranking. It is NOT the same as QS, Times, USNews, or Shanghai.
+- Do not change SRS discriptions in .swift files unless I explicitly ask you to.
+- Do not spell out SRS. Alway use SRS.
 - SRS is computed in `cinfo/College.swift` (`compositeScore` / `averageRank`).
 - Supplemental data (acceptance rate, endowment, awards, students, faculty, schools, location) lives in `cinfo/SupplementalData.swift`.
-- SRS has six weighted components: Academic rankings (49%), Endowment per student (15%), Selectivity (13.5%), Research awards (12%), Institutional focus (8.5%), Location (2%).
+- SRS has six weighted components: Academic rankings (45%), Selectivity (13.5%), Endowment per student (19%), Research awards (12%), Institutional focus (8.5%), Location (2%).
 - Weights must always sum to 100%. If weights change, update College.swift, RANKINGS.md, HomeView.swift, and RankingTrendView.swift together.
 - The algorithm is documented in `/RANKINGS.md` under "SRS Algorithm (v3 — current)". Keep that doc in sync with code.
-- In the UI, SRS appears as: the "SRS" tab in Discover (ContentView), the badge on CollegeRow, and the banner in RankingTrendView.
+
 
 
 

@@ -73,18 +73,20 @@ numbers diluted across a massive student body.
 
 ### Six components
 
+Components are listed in code evaluation order.
+
 | # | Component | Base weight | Data source |
 |---|-----------|-------------|-------------|
-| 1 | **Academic rankings** | 49 % | QS / Times / USNews / Shanghai, 2022–2026 |
-| 2 | **Endowment per student** | 15 % | Endowment ÷ total enrollment (USD, 2024) |
-| 3 | **Selectivity** | 13.5 % | Undergraduate acceptance rate (%) |
+| 1 | **Academic rankings** | 45 % | QS / Times / USNews / Shanghai, 2022–2026 |
+| 2 | **Selectivity** | 13.5 % | Undergraduate acceptance rate (%) |
+| 3 | **Endowment per student** | 19 % | Endowment ÷ total enrollment (USD, 2024) |
 | 4 | **Research awards** | 12 % | All-time affiliated Nobel / Fields / Turing laureates |
 | 5 | **Institutional focus** | 8.5 % | Inverse-log of enrollment size × inverse-log of school count |
 | 6 | **Location** | 2 % | Metro-area size / city centrality, pre-scored 0–100 |
 
 ---
 
-### Component 1 — Academic rankings  (49 %)
+### Component 1 — Academic rankings  (45 %)
 
 **Step 1a — Per-system temporal-weighted average rank**
 
@@ -155,11 +157,14 @@ selScore = max(0, min(100, 100 − acceptanceRate))
 
 ---
 
-### Component 3 — Endowment per student  (15 %)
+### Component 3 — Endowment per student  (19 %)
 
 Rewards **concentrated** financial resources.  A $34 B endowment for
 8,500 students (Princeton ≈ $4 M/student) outscores a $53 B endowment
 spread across 21,000 students (Harvard ≈ $2.5 M/student).
+
+> **Requires both** `endowmentBn > 0` **and** `studentCount > 0`.
+> If either is missing, this component is skipped and its weight redistributed.
 
 ```
 endPerStudentKUSD = endowmentBn × 10^6 / studentCount   (USD thousands)
@@ -295,6 +300,86 @@ Position in that list = **SRS** badge displayed on the card.
 
 ---
 
+### Complete step-by-step pseudocode
+
+This is the exact sequence implemented in `compositeScore` inside `College.swift`.
+
+```
+INPUT
+  yearlyRankings  — dict of { year → { qs, times, usNews, shanghai } }
+  sup             — UniversitySupplemental record from SupplementalData.swift
+
+CONSTANTS
+  α = 0.75   (temporal decay)
+  currentYear = 2026
+  RANK_FLOOR  = 249.0
+  ENDOW_ANCHOR_K = 4012.0   (Princeton USD thousands/student)
+  AWARD_ANCHOR   = 162.0    (Harvard 161 laureates + 1)
+  ENROLL_MIN = 2 000 ,  ENROLL_MAX = 150 000
+  DEPT_MIN   = 4     ,  DEPT_MAX   = 65
+
+STEP 1 — Per-system temporal-weighted average rank
+  for each system S in { QS, Times, USNews, Shanghai }:
+    wSum = 0,  wTot = 0
+    for age in 0 … 4:
+      if rank(S, currentYear − age) exists:
+        w     = α ^ age
+        wSum += w × rank(S, currentYear − age)
+        wTot += w
+    if wTot > 0:
+      r(S) = wSum / wTot        ← weighted average rank for system S
+
+STEP 2 — Cross-system mean
+  r̄ = mean of all r(S) that were computed   (equal weight per system)
+  if no system has data → return nil (university unranked)
+
+STEP 3 — Normalise rank to 0–100
+  rankScore = max(0,  100 × (1 − (r̄ − 1) / RANK_FLOOR))
+
+STEP 4 — Accumulate weighted parts   (parts = list of (weight, score))
+  parts ← [ (0.45, rankScore) ]                           # always present
+
+  if sup.acceptanceRate ≠ nil:
+    selScore = max(0, min(100,  100 − acceptanceRate))
+    parts ← parts + [ (0.135, selScore) ]
+
+  if sup.endowmentBn > 0  AND  sup.studentCount > 0:
+    kUSD  = endowmentBn × 1 000 000 / studentCount
+    endScore = min(100,  ln(max(1, kUSD)) / ln(ENDOW_ANCHOR_K) × 100)
+    parts ← parts + [ (0.19, endScore) ]
+
+  if sup.awardCount ≠ nil:
+    awardScore = min(100,  ln(max(1, awardCount) + 1) / ln(AWARD_ANCHOR) × 100)
+    parts ← parts + [ (0.12, awardScore) ]
+
+  # Institutional focus — each sub-score is independent; use whichever is available
+  if sup.studentCount ≠ nil:
+    c = max(studentCount, ENROLL_MIN)
+    enrollFocus = min(100,  (ln(ENROLL_MAX) − ln(c)) / (ln(ENROLL_MAX) − ln(ENROLL_MIN)) × 100)
+
+  if sup.schoolCount ≠ nil:
+    c = max(schoolCount, DEPT_MIN)
+    deptFocus = min(100,  (ln(DEPT_MAX) − ln(c)) / (ln(DEPT_MAX) − ln(DEPT_MIN)) × 100)
+
+  if enrollFocus OR deptFocus available:
+    focusScore = mean of whichever sub-scores are available
+    parts ← parts + [ (0.085, focusScore) ]
+
+  if sup.locationScore ≠ nil:
+    parts ← parts + [ (0.02, locationScore) ]
+
+STEP 5 — Weighted blend
+  totalW = Σ weight_i  over all parts
+  compositeScore = (Σ weight_i × score_i) / totalW     # 0–100, higher = better
+
+STEP 6 — Positional rank
+  averageRank = 100 − compositeScore                   # lower = better
+  Sort all universities by averageRank ascending.
+  Position in sorted list = SRS rank badge (#1, #2, …)
+```
+
+---
+
 ### Constants
 
 | Constant | Value | Role |
@@ -307,7 +392,7 @@ Position in that list = **SRS** badge displayed on the card.
 | `researchAwardsAnchor` | 162 | Harvard 161 laureates + 1 (log base) |
 | `enrollAnchorMin / Max` | 2 000 / 150 000 | Enrollment focus bounds |
 | `deptAnchorMin / Max` | 4 / 65 | School-count focus bounds |
-| Weight split | 49 / 13.5 / 15 / 12 / 8.5 / 2 | Rankings / Selectivity / EndowPerStudent / ResearchAwards / Focus / Location |
+| Weight split | 45 / 13.5 / 19 / 12 / 8.5 / 2 | Rankings / Selectivity / EndowPerStudent / ResearchAwards / Focus / Location |
 
 ---
 

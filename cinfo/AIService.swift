@@ -91,7 +91,7 @@ enum AIChatContext: Identifiable, Equatable {
         case .budget:
             return "Hi! Let's plan your study budget 💰\n\nWhich countries or universities are you considering? Tell me your approximate budget per year and I'll help you find the best options.\n\nIf you've uploaded documents in Files, I'll use them automatically."
         case .discover:
-            return "Hi! Ask me anything about universities and rankings 🔍\n\nI have live data on over 200 top universities across 25 countries — QS, Times, US News, and Shanghai rankings, tuition, locations, and more.\n\nWhat would you like to explore?"
+            return "Hi! Ask me anything about universities and rankings 🔍\n\nI provide live data on 200+ leading universities across 25 countries, including the latest rankings from QS, Times Higher Education, U.S. News, and Shanghai ARWU. I also use our proprietary SRS, a six-factor model that evaluates institutions based on academic performance, selectivity, financial strength, research excellence, institutional focus, and location.\n\nWhat would you like to explore?"
         }
     }
 

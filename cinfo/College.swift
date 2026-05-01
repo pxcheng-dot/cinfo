@@ -192,8 +192,8 @@ struct College: Identifiable {
 
     // ── Composite score  (0–100, higher = better)  ───────────────────────
     //
-    // v3 weights: rankings 48 % | selectivity 12 % | endowment/student 14 %
-    //             awards/faculty 14 % | institutional focus 12 %
+    // v3 weights: academic rankings 45 % | selectivity 13.5 % | endowment/student 19 %
+    //             research awards 12 % | institutional focus 8.5 % | location 2 %
     //
     // "Focus" rewards smaller, more specialised institutions:
     //   a concentrated $4 B endowment across 2 400 students (Caltech) ranks
@@ -207,21 +207,21 @@ struct College: Identifiable {
         typealias WS = (weight: Double, score: Double)
         var parts: [WS] = []
 
-        // 1 – Academic rankings (49 %)
+        // 1 – Academic rankings (45 %)
         let rankScore = max(0.0, 100.0 * (1.0 - (r - 1.0) / 249.0))
-        parts.append((0.49, rankScore))
+        parts.append((0.45, rankScore))
 
         // 2 – Selectivity (13.5 %)
         if let a = sup.acceptanceRate {
             parts.append((0.135, max(0.0, min(100.0, 100.0 - a))))
         }
 
-        // 3 – Endowment per student (15 %) — log scale, Princeton ~$4 012 K/student → 100
+        // 3 – Endowment per student (19 %) — log scale, Princeton ~$4 012 K/student → 100
         if let e = sup.endowmentBn, e > 0,
            let s = sup.studentCount, s > 0 {
             let kUSD  = e * 1_000_000.0 / Double(s)
             let score = min(100.0, max(0.0, log(max(1.0, kUSD)) / log(4012.0) * 100.0))
-            parts.append((0.15, score))
+            parts.append((0.19, score))
         }
 
         // 4 – Research awards (12 %) — log scale, Harvard 161 laureates → 100
