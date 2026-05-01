@@ -17,7 +17,6 @@ struct FilesView: View {
     @AppStorage("appLanguage") private var lang = "en"
 
     // Sheet / picker state
-    @State private var showAddSheet      = false   // confirmationDialog trigger
     @State private var showDocPicker     = false
     @State private var showCamera        = false
     @State private var showPhotosPicker  = false
@@ -95,13 +94,6 @@ struct FilesView: View {
                 Button("OK") { convertError = nil }
             } message: { Text(convertError ?? "") }
 
-            // ── Add-file action sheet (avoids Menu's _UIReparentingView issue) ─
-            .confirmationDialog("Add File", isPresented: $showAddSheet) {
-                Button("Browse Files")    { showDocPicker    = true }
-                Button("Photo Library")   { showPhotosPicker = true }
-                Button("Camera")          { showCamera       = true }
-                Button("Cancel", role: .cancel) {}
-            }
         }
     }
 
@@ -110,7 +102,11 @@ struct FilesView: View {
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
         ToolbarItem(placement: .primaryAction) {
-            Button { showAddSheet = true } label: {
+            Menu {
+                Button { showDocPicker    = true } label: { Label("Browse Files",  systemImage: "folder") }
+                Button { showPhotosPicker = true } label: { Label("Photo Library", systemImage: "photo") }
+                Button { showCamera       = true } label: { Label("Camera",        systemImage: "camera") }
+            } label: {
                 Image(systemName: "plus")
             }
         }
@@ -173,7 +169,7 @@ struct FilesView: View {
         ContentUnavailableView {
             Label("No Files Yet", systemImage: "tray")
         } description: {
-            Text("Upload documents or photos — transcripts, CVs, recommendation letters, or handwritten notes. Text is extracted automatically for AI context.")
+            Text("Upload documents or photos, like transcripts, CVs, recommendation letters, personal statements, test scores, certificates, portfolios, or even handwritten notes. You can also include extracurricular records, awards, research papers, internship details, and financial documents. Text is automatically extracted to give AI context, so it can provide more accurate guidance, feedback, and personalized recommendations.")
         }
     }
 }

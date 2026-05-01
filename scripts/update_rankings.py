@@ -416,6 +416,7 @@ def build_headers(years_to_keep: list[int]) -> list[str]:
     for sys in SYSTEMS:
         for yr in years_to_keep:
             headers.append(f"{sys}_{yr}")
+    headers.append("srsScore")
     return headers
 
 

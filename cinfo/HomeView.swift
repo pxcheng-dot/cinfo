@@ -72,25 +72,26 @@ struct HomeView: View {
 
                     // ── Top 10 Leaderboard ────────────────────────────────────
                     VStack(alignment: .leading, spacing: 0) {
-                        HStack(spacing: 6) {
-                            Text(l("top_10", lang))
-                                .font(.title2).fontWeight(.bold)
-                            Button {
-                                showOverallInfo = true
-                            } label: {
-                                Image(systemName: "info.circle")
-                                    .font(.system(size: 17, weight: .regular))
-                                    .foregroundStyle(.secondary)
-                            }
-                            .buttonStyle(.plain)
+                        Text(l("top_10", lang))
+                            .font(.title2).fontWeight(.bold)
+                            .padding(.horizontal)
+                            .padding(.bottom, 8)
+
+                        Button {
+                            showOverallInfo = true
+                        } label: {
+                            Text(l("top_10_srs_intro", lang))
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.leading)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .contentShape(Rectangle())
                         }
+                        .buttonStyle(.plain)
                         .padding(.horizontal)
                         .padding(.bottom, 12)
-                        .sheet(isPresented: $showOverallInfo) {
-                            OverallRankingInfoSheet()
-                                .presentationDetents([.medium])
-                                .presentationDragIndicator(.visible)
-                        }
+                        .accessibilityHint("Open SRS details")
 
                         VStack(spacing: 0) {
                             ForEach(Array(topColleges.enumerated()), id: \.element.id) { index, college in
@@ -105,6 +106,11 @@ struct HomeView: View {
                         .overlay(RoundedRectangle(cornerRadius: 16)
                             .stroke(Color(.separator), lineWidth: 0.5))
                         .padding(.horizontal)
+                    }
+                    .sheet(isPresented: $showOverallInfo) {
+                        OverallRankingInfoSheet()
+                            .presentationDetents([.medium])
+                            .presentationDragIndicator(.visible)
                     }
 
                     // ── Last Updated ──────────────────────────────────────────
@@ -368,33 +374,37 @@ private struct OverallRankingInfoSheet: View {
                 VStack(alignment: .leading, spacing: 20) {
 
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("SRS fuses time-weighted, independent signals into five dimensions below, and intergates them into a single, intelligent measure of university performance.\n\nSRS is designed with students at its core. Unlike traditional rankings that prioritize institutional metrics, SRS estimates which universities are best suited for helping you achieve excellence in your chosen field, maximize your career prospects, and create meaningful impact on society.")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .fixedSize(horizontal: false, vertical: true)
+                        Text("Unlike traditional rankings that prioritize institutional metrics, SRS estimates which universities are best suited for helping you achieve excellence in your chosen field 🧠, maximize your career prospects 📈, and create meaningful impact on society 🌍.\n\nSRS fuses time-weighted, independent signals into five dimensions below, and intergates them into a single, intelligent measure of university performance.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     .padding(.horizontal)
                     .padding(.top, 4)
 
                     VStack(spacing: 0) {
                         ForEach(Array(factors.enumerated()), id: \.element.id) { i, factor in
-                            HStack(alignment: .top, spacing: 14) {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(factor.color.opacity(0.15))
-                                        .frame(width: 36, height: 36)
-                                    Image(systemName: factor.icon)
-                                        .font(.system(size: 15, weight: .semibold))
-                                        .foregroundStyle(factor.color)
-                                }
-                                VStack(alignment: .leading, spacing: 3) {
+                            VStack(alignment: .leading, spacing: 6) {
+                                HStack(alignment: .center, spacing: 14) {
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .fill(factor.color.opacity(0.15))
+                                        Image(systemName: factor.icon)
+                                            .font(.system(size: 15, weight: .semibold))
+                                            .foregroundStyle(factor.color)
+                                    }
+                                    .frame(width: 36, height: 36)
                                     Text(factor.title)
                                         .font(.subheadline).fontWeight(.semibold)
-                                    Text(factor.detail)
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
-                                        .fixedSize(horizontal: false, vertical: true)
+                                        .multilineTextAlignment(.leading)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                 }
+                                Text(factor.detail)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 36 + 14)
                             }
                             .padding(.horizontal, 16)
                             .padding(.vertical, 12)
@@ -412,7 +422,7 @@ private struct OverallRankingInfoSheet: View {
                 .padding(.bottom, 24)
             }
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
-            .navigationTitle("SRS Score")
+            .navigationTitle("About SRS Score")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {

@@ -38,6 +38,8 @@ private let strings: [String: [String: String]] = [
 
     // Home screen
     "top_10":           ["en": "Top 10 Institutions", "zh": "综合前十"],
+    "top_10_srs_intro": ["en": "We're excited to introduce our new ranking model - SRS. It's the first model to put students at the center. It ranks how well universities are equipped to help you grow, thrive, and succeed 🚀. Tap to learn more.",
+                         "zh": "我们很高兴推出全新的排名模型——SRS。这是首个以学生为中心的模型，衡量大学如何帮助你成长、茁壮并成功。前往「探索」了解更多。"],
     "countries_covered":["en": "Countries Covered", "zh": "涵盖地区"],
     "stat_unis":        ["en": "Universities",      "zh": "大学"],
     "stat_countries":   ["en": "Countries",         "zh": "国家/地区"],
@@ -46,6 +48,7 @@ private let strings: [String: [String: String]] = [
 
     // Rankings screen
     "search_prompt":    ["en": "Search universities", "zh": "搜索大学"],
+    "explore_school_fmt": ["en": "Explore %@", "zh": "探索 %@"],
     "per_year_usd":     ["en": "/ year (USD)",      "zh": "/ 年（美元）"],
     "per_year_cny":     ["en": "year (CNY)",        "zh": "年（人民币）"],
 

@@ -4,10 +4,11 @@
 //
 //  Parses universities.csv → [College].
 //
-//  CSV structure (25 columns):
+//  CSV structure:
 //    name, country, description, tuitionUSD, websiteURL,
 //    rankQS_YYYY × 5, rankTimes_YYYY × 5,
-//    rankUSNews_YYYY × 5, rankShanghai_YYYY × 5
+//    rankUSNews_YYYY × 5, rankShanghai_YYYY × 5,
+//    optional srsScore (0–100)
 //
 //  The loader is header-driven: it scans the first row for columns whose
 //  names match "rank<System>_<Year>" and builds the yearlyRankings dict
@@ -81,6 +82,7 @@ enum DataLoader {
         let description: Int
         let tuition:     Int
         let website:     Int
+        let srsScore:    Int?
         // ranking columns: key = "rankQS_2026", value = column index
         let rankCols: [String: Int]
 
@@ -94,6 +96,7 @@ enum DataLoader {
     private static func buildColumnIndex(from header: [String]) -> ColumnIndex {
         var rankCols: [String: Int] = [:]
         var name = 0, country = 1, description = 2, tuition = 3, website = 4
+        var srsScore: Int?
 
         for (i, col) in header.enumerated() {
             switch col {
@@ -102,6 +105,7 @@ enum DataLoader {
             case "description": description = i
             case "tuitionUSD":  tuition     = i
             case "websiteURL":  website     = i
+            case "srsScore":    srsScore    = i
             default:
                 // Matches "rankQS_2026", "rankTimes_2025", etc.
                 let parts = col.components(separatedBy: "_")
@@ -111,7 +115,7 @@ enum DataLoader {
             }
         }
         return ColumnIndex(name: name, country: country, description: description,
-                           tuition: tuition, website: website, rankCols: rankCols)
+                           tuition: tuition, website: website, srsScore: srsScore, rankCols: rankCols)
     }
 
     // MARK: – Row → College
@@ -155,13 +159,21 @@ enum DataLoader {
             YearRankings(qs: $0.qs, times: $0.times, usNews: $0.usNews, shanghai: $0.shanghai)
         }
 
+        let csvSrsScore: Double? = {
+            guard let idx = ci.srsScore, idx < fields.count else { return nil }
+            let s = field(idx).trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !s.isEmpty, let v = Double(s) else { return nil }
+            return v
+        }()
+
         return College(
             name:           field(ci.name),
             country:        country,
             description:    field(ci.description),
             tuitionUSD:     tuitionUSD,
             websiteURL:     field(ci.website),
-            yearlyRankings: yearlyRankings
+            yearlyRankings: yearlyRankings,
+            csvSrsScore:    csvSrsScore
         )
     }
 

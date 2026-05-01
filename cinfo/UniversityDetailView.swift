@@ -4,7 +4,7 @@
 //
 //  Full-page detail sheet for a single university.
 //  Shows the long description from university_descriptions.json
-//  and provides a button to open the official website in-app.
+//  and a tappable “Explore (school)” link to open the official site in-app.
 //
 
 import SwiftUI
@@ -18,6 +18,10 @@ struct UniversityDetailView: View {
 
     private var longDescription: String {
         DescriptionLoader.description(for: college.name) ?? college.description
+    }
+
+    private var exploreLinkTitle: String {
+        String(format: l("explore_school_fmt", lang), college.exploreLinkDisplayName)
     }
 
     var body: some View {
@@ -35,23 +39,17 @@ struct UniversityDetailView: View {
                         .font(.body)
                         .lineSpacing(5)
 
-                    // Inline website link
                     if let url = URL(string: college.websiteURL) {
                         Button {
                             webLink = WebLink(url: url)
                         } label: {
-                            HStack(spacing: 5) {
-                                Image(systemName: "safari")
-                                    .font(.footnote)
-                                Text(college.websiteURL
-                                    .replacingOccurrences(of: "https://", with: "")
-                                    .replacingOccurrences(of: "http://", with: ""))
-                                    .font(.footnote)
-                                    .underline()
-                            }
-                            .foregroundStyle(Color.accentColor)
+                            Text(exploreLinkTitle)
+                                .font(.body)
+                                .underline()
+                                .foregroundStyle(Color.accentColor)
                         }
                         .buttonStyle(.plain)
+                        .accessibilityAddTraits(.isLink)
                     }
                 }
                 .padding()

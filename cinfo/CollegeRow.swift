@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 // ── Filter Pill Button ───────────────────────────────────────────────────────
 struct FilterPill: View {
@@ -29,6 +30,20 @@ struct FilterPill: View {
 }
 
 // ── College Row Card ─────────────────────────────────────────────────────────
+private extension View {
+    /// Dark halo so white label text stays readable on varied campus photos.
+    @ViewBuilder
+    func campusCardLabelShadow(enabled: Bool) -> some View {
+        if enabled {
+            self
+                .shadow(color: .black.opacity(0.85), radius: 0, x: 0, y: 1)
+                .shadow(color: .black.opacity(0.55), radius: 8, x: 0, y: 3)
+        } else {
+            self
+        }
+    }
+}
+
 struct CollegeRow: View {
     let college: College
     let activeRanking: RankingSystem
@@ -37,49 +52,62 @@ struct CollegeRow: View {
     let overallRank: Int
 
     @EnvironmentObject private var currency: CurrencyService
-    @State private var webLink:          WebLink?
+    @State private var showUniversityDetail = false
     @State private var trendSystem:      RankingSystem? = nil
     @State private var showHomeCurrency  = false
     @AppStorage("appLanguage")  private var lang         = "en"
     @AppStorage("homeCurrency") private var homeCurrencyCode = "USD"
+    @Environment(\.colorScheme) private var colorScheme
 
     // Effective rank for display in the hero badge
     private var heroRank: Int? {
         activeRanking == .overall ? overallRank : college.rank(for: activeRanking)
     }
 
+    private var campusHero: UIImage? { CampusHeroImage.uiImage(for: college.name) }
+
+    /// In dark mode, photos and secondary backgrounds sit on near-black; a light rim keeps cards distinct.
+    private var cardStrokeColor: Color {
+        colorScheme == .dark ? Color.white.opacity(0.22) : Color(.separator)
+    }
+
+    private var cardStrokeWidth: CGFloat { colorScheme == .dark ? 1 : 0.5 }
+
     var body: some View {
+        let onPhoto = campusHero != nil
+
         VStack(alignment: .leading, spacing: 10) {
 
             // Name + country
             HStack(alignment: .center, spacing: 12) {
 
                 VStack(alignment: .leading, spacing: 2) {
-                    // Tappable name opens the university website inside the app
+                    // Tappable name opens full description (university_descriptions.json) + official link
                     Button {
-                        if let url = URL(string: college.websiteURL) {
-                            webLink = WebLink(url: url)
-                        }
+                        showUniversityDetail = true
                     } label: {
                         Text(college.name)
                             .font(.headline)
                             .lineLimit(2)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundStyle(Color.accentColor)
+                            .foregroundStyle(onPhoto ? Color.white : Color.accentColor)
+                            .campusCardLabelShadow(enabled: onPhoto)
                     }
                     .buttonStyle(.plain)
 
                     Text("\(college.country.flag)  \(college.country.rawValue)")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(onPhoto ? Color.white : Color.secondary)
+                        .campusCardLabelShadow(enabled: onPhoto)
                 }
             }
 
             // Description
             Text(college.description)
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(onPhoto ? Color.white.opacity(0.96) : Color.secondary)
                 .lineLimit(2)
+                .campusCardLabelShadow(enabled: onPhoto)
 
             // Ranking badge + tuition side by side
             HStack(alignment: .center, spacing: 12) {
@@ -89,22 +117,57 @@ struct CollegeRow: View {
                 .buttonStyle(.plain)
 
                 Rectangle()
-                    .fill(Color(.systemGray4))
+                    .fill(onPhoto ? Color.white.opacity(0.55) : Color(.systemGray4))
                     .frame(width: 1, height: 36)
 
                 TuitionView(tuitionUSD: college.tuitionUSD,
                             localCode: college.country.currencyCode,
                             homeCode: homeCurrencyCode,
                             currency: currency,
-                            lang: lang)
+                            lang: lang,
+                            onPhotoBackdrop: onPhoto)
             }
         }
         .padding()
-        .background(Color(.secondarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 14))
-        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.separator), lineWidth: 0.5))
-        .sheet(item: $webLink) { link in
-            SafariView(url: link.url)
+        .background {
+            if onPhoto {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(Color.black.opacity(0.32))
+            }
+        }
+        .background {
+            ZStack {
+                if let campusHero {
+                    Image(uiImage: campusHero)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .clipped()
+                    // Stronger darkening toward the bottom where most copy sits.
+                    LinearGradient(
+                        stops: [
+                            .init(color: .black.opacity(0.38), location: 0),
+                            .init(color: .black.opacity(0.52), location: 0.38),
+                            .init(color: .black.opacity(0.70), location: 0.72),
+                            .init(color: .black.opacity(0.78), location: 1),
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    Color(.secondarySystemBackground)
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .strokeBorder(cardStrokeColor, lineWidth: cardStrokeWidth)
+        )
+        .sheet(isPresented: $showUniversityDetail) {
+            UniversityDetailView(college: college)
         }
         .sheet(item: $trendSystem) { system in
             RankingTrendView(college: college,
@@ -125,6 +188,8 @@ private struct TuitionView: View {
     let homeCode:    String   // user's chosen home currency
     let currency:    CurrencyService
     let lang:        String
+    /// Lighter text when card uses a campus photo background.
+    var onPhotoBackdrop: Bool = false
 
     @State private var showHome = false
 
@@ -149,7 +214,8 @@ private struct TuitionView: View {
             if isSameCurrency {
                 Text(displayText)
                     .font(.footnote)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(onPhotoBackdrop ? Color.white : Color.secondary)
+                    .campusCardLabelShadow(enabled: onPhotoBackdrop)
             } else {
                 Button {
                     withAnimation(.easeInOut(duration: 0.18)) { showHome.toggle() }
@@ -157,14 +223,16 @@ private struct TuitionView: View {
                     HStack(spacing: 4) {
                         Image(systemName: "arrow.left.arrow.right")
                             .font(.system(size: 10, weight: .medium))
-                            .foregroundStyle(Color.accentColor)
+                            .foregroundStyle(onPhotoBackdrop ? Color.white : Color.accentColor)
+                            .campusCardLabelShadow(enabled: onPhotoBackdrop)
                         Text(displayText)
                             .font(.footnote)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(onPhotoBackdrop ? Color.white : Color.secondary)
+                            .campusCardLabelShadow(enabled: onPhotoBackdrop)
                     }
                 }
                 .buttonStyle(.plain)
-            }
+                 }
         }
     }
 }

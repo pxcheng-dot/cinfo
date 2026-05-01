@@ -75,10 +75,10 @@ enum AIChatContext: Identifiable, Equatable {
 
     var navTitle: String {
         switch self {
-        case .match:    return "Match"
-        case .apply:    return "Apply"
-        case .budget:   return "Budget"
-        case .discover: return "Ask AI"
+        case .match:    return "Find Best Matches"
+        case .apply:    return "Apply Dream Schools"
+        case .budget:   return "Plan Budget"
+        case .discover: return "Explore Options"
         }
     }
 
@@ -298,20 +298,33 @@ final class AIService: ObservableObject {
             let the = c.rankTimes.map    { "\($0)" } ?? "-"
             let usn = c.rankUSNews.map   { "\($0)" } ?? "-"
             let sha = c.rankShanghai.map { "\($0)" } ?? "-"
-            return "#\(i+1) \(c.name) | \(c.country.rawValue) | ~$\(c.tuitionUSD)/yr | QS:\(qs) THE:\(the) USN:\(usn) SHN:\(sha)"
+//            let srs: String
+//            if let csv = c.csvSrsScore {
+//                srs = String(format: "%.1f", csv)
+//            } else if let live = c.compositeScore {
+//                srs = String(format: "%.1f", live)
+//            } else {
+//                srs = "-"
+//            }
+            return "SRS #\(i+1) | \(c.name) | \(c.country.rawValue) | ~$\(c.tuitionUSD)/yr | QS:\(qs) THE:\(the) USN:\(usn) SHN:\(sha)"
         }.joined(separator: "\n")
 
+        let srsContext = """
+        SRS dataset: Each row includes SRS — the value from the bundled `srsScore` column in universities.csv (0–100, higher is better). If that field is absent, the fallback is the live composite score from the same formula. Row # is global SRS rank (#1 best).
+        SRS combines six weighted signals: academic rankings 45%, admission selectivity 13.5%, financial strength 19%, concentrated excellence (Nobel/Fields/Turing affiliates) 12%, institutional focus 8.5%, career opportunity (metro centrality) 2%. It is not the same as QS, Times, US News, or Shanghai — cite SRS separately when comparing schools.
+        """
         let focus: String
         switch context {
         case .match:
-            focus = "Focus on matching universities to the student's profile, interests, goals, and constraints. Use any uploaded personal documents to personalise recommendations."
+            focus = "Focus on matching universities to the student's profile, interests, goals, and constraints. Use any uploaded personal documents to personalise recommendations. Use SRS scores from the dataset when ranking or comparing schools as appropriate; SRS is separate from QS/Times/US News/Shanghai."
         case .discover:
             focus = """
             You are a university rankings and discovery expert with deep knowledge of the QS, \
-            Times Higher Education, US News, and Shanghai (ARWU) ranking systems. \
+            Times Higher Education, US News, Shanghai (ARWU), and SRS ranking systems. \
             Answer questions about universities, explain what rankings measure and how they differ, \
             compare institutions, highlight strengths and weaknesses, and help users explore and \
-            interpret the data. Use the full ranking dataset provided below. Be precise with numbers.
+            interpret the data. Use the full ranking dataset provided below. Be precise with numbers. \
+            When users ask about SRS, use the SRS values and context supplied below — they come from the `srsScore` column in universities.csv (with live fallback if missing).
             """
         case .apply:
             focus = """
@@ -321,7 +334,10 @@ final class AIService: ObservableObject {
             Cover Letter, Scholarship Essay, and CV/Resume. \
             When asked to write a document, use any uploaded personal documents as source material. \
             Always ask for the target university/program and word limit if not specified. \
-            Output polished, ready-to-submit prose unless the student asks for an outline first.
+            Output polished, ready-to-submit prose unless the student asks for an outline first. \
+            Emphasize students should actively think through and discuss their materials to ensure \
+            the final work carries a genuine personal signature, rather than relying entirely on AI, \
+            even when the prose is polished and ready-to-submit. 
             """
         case .budget:
             focus = "Focus on tuition costs, living expenses, scholarships, and affordable options."
@@ -334,14 +350,17 @@ final class AIService: ObservableObject {
         You are a knowledgeable, warm, and practical university admissions advisor.
         \(focus)
 
-        You have real data on 211 top universities. Top 100 by overall ranking:
+        \(srsContext)
+
+        You have real data on 211 top universities. Rows below are ordered by SRS rank (showing up to \(limit) institutions):
         \(table)
 
         Guidelines:
         - Use the data above for recommendations and comparisons.
         - Ask clarifying questions before making recommendations.
         - Format lists with bullet points for readability.
-        - Be encouraging and realistic about admissions.\(filePart)
+        - Be encouraging and realistic about admissions.
+        - Give honest estimate of the probability of being admitted.\(filePart)
         """
     }
 

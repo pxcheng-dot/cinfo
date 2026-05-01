@@ -55,6 +55,9 @@ struct College: Identifiable {
     // The app always surfaces the most recent year that has any data.
     let yearlyRankings: [Int: YearRankings]
 
+    /// `srsScore` column from `universities.csv` (0–100 snapshot). Sorting and UI use `compositeScore`; this is for export / AI context alignment with the file.
+    let csvSrsScore: Double?
+
     // The calendar year considered "current" — update each release cycle.
     static let currentYear = 2026
 
@@ -293,6 +296,34 @@ struct College: Identifiable {
             }
             .map(\.key)
             .sorted(by: >)
+    }
+}
+
+extension College {
+
+    /// Preferred short name for “Explore …” official-site links (otherwise `name`).
+    private static let exploreLinkShortNames: [String: String] = [
+        "Massachusetts Institute of Technology": "MIT",
+        "California Institute of Technology": "Caltech",
+        "Harvard University": "Harvard",
+        "Princeton University": "Princeton",
+        "Yale University": "Yale",
+        "Columbia University": "Columbia",
+        "University of Pennsylvania": "Penn",
+        "Cornell University": "Cornell",
+        "University of California, Berkeley": "UC Berkeley",
+        "University of California, Los Angeles": "UCLA",
+        "University of California, San Diego": "UCSD",
+        "University of Michigan–Ann Arbor": "UMich",
+        "Northwestern University": "Northwestern",
+        "Duke University": "Duke",
+        "University of Oxford": "Oxford",
+        "University of Cambridge": "Cambridge",
+        "Johns Hopkins University": "JHU",
+    ]
+
+    var exploreLinkDisplayName: String {
+        Self.exploreLinkShortNames[name] ?? name
     }
 }
 

@@ -336,7 +336,7 @@ private struct OverallRankBanner: View {
 
             // Explanation
             VStack(alignment: .leading, spacing: 3) {
-                Text("SRS is a multi-factor model that provides student-first ranking for universities around the world. It blends temporally-weighted academic achievement with selectivity, financial strength, concentrated excellence, institutional focus, and career opportunities. SRS measures how well a university enables students to thrive.")
+                Text("SRS is a multi-factor model that provides student-first ranking for universities around the world. It blends time-weighted academic excellence with financial strength, admission selectivity, faculty achievements, institutional focus, and career opportunities. SRS measures how well a university enables students to thrive.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
