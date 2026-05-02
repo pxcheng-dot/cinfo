@@ -228,7 +228,7 @@ final class UserFileStore: ObservableObject {
     func runOCR(for file: UserFile) async {
         guard file.isImage, let url = diskURL(for: file) else { return }
 
-        await MainActor.run { processingIDs.insert(file.id) }
+        await MainActor.run { _ = processingIDs.insert(file.id) }
         defer { Task { @MainActor in processingIDs.remove(file.id) } }
 
         guard let cgImage = UIImage(contentsOfFile: url.path)?.cgImage else { return }

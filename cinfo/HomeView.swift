@@ -271,7 +271,7 @@ struct CountriesSheet: View {
             .navigationTitle(l("countries_covered", lang))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                ToolbarItem(placement: .cancellationAction) {
                     Button(l("done", lang)) { dismiss() }
                 }
             }
@@ -425,7 +425,7 @@ private struct OverallRankingInfoSheet: View {
             .navigationTitle("About SRS Score")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                ToolbarItem(placement: .cancellationAction) {
                     Button("Done") { dismiss() }
                 }
             }

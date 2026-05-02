@@ -12,6 +12,7 @@ struct SettingsView: View {
     @AppStorage("appColorScheme") private var colorSchemeKey  = "dark"
     @AppStorage("appLanguage")    private var lang            = "en"
     @AppStorage("homeCurrency")   private var homeCurrency    = "USD"
+    @AppStorage("autoAddAIMatchSchoolsToMySchools") private var autoAddAIMatchSchoolsToMySchools = true
     @EnvironmentObject private var apiKeyStore: APIKeyStore
     @EnvironmentObject private var aiSettings:  AISettings
     @State private var showKeys = false
@@ -41,6 +42,17 @@ struct SettingsView: View {
                 Section(l("language", lang)) {
                     LanguageRow(label: l("lang_en", lang), code: "en", selected: $lang)
                     LanguageRow(label: l("lang_zh", lang), code: "zh", selected: $lang)
+                }
+
+                // ── Match → My Schools ────────────────────────────────────────
+                Section {
+                    Toggle(isOn: $autoAddAIMatchSchoolsToMySchools) {
+                        Text(l("settings_auto_add_ai_schools", lang))
+                    }
+                } header: {
+                    Text(l("settings_match_section", lang))
+                } footer: {
+                    Text(l("settings_auto_add_ai_schools_footer", lang))
                 }
 
                 // ── AI Provider ───────────────────────────────────────────────

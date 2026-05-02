@@ -52,6 +52,7 @@ struct CollegeRow: View {
     let overallRank: Int
 
     @EnvironmentObject private var currency: CurrencyService
+    @EnvironmentObject private var savedSchools: SavedSchoolsStore
     @State private var showUniversityDetail = false
     @State private var trendSystem:      RankingSystem? = nil
     @State private var showHomeCurrency  = false
@@ -66,12 +67,40 @@ struct CollegeRow: View {
 
     private var campusHero: UIImage? { CampusHeroImage.uiImage(for: college.name) }
 
+    private var isSchoolSaved: Bool { savedSchools.contains(college.name) }
+
+    private func triggerHeartHaptic() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.prepare()
+        generator.impactOccurred()
+    }
+
     /// In dark mode, photos and secondary backgrounds sit on near-black; a light rim keeps cards distinct.
     private var cardStrokeColor: Color {
         colorScheme == .dark ? Color.white.opacity(0.22) : Color(.separator)
     }
 
     private var cardStrokeWidth: CGFloat { colorScheme == .dark ? 1 : 0.5 }
+
+    @ViewBuilder
+    private func heartButton(onPhoto: Bool) -> some View {
+        Button {
+            triggerHeartHaptic()
+            withAnimation(.easeInOut(duration: 0.2)) {
+                savedSchools.toggle(college.name)
+            }
+        } label: {
+            Image(systemName: isSchoolSaved ? "heart.fill" : "heart")
+                .font(.system(size: 26, weight: .semibold))
+                .foregroundStyle(isSchoolSaved ? Color.red : (onPhoto ? Color.white : Color.secondary))
+                .shadow(color: onPhoto ? Color.black.opacity(0.45) : Color.clear, radius: 2, x: 0, y: 1)
+                .frame(width: 48, height: 48)
+                .background(.ultraThinMaterial, in: Circle())
+        }
+        .buttonStyle(.plain)
+        .padding(8)
+        .accessibilityLabel(isSchoolSaved ? l("heart_remove_a11y", lang) : l("heart_save_a11y", lang))
+    }
 
     var body: some View {
         let onPhoto = campusHero != nil
@@ -166,6 +195,9 @@ struct CollegeRow: View {
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .strokeBorder(cardStrokeColor, lineWidth: cardStrokeWidth)
         )
+        .overlay(alignment: .bottomTrailing) {
+            heartButton(onPhoto: onPhoto)
+        }
         .sheet(isPresented: $showUniversityDetail) {
             UniversityDetailView(college: college)
         }

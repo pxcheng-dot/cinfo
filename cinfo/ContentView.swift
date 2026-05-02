@@ -23,6 +23,7 @@ struct ContentView: View {
     @State private var showReorderSheet    = false
     @State private var showAllUniversities = false
     @State private var showCountries       = false
+    @State private var showDiscoverInfo    = false
     @State private var showAI              = false
 
     private var countryCount: Int { Set(store.colleges.map(\.country)).count }
@@ -132,21 +133,71 @@ struct ContentView: View {
                 .background(Color(.systemGroupedBackground))
                 .animation(.easeInOut(duration: 0.3), value: activeRanking)
             }
-            .navigationTitle(l("tab_rankings", lang))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("")
             .searchable(text: $searchText, prompt: l("search_prompt", lang))
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                ToolbarItem(placement: .principal) {
+                    HStack(spacing: 8) {
+                        Text(l("tab_rankings", lang))
+                            .font(.headline)
+                        Button {
+                            showDiscoverInfo = true
+                        } label: {
+                            Image(systemName: "info.circle")
+                                .imageScale(.large)
+                                .foregroundStyle(Color.secondary)
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel(l("discover_info_a11y", lang))
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
                     Button { showAI = true } label: {
                         Image(systemName: "sparkles")
                     }
+                    .accessibilityLabel(l("discover_ai_a11y", lang))
                 }
             }
             .sheet(isPresented: $showReorderSheet) {
                 FilterOrderSheet(orderRaw: $filterTabOrderRaw, lang: lang)
             }
+            .sheet(isPresented: $showDiscoverInfo) {
+                DiscoverInfoSheet(lang: lang)
+                    .presentationDetents([.medium])
+                    .presentationDragIndicator(.visible)
+            }
             .sheet(isPresented: $showAI) {
                 AIChatView(context: .discover)
             }
+    }
+}
+
+// ── Discover intro sheet ─────────────────────────────────────────────────────
+private struct DiscoverInfoSheet: View {
+    let lang: String
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                Text(l("discover_intro", lang))
+                    .font(.body)
+                    .foregroundStyle(.primary)
+                    .lineSpacing(5)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+            }
+            .background(Color(.systemGroupedBackground).ignoresSafeArea())
+            .navigationTitle(l("tab_rankings", lang))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button(l("done", lang)) { dismiss() }
+                }
+            }
+        }
     }
 }
 
@@ -214,7 +265,7 @@ private struct FilterOrderSheet: View {
             .navigationTitle(l("customize_tabs", lang))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
+                ToolbarItem(placement: .cancellationAction) {
                     Button(l("done", lang)) { dismiss() }
                 }
             }
@@ -248,4 +299,7 @@ private struct DiscoverStatChip: View {
 
 #Preview {
     ContentView()
+        .environmentObject(CollegeStore())
+        .environmentObject(CurrencyService())
+        .environmentObject(SavedSchoolsStore())
 }

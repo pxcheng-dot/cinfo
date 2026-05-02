@@ -311,6 +311,12 @@ extension College {
         "Columbia University": "Columbia",
         "University of Pennsylvania": "Penn",
         "Cornell University": "Cornell",
+        "Brown University": "Brown",
+        "Dartmouth College": "Dartmouth",
+        "Vanderbilt University": "Vanderbilt",
+        "Washington University in St. Louis": "WUSTL",
+        "Emory University": "Emory",
+        "Georgetown University": "Georgetown",
         "University of California, Berkeley": "UC Berkeley",
         "University of California, Los Angeles": "UCLA",
         "University of California, San Diego": "UCSD",
@@ -320,6 +326,14 @@ extension College {
         "University of Oxford": "Oxford",
         "University of Cambridge": "Cambridge",
         "Johns Hopkins University": "JHU",
+        "Carnegie Mellon University": "CMU",
+        "University of Chicago": "UChicago",
+        "University College London": "UCL",
+        "New York University": "NYU",
+        "University of Texas at Austin": "UT Austin",
+        "University of Wisconsin–Madison": "UW Madison",
+        "University of California, Santa Barbara": "UCSB",
+        "University of California, Davis": "UCD",
     ]
 
     var exploreLinkDisplayName: String {

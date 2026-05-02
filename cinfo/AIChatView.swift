@@ -18,7 +18,9 @@ struct AIChatView: View {
     @EnvironmentObject private var apiKeyStore: APIKeyStore
     @EnvironmentObject private var aiSettings:  AISettings
     @EnvironmentObject private var fileStore:   UserFileStore
+    @EnvironmentObject private var savedSchools: SavedSchoolsStore
     @AppStorage("appLanguage")  private var lang = "en"
+    @AppStorage("autoAddAIMatchSchoolsToMySchools") private var autoAddAIMatchSchoolsToMySchools = true
     @Environment(\.dismiss)     private var dismiss
 
     @State private var input         = ""
@@ -185,7 +187,9 @@ struct AIChatView: View {
                       apiKey:      apiKeyStore.key(for: aiSettings.provider),
                       colleges:    store.colleges,
                       context:     context,
-                      fileContext: fileStore.combinedContext)
+                      fileContext: fileStore.combinedContext,
+                      savedSchools: context == .match ? savedSchools : nil,
+                      matchAutoAddToMySchools: autoAddAIMatchSchoolsToMySchools)
     }
 }
 

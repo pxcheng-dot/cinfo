@@ -2,7 +2,7 @@
 //  FilesView.swift
 //  cinfo
 //
-//  Lets users upload documents and photos for AI context.
+//  Uploaded files folder inside Backpack: documents and photos for AI context.
 //  Supports: document picker, camera capture, photo library.
 //  Photos are OCR-scanned automatically; images can be converted to PDF.
 //
@@ -11,7 +11,7 @@ import SwiftUI
 import PhotosUI
 import UniformTypeIdentifiers
 
-struct FilesView: View {
+struct UploadedFilesFolderView: View {
 
     @EnvironmentObject private var fileStore: UserFileStore
     @AppStorage("appLanguage") private var lang = "en"
@@ -26,75 +26,66 @@ struct FilesView: View {
 
 
     var body: some View {
-        NavigationStack {
-            Group {
-                if fileStore.files.isEmpty {
-                    emptyPlaceholder
-                } else {
-                    fileList
-                }
+        Group {
+            if fileStore.files.isEmpty {
+                emptyPlaceholder
+            } else {
+                fileList
             }
-            .navigationTitle("Files")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar { toolbarContent }
-
-            // ── Document picker ────────────────────────────────────────────
-            .fileImporter(
-                isPresented: $showDocPicker,
-                allowedContentTypes: [.pdf, .plainText, .data],
-                allowsMultipleSelection: true
-            ) { result in
-                switch result {
-                case .success(let urls):
-                    for url in urls {
-                        do { try fileStore.importFile(from: url) }
-                        catch { importError = error.localizedDescription }
-                    }
-                case .failure(let err):
-                    importError = err.localizedDescription
-                }
-            }
-
-            // ── Photo library picker (state-driven, NOT embedded in Menu) ──
-            .photosPicker(isPresented: $showPhotosPicker,
-                          selection: $photosItem,
-                          matching: .images)
-            .onChange(of: photosItem) {
-                guard let item = photosItem else { return }
-                Task {
-                    if let data = try? await item.loadTransferable(type: Data.self),
-                       let img  = UIImage(data: data) {
-                        await fileStore.importImage(img, name: "Library Photo")
-                    }
-                    photosItem = nil
-                }
-            }
-
-            // ── Camera sheet (only on real device) ─────────────────────────
-            .sheet(isPresented: $showCamera) {
-                CameraPicker { image in
-                    showCamera = false
-                    Task { await fileStore.importImage(image, name: "Camera") }
-                }
-                .ignoresSafeArea()
-            }
-
-            // ── Alerts ─────────────────────────────────────────────────────
-            .alert("Import Error", isPresented: Binding(
-                get: { importError != nil },
-                set: { if !$0 { importError = nil } }
-            )) {
-                Button("OK") { importError = nil }
-            } message: { Text(importError ?? "") }
-
-            .alert("Conversion Error", isPresented: Binding(
-                get: { convertError != nil },
-                set: { if !$0 { convertError = nil } }
-            )) {
-                Button("OK") { convertError = nil }
-            } message: { Text(convertError ?? "") }
-
         }
+        .navigationTitle(l("backpack_files_folder", lang))
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar(.visible, for: .navigationBar)
+        .toolbar { toolbarContent }
+        .fileImporter(
+            isPresented: $showDocPicker,
+            allowedContentTypes: [.pdf, .plainText, .data],
+            allowsMultipleSelection: true
+        ) { result in
+            switch result {
+            case .success(let urls):
+                for url in urls {
+                    do { try fileStore.importFile(from: url) }
+                    catch { importError = error.localizedDescription }
+                }
+            case .failure(let err):
+                importError = err.localizedDescription
+            }
+        }
+        .photosPicker(isPresented: $showPhotosPicker,
+                      selection: $photosItem,
+                      matching: .images)
+        .onChange(of: photosItem) {
+            guard let item = photosItem else { return }
+            Task {
+                if let data = try? await item.loadTransferable(type: Data.self),
+                   let img  = UIImage(data: data) {
+                    await fileStore.importImage(img, name: "Library Photo")
+                }
+                photosItem = nil
+            }
+        }
+        .sheet(isPresented: $showCamera) {
+            CameraPicker { image in
+                showCamera = false
+                Task { await fileStore.importImage(image, name: "Camera") }
+            }
+            .ignoresSafeArea()
+        }
+        .alert("Import Error", isPresented: Binding(
+            get: { importError != nil },
+            set: { if !$0 { importError = nil } }
+        )) {
+            Button("OK") { importError = nil }
+        } message: { Text(importError ?? "") }
+
+        .alert("Conversion Error", isPresented: Binding(
+            get: { convertError != nil },
+            set: { if !$0 { convertError = nil } }
+        )) {
+            Button("OK") { convertError = nil }
+        } message: { Text(convertError ?? "") }
+
     }
 
     // MARK: – Toolbar
@@ -254,6 +245,8 @@ private struct FileRow: View {
 }
 
 #Preview {
-    FilesView()
-        .environmentObject(UserFileStore())
+    NavigationStack {
+        UploadedFilesFolderView()
+    }
+    .environmentObject(UserFileStore())
 }

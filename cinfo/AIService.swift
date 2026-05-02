@@ -139,7 +139,9 @@ final class AIService: ObservableObject {
               apiKey:      String,
               colleges:    [College],
               context:     AIChatContext,
-              fileContext: String = "") async {
+              fileContext: String = "",
+              savedSchools: SavedSchoolsStore? = nil,
+              matchAutoAddToMySchools: Bool = true) async {
 
         let key = apiKey.trimmingCharacters(in: .whitespaces)
         guard !key.isEmpty else {
@@ -161,6 +163,14 @@ final class AIService: ObservableObject {
             await streamOpenAI(model: modelId, apiKey: key, systemPrompt: systemPrompt)
         case .anthropic:
             await streamAnthropic(model: modelId, apiKey: key, systemPrompt: systemPrompt)
+        }
+
+        if context == .match, let ss = savedSchools,
+           let last = messages.last, last.role == .assistant,
+           !last.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            ss.ingestMatchAssistantRecommendations(fromAssistantText: last.content,
+                                                   colleges: colleges,
+                                                   addToMySchools: matchAutoAddToMySchools)
         }
     }
 

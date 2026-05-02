@@ -2,8 +2,8 @@
 //  MainTabView.swift
 //  cinfo
 //
-//  Root container with two tabs: Home and Settings.
-//  Rankings is accessed via a card on the Home screen.
+//  Root tabs: Home, Backpack (files + saved schools), Settings.
+//  Discover rankings open from Home.
 //
 
 import SwiftUI
@@ -26,8 +26,8 @@ struct MainTabView: View {
             HomeView()
                 .tabItem { Label(l("tab_home",     lang), systemImage: "house.fill") }
 
-            FilesView()
-                .tabItem { Label(l("tab_files",    lang), systemImage: "folder.fill") }
+            BackpackView()
+                .tabItem { Label(l("tab_backpack", lang), systemImage: "backpack.fill") }
 
             SettingsView()
                 .tabItem { Label(l("tab_settings", lang), systemImage: "gear") }
@@ -38,4 +38,10 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
+        .environmentObject(CollegeStore())
+        .environmentObject(CurrencyService())
+        .environmentObject(APIKeyStore())
+        .environmentObject(AISettings())
+        .environmentObject(UserFileStore())
+        .environmentObject(SavedSchoolsStore())
 }
